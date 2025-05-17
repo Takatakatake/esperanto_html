@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大多数の环境中で正常に运行するRuby显示功能</title>
+    <style>
+
+    html, body {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+  
+      :root {
+        --ruby-color: blue;
+        --ruby-font-size: 0.5em;
+      }
+      html {
+        font-size: 100%; /* 多くのブラウザは16px相当が標準 */
+      }
+
+      .text-M_M {
+        font-size: 1rem!important; 
+        font-family: Arial, sans-serif;
+        line-height: 2.0 !important;  /* text-M_Mのline-heightとrubyのline-heightは一致させる必要がある。 */
+        display: block; /* ブロック要素として扱う */
+        position: relative;
+      }
+  
+      /* ▼ ルビ（フレックスでルビを上に表示） */
+      ruby {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: top !important;
+        line-height: 2.0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 1rem !important;
+      }
+  
+      /* ▼ 追加マイナス余白（ルビサイズ別に上書き） */
+      rt {
+        display: block !important;
+        font-size: var(--ruby-font-size);
+        color: var(--ruby-color);
+        line-height: 1.05;/*ルビを改行するケースにおけるルビの行間*/
+        text-align: center;
+        /* margin-top: 0.2em !important;   
+        transform: translateY(0.4em) !important; */
+      }
+      rt.XXXS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -8.3em !important;/* ルビの高さ位置はここで調節する。 */
+        transform: translateY(-0em) !important;
+      }    
+      rt.XXS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -7.2em !important;/* ルビの高さ位置はここで調節する。 */
+        transform: translateY(-0em) !important;
+      }
+      rt.XS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -6.1em !important;
+        transform: translateY(-0em) !important;
+      }
+      rt.S_S {
+        --ruby-font-size: 0.4em;
+        margin-top: -4.85em !important;
+        transform: translateY(-0em) !important;
+      }
+      rt.M_M {
+        --ruby-font-size: 0.5em;
+        margin-top: -4.00em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.L_L {
+        --ruby-font-size: 0.6em; 
+        margin-top: -3.55em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.XL_L {
+        --ruby-font-size: 0.7em;
+        margin-top: -3.20em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.XXL_L {
+        --ruby-font-size: 0.8em;
+        margin-top: -2.80em !important;
+        transform: translateY(-0.0em) !important;
+      }
+  
+    </style>
+  </head>
+  <body>
+  <p class="text-M_M">
+はい、承知いたしました。以下にエスペラントの原文と、各文に対応する日本語訳を挿入して示します。<br>
+<br>
+<ruby>Kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>nom<rt class="XXL_L">名前</rt></ruby>i <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n viruson?<br>
+このウイルスを何と呼ぶか？<br>
+<br>
+27an <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mart<rt class="XXL_L">３月</rt></ruby>o, 2020<br>
+2020年3月27日<br>
+<br>
+<br>
+<ruby>Ebl<rt class="L_L">可能</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>aŭskult<rt class="XL_L">(を)聴く</rt></ruby>i ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n <ruby>artikol<rt class="M_M">記事;冠詞</rt></ruby>on, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>n <ruby>voĉ<rt class="XXL_L">声</rt></ruby><ruby>leg<rt class="XS_S">(を)読む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>Ann<rt class="M_M">アンナ</rt></ruby>a Löwenstein.<br>
+アンナ・レーヴェンシュタインが朗読したこの記事を聞くことができます。<br>
+<br>
+<ruby>Tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> viruso <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sol<rt class="XS_S">唯一の</rt></ruby>a <ruby>afer<rt class="XL_L">物事</rt></ruby>o <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pens<rt class="XXL_L">思う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>semajn<rt class="XXL_L">一週間</rt></ruby>oj.<br>
+このウイルスは、私たち全員が何週間も話し、考えている唯一のことです。<br>
+<br>
+<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>nom<rt class="XXL_L">名前</rt></ruby>u <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o?<br>
+しかし、エスペラントでそれを何と呼ぶべきでしょうか？<br>
+<br>
+La <ruby>medicin<rt class="XXL_L">医学</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj <ruby>prefer<rt class="S_S">(を)より好む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>termin<rt class="L_L">専門用語</rt></ruby>on <ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso, <ruby>ĉar<rt class="XXS_S">だから<br>;車</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>a <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci<rt class="XXL_L">国民</rt></ruby>a <ruby>teknik<rt class="XXL_L">技術</rt></ruby>a <ruby>nom<rt class="XXL_L">名前</rt></ruby>o, <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>aj <ruby>lingv<rt class="XXL_L">言語</rt></ruby>oj <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sam<rt class="M_M">同一の</rt></ruby>a <ruby>form<rt class="XXL_L">形</rt></ruby>o (<ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>laŭ<rt class="S_S">沿って</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>apart<rt class="L_L">別々の</rt></ruby>a <ruby>skrib<rt class="M_M">(を)書く</rt></ruby><ruby>sistem<rt class="XXL_L">体系</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>koncern<rt class="S_S">(に)関係がある</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o).<br>
+医療関係者は「<ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso（コロナウイルス）」という用語を好みます。なぜなら、それが多くの言語で同じ形で（ただし、それぞれの言語の特定の表記体系に従って）使用されている国際的な専門用語だからです。<br>
+<br>
+<ruby>Fakt<rt class="XL_L">事実</rt></ruby>e <ruby>ekzist<rt class="M_M">存在する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>aj <ruby>spec<rt class="XXL_L">種類</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> viruso, <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby><ruby>ter<rt class="M_M">土地</rt></ruby>oviruso, rinoviruso, <ruby>rot<rt class="XXS_S">[軍]中<br>隊</rt></ruby>aviruso <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>aj.<br>
+実際には、例えばエンテロウイルス、ライノウイルス、ロタウイルスなど、多くの種類のウイルスが存在します。<br>
+<br>
+La viruso, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>kaŭz<rt class="XXL_L">原因</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby><ruby>mond<rt class="XXL_L">世界</rt></ruby>an <ruby>epidemi<rt class="S_S">[病]流行性伝染病</rt></ruby>on, <ruby>aparten<rt class="M_M">(に)所属する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>famili<rt class="XXL_L">家族</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>onavirusoj, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>ekzist<rt class="M_M">存在する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>aj <ruby>ali<rt class="S_S">他の</rt></ruby>aj <ruby>spec<rt class="XXL_L">種類</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kaŭz<rt class="XXL_L">原因</rt></ruby>i <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>simpl<rt class="XL_L">簡単な</rt></ruby>an <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>varm<rt class="XXL_L">暑い</rt></ruby><ruby>um<rt class="XS_S">不定意味</rt></ruby>on.<br>
+現在、世界的な流行を引き起こしているウイルスはコロナウイルス科に属しますが、他にも多くの種類のコロナウイルスが存在し、それらは単なる風邪を引き起こすこともあります。<br>
+<br>
+Se <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>uz<rt class="S_S">使う</rt></ruby>i <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n <ruby>teknik<rt class="XXL_L">技術</rt></ruby>an <ruby>termin<rt class="L_L">専門用語</rt></ruby>on, <ruby>not<rt class="S_S">覚え書</rt></ruby>u, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>o.<br>
+もしその専門用語を使いたいのであれば、「<ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso」は一語であることに注意してください。<br>
+<br>
+La <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>part<rt class="XL_L">部分</rt></ruby>o <ruby>kor<rt class="XXL_L">心</rt></ruby>ona- <ruby>aspekt<rt class="M_M">(に)見える</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>adjektiv<rt class="L_L">[文]形容詞</rt></ruby>o, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>fakt<rt class="XL_L">事実</rt></ruby>e <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>part<rt class="XL_L">部分</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>radik<rt class="XXL_L">根</rt></ruby>o.<br>
+最初の部分「<ruby>kor<rt class="XXL_L">心</rt></ruby>ona-」は形容詞のように見えますが、実際には語根の一部です。<br>
+<br>
+La <ruby>vort<rt class="M_M">[文]語</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>divid<rt class="XS_S">(を)分割する</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>a.<br>
+その単語は分割できません。<br>
+<br>
+<ruby>Inter<rt class="S_S">(の)間に</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>e, <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby>, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>esperant<rt class="M_M">エスペラント</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>plej<rt class="XL_L">最も</rt></ruby><ruby>part<rt class="XL_L">部分</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>medicin<rt class="XXL_L">医学</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj, <ruby>diskut<rt class="S_S">(を)討議する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>nom<rt class="XXL_L">名前</rt></ruby>i <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n viruson <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o.<br>
+しかしその間、大部分が医療関係者ではないエスペランティストたちは、エスペラントでこのウイルスを何と呼ぶか議論しています。<br>
+<br>
+Corona <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> latina <ruby>vort<rt class="M_M">[文]語</rt></ruby>o <ruby>por<rt class="S_S">ために</rt></ruby> “<ruby>kron<rt class="XXL_L">冠</rt></ruby>o” (la <ruby>kap<rt class="XXL_L">頭</rt></ruby><ruby>vest<rt class="XXL_L">服</rt></ruby>o <ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>reĝ<rt class="XXL_L">王</rt></ruby>o <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>reĝ<rt class="XXL_L">王</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o), <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>aj <ruby>esperant<rt class="M_M">エスペラント</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj <ruby>nom<rt class="XXL_L">名前</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>kron<rt class="XXL_L">冠</rt></ruby>-viruso.<br>
+「Corona」はラテン語で「王冠」（王や女王が着用する頭飾り）を意味する言葉なので、多くのエスペランティストはそれを「<ruby>kron<rt class="XXL_L">冠</rt></ruby>-viruso（王冠ウイルス）」と呼んでいます。<br>
+<br>
+En <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>ekzist<rt class="M_M">存在する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>o <ruby>kor<rt class="XXL_L">心</rt></ruby>ono.<br>
+エスペラントには「<ruby>kor<rt class="XXL_L">心</rt></ruby>ono（コロナ）」という単語も存在します。<br>
+<br>
+Ĝi <ruby>rilat<rt class="XS_S">関係する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ekster<rt class="L_L">(の)外で</rt></ruby>a <ruby>part<rt class="XL_L">部分</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>atmosfer<rt class="XXL_L">大気</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>ĉirkaŭ<rt class="S_S">~まわりに;約</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sun<rt class="XL_L">太陽</rt></ruby>on, <ruby>kvankam<rt class="M_M">(~だ)けれども</rt></ruby> <ruby>normal<rt class="XXL_L">正常な</rt></ruby>e <ruby>ebl<rt class="L_L">可能</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby>i <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>eklips<rt class="XXL_L">[天]食</rt></ruby>o.<br>
+それは太陽を取り巻く大気の外層部分を指しますが、通常は日食の時しか見ることができません。<br>
+<br>
+<ruby>Fakt<rt class="XL_L">事実</rt></ruby>e <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>o <ruby>kor<rt class="XXL_L">心</rt></ruby>ono <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sam<rt class="M_M">同一の</rt></ruby>a latina <ruby>vort<rt class="M_M">[文]語</rt></ruby>o corona, <ruby>ĉar<rt class="XXS_S">だから<br>;車</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>ĉirkaŭ<rt class="S_S">~まわりに;約</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sun<rt class="XL_L">太陽</rt></ruby>on <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>kron<rt class="XXL_L">冠</rt></ruby>o.<br>
+実際、その「<ruby>kor<rt class="XXL_L">心</rt></ruby>ono」という単語も同じラテン語の「corona」に由来します。なぜなら、それが王冠のように太陽を取り囲んでいるからです。<br>
+<br>
+En <ruby>plur<rt class="M_M">複数の</rt></ruby>aj <ruby>eŭrop<rt class="S_S">ヨーロッパ</rt></ruby>aj <ruby>lingv<rt class="XXL_L">言語</rt></ruby>oj “<ruby>kron<rt class="XXL_L">冠</rt></ruby>o” <ruby>kaj<rt class="L_L">and</rt></ruby> “<ruby>kor<rt class="XXL_L">心</rt></ruby>ono” <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sam<rt class="M_M">同一の</rt></ruby>a <ruby>vort<rt class="M_M">[文]語</rt></ruby>o, <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> itala, <ruby>hispan<rt class="M_M">スペイン人</rt></ruby>a, <ruby>franc<rt class="S_S">フランス人</rt></ruby>a, <ruby>pol<rt class="XXS_S">ポーラ<br>ンド人</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>aj.<br>
+いくつかのヨーロッパ言語では、「<ruby>kron<rt class="XXL_L">冠</rt></ruby>o（王冠）」と「<ruby>kor<rt class="XXL_L">心</rt></ruby>ono（コロナ）」は同じ単語であり、例えばイタリア語、スペイン語、フランス語、ポーランド語などがあります。<br>
+<br>
+<ruby>Fot<rt class="XXS_S">写真を<br>撮る</rt></ruby>o: Wikipedia/Luc <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>atour CC BY-SA 3.0<br>
+写真：ウィキペディア/Luc <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>atour CC BY-SA 3.0<br>
+<br>
+La <ruby>membr<rt class="XXL_L">会員</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Akademi<rt class="XXL_L">学士院</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>diskut<rt class="S_S">(を)討議する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>nom<rt class="XXL_L">名前</rt></ruby>i <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n viruson <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o.<br>
+アカデミー・オブ・エスペラントのメンバーは、エスペラントでこのウイルスを何と呼ぶか議論しました。<br>
+<br>
+La <ruby>plej<rt class="XL_L">最も</rt></ruby><ruby>mult<rt class="M_M">多くの</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>egal<rt class="M_M">等しい</rt></ruby>e <ruby>divid<rt class="XS_S">(を)分割する</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>kron<rt class="XXL_L">冠</rt></ruby>-viruso <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>on-viruso.<br>
+大多数は「<ruby>kron<rt class="XXL_L">冠</rt></ruby>-viruso」と「<ruby>kor<rt class="XXL_L">心</rt></ruby>on-viruso」の間で意見が均等に分かれました。<br>
+<br>
+(La <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>grand<rt class="XL_L">大きい</rt></ruby>a <ruby>grup<rt class="S_S">グループ</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>medicin<rt class="XXL_L">医学</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj, <ruby>ali<rt class="S_S">他の</rt></ruby><ruby>flank<rt class="XXL_L">側</rt></ruby>e, <ruby>prefer<rt class="S_S">(を)より好む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>teknik<rt class="XXL_L">技術</rt></ruby>an <ruby>termin<rt class="L_L">専門用語</rt></ruby>on <ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso.)<br>
+（一方、少数の医療関係者のグループは、専門用語である「<ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso」を好みました。）<br>
+<br>
+<ruby>Fin<rt class="XS_S">終える</rt></ruby><ruby>fin<rt class="XS_S">終える</rt></ruby>e, do, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Akademi<rt class="XXL_L">学士院</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>rekomend<rt class="XL_L">(を)推薦する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>form<rt class="XXL_L">形</rt></ruby>oj, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>anonc<rt class="S_S">(を)公表する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ambaŭ<rt class="XXL_L">両方の</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>aj.<br>
+したがって、最終的にアカデミーは2つの形式のどちらか一方を推奨せず、両方とも使用可能であると発表しました。<br>
+<br>
+<ruby>Nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>iom<rt class="XL_L">多少</rt></ruby> <ruby>da<rt class="XXL_L">の</rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>ek<rt class="S_S">開始</rt></ruby><ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby>, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>form<rt class="XXL_L">形</rt></ruby>oj <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>prefer<rt class="S_S">(を)より好む</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby><ruby>mult<rt class="M_M">多くの</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>esperant<rt class="M_M">エスペラント</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj.<br>
+しばらくして初めて、2つの形式のうちどちらがエスペランティストの大多数に好まれるかがわかるでしょう。<br>
+<br>
+<ruby>Oft<rt class="XXS_S">たび<br>たび</rt></ruby>e <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>precip<rt class="S_S">特に;主要な</rt></ruby>e <ruby>rilat<rt class="XS_S">関係する</rt></ruby>e <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>scienc<rt class="XXL_L">科学</rt></ruby>aj <ruby>afer<rt class="XL_L">物事</rt></ruby>oj, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sam<rt class="M_M">同一の</rt></ruby>a <ruby>afer<rt class="XL_L">物事</rt></ruby>o <ruby>ekzist<rt class="M_M">存在する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>popol<rt class="XXL_L">人民</rt></ruby>a <ruby>nom<rt class="XXL_L">名前</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>scienc<rt class="XXL_L">科学</rt></ruby>a <ruby>nom<rt class="XXL_L">名前</rt></ruby>o, <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e <ruby>sal<rt class="XXL_L">塩</rt></ruby>o <ruby>nom<rt class="XXL_L">名前</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>natri<rt class="XXS_S">[化]ナト<br>リウム</rt></ruby>a <ruby>klor<rt class="S_S">[化]塩素</rt></ruby><ruby>id<rt class="XS_S">子孫</rt></ruby>o (NaCl), <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>flor<rt class="XXL_L">花</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o <ruby>miozot<rt class="XS_S">[植]ワスレナグサ</rt></ruby>o <ruby>nom<rt class="XXL_L">名前</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>forges<rt class="M_M">(を)忘れる</rt></ruby>u<ruby>mi<rt class="XXL_L">私</rt></ruby>no (ne-<ruby>forges<rt class="M_M">(を)忘れる</rt></ruby>u-<ruby>mi<rt class="XXL_L">私</rt></ruby>n-o).<br>
+特に科学的な事柄に関して、同じものに対して通俗名と学術名が存在することがよくあります。例えば、塩は塩化ナトリウム（NaCl）とも呼ばれ、ワスレナグサという小花は「<ruby>ne<rt class="M_M">ない</rt></ruby><ruby>forges<rt class="M_M">(を)忘れる</rt></ruby>u<ruby>mi<rt class="XXL_L">私</rt></ruby>no（私を忘れないで）」とも呼ばれます。<br>
+<br>
+<ruby>Ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> viruso, <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>e <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>gazet<rt class="XXL_L">雑誌</rt></ruby>o, <ruby>ricev<rt class="S_S">(を)受取る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>popol<rt class="XXL_L">人民</rt></ruby>-<ruby>nom<rt class="XXL_L">名前</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o, eĉ <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>ankoraŭ<rt class="XXL_L">まだ</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>decid<rt class="XS_S">(を)決定する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>form<rt class="XXL_L">形</rt></ruby>oj.<br>
+現在あらゆる新聞で話題になっているこのウイルスも、たとえ私たちがまだ2つの形式の間で決定していなくても、エスペラントでの通俗名を得ています。<br>
+<br>
+<ruby>Kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kriz<rt class="XL_L">危機</rt></ruby>o <ruby>fin<rt class="XS_S">終える</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby>, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>rajt<rt class="L_L">権利</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>normal<rt class="XXL_L">正常な</rt></ruby>a <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o, <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>plu<rt class="S_S">さらに</rt></ruby> <ruby>bezon<rt class="XS_S">(を)必要とする</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n <ruby>vort<rt class="M_M">[文]語</rt></ruby>on, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>rilat<rt class="XS_S">関係する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>a <ruby>aktual<rt class="XXL_L">現存の</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>o.<br>
+危機が終わり、私たち全員が通常の生活に戻る権利を得たとき、現代の時事問題に関連するその言葉はもはや必要なくなるでしょう。<br>
+<br>
+<ruby>Tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>scienc<rt class="XXL_L">科学</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>nov<rt class="S_S">新しい</rt></ruby>e <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby>i <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby> <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>onaviruso, <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>prefer<rt class="S_S">(を)より好む</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>an <ruby>scienc<rt class="XXL_L">科学</rt></ruby>an <ruby>termin<rt class="L_L">専門用語</rt></ruby>on.<br>
+その時、科学者たちは再び、自分たちの好む学術用語を使ってコロナウイルスについて互いに話すことができるでしょう。<br>
+<br>
+<ruby>Ann<rt class="M_M">アンナ</rt></ruby>a Löwenstein<br>
+アンナ・レーヴェンシュタイン<br>
+<br>
+<ruby>Redakt<rt class="S_S">(を)編集する</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>e 16an <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>april<rt class="XXL_L">４月</rt></ruby>o, 2020 <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Ann<rt class="M_M">アンナ</rt></ruby>a<br>
+2020年4月16日 アンナ編集<br>
+</p></body></html>
