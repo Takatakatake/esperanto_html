@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大本エスペラント</title>
+  <style>
+    html,
+    body {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+
+    :root {
+      --ruby-color: blue;
+      --ruby-font-size: 0.5em;
+    }
+
+    html {
+      font-size: 100%;
+      /* 多くのブラウザは16px相当が標準 */
+    }
+
+    .text-M_M {
+      font-size: 1rem !important;
+      font-family: Arial, sans-serif;
+      line-height: 2.0 !important;
+      /* text-M_Mのline-heightとrubyのline-heightは一致させる必要がある。 */
+      display: block;
+      /* ブロック要素として扱う */
+      position: relative;
+    }
+
+    /* ▼ ルビ（フレックスでルビを上に表示） */
+    ruby {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: top !important;
+      line-height: 2.0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: 1rem !important;
+    }
+
+    /* ▼ 追加マイナス余白（ルビサイズ別に上書き） */
+    rt {
+      display: block !important;
+      font-size: var(--ruby-font-size);
+      color: var(--ruby-color);
+      line-height: 1.05;
+      /*ルビを改行するケースにおけるルビの行間*/
+      text-align: center;
+      /* margin-top: 0.2em !important;   
+        transform: translateY(0.4em) !important; */
+    }
+
+    rt.XXXS_S {
+      --ruby-font-size: 0.3em;
+      margin-top: -8.3em !important;
+      /* ルビの高さ位置はここで調節する。 */
+      transform: translateY(-0em) !important;
+    }
+
+    rt.XXS_S {
+      --ruby-font-size: 0.3em;
+      margin-top: -7.2em !important;
+      /* ルビの高さ位置はここで調節する。 */
+      transform: translateY(-0em) !important;
+    }
+
+    rt.XS_S {
+      --ruby-font-size: 0.3em;
+      margin-top: -6.1em !important;
+      transform: translateY(-0em) !important;
+    }
+
+    rt.S_S {
+      --ruby-font-size: 0.4em;
+      margin-top: -4.85em !important;
+      transform: translateY(-0em) !important;
+    }
+
+    rt.M_M {
+      --ruby-font-size: 0.5em;
+      margin-top: -4.00em !important;
+      transform: translateY(-0.0em) !important;
+    }
+
+    rt.L_L {
+      --ruby-font-size: 0.6em;
+      margin-top: -3.55em !important;
+      transform: translateY(-0.0em) !important;
+    }
+
+    rt.XL_L {
+      --ruby-font-size: 0.7em;
+      margin-top: -3.20em !important;
+      transform: translateY(-0.0em) !important;
+    }
+
+    rt.XXL_L {
+      --ruby-font-size: 0.8em;
+      margin-top: -2.80em !important;
+      transform: translateY(-0.0em) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="text-M_M">
+    ---<br>
+    <br>
+    ### 【2ページ目】 <ruby>Ĉe<rt class="XXS_S">とこ<br>ろで</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>o<br>
+    <br>
+    **Ĉe <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>o**<br>
+    <br>
+    <ruby>Antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>Ŝink<rt class="S_S">[料]ハム</rt></ruby>yoo-den <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>Ten<rt class="XS_S">支え持つ</rt></ruby>'onkjo (la <ruby>Centr<rt class="XXL_L">中心
+      </rt></ruby>a <ruby>Ofic<rt class="XL_L">職務</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> Oomoto, <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>urb<rt class="XXL_L">市</rt></ruby>o <ruby>Kame<rt class="S_S">[美]カメオ</rt></ruby>oka, <ruby>guberni
+      <rt class="XXL_L">県</rt>
+    </ruby>o Kioto), <ruby>star<rt class="XS_S">立っている</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby> "<ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>Monument<rt class="XXL_L">記念碑</rt></ruby>o",
+    <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>vual<rt class="XS_S">[服]ベール</rt></ruby><ruby>ig<rt class="XXS_S">
+        させ<br>る</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino DEGUĈI Naohi, <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>Tri<rt class="XL_L">三</rt></ruby>a <ruby>Spirit<rt class="XXL_L">精神</rt></ruby>a <ruby>Gvid<rt class="XXS_S">
+        (を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o,
+    <ruby>en<rt class="M_M">中で</rt></ruby> 1963 (<ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>du<rt
+        class="XXL_L">二</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby>-<ruby>jar<rt class="XXL_L">年</rt>
+    </ruby><ruby>cent<rt class="XXL_L">百</rt></ruby>o), <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>memor<rt class="S_S">(を)覚えている</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> 40-a <ruby>dat<rt class="L_L">日付</rt></ruby><ruby>re<rt class="S_S">
+        再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>iĝ<rt class="XS_S">なる
+      </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> EPA. <ruby>Sur<rt class="XXS_S">(~の)<br>上に</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>monument<rt class="XXL_L">記念碑</rt></ruby>o <ruby>est<rt class="XXS_S">
+        (~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>gravur<rt class="S_S">(を)彫り込む</rt>
+    </ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>aj <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>aj <ruby>liter<rt class="XL_L">文字</rt></ruby>oj "<ruby>Unu<rt
+        class="XXL_L">一</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>o, <ruby>Unu<rt class="XXL_L">一</rt></ruby>
+    <ruby>Mond<rt class="XXL_L">世界</rt></ruby>o, <ruby>Unu<rt class="XXL_L">一</rt></ruby> <ruby>Inter<rt class="S_S">
+        (の)間に</rt></ruby><ruby>lingv<rt class="XXL_L">言語</rt></ruby>o". <ruby>La<rt class="M_M">The</rt></ruby>
+    <ruby>ating<rt class="M_M">(に)着く</rt></ruby>-<ruby>punkt<rt class="XXL_L">点</rt></ruby>o <ruby>de<rt class="XS_S">
+        の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>tri<rt class="XL_L">三</rt></ruby> <ruby>ag<rt
+        class="XXS_S">行動<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>oj, <ruby>inter<rt class="S_S">
+        (の)間に</rt></ruby><ruby>religi<rt class="XXL_L">宗教</rt></ruby>a, <ruby>mond<rt class="XXL_L">世界</rt>
+    </ruby><ruby>feder<rt class="XS_S">(を)連合させる</rt></ruby><ruby>ism<rt class="XL_L">主義</rt></ruby>a <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a, <ruby>ĝis<rt class="XS_S">(~)まで
+      </rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby>en<ruby>puŝ<rt
+        class="XS_S">(を)押す</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>aj <ruby>de<rt class="XS_S">の;から
+      </rt></ruby> Oomoto <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>real<rt class="M_M">現実の</rt></ruby><ruby>ig<rt
+        class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt>
+    </ruby>on <ruby>Mir<rt class="XXS_S">不思議<br>に思う</rt></ruby>oku (<ruby>Sur<rt class="XXS_S">(~の)<br>上に</rt>
+    </ruby><ruby>ter<rt class="M_M">土地</rt></ruby>a <ruby>Ĉiel<rt class="S_S">色々に</rt></ruby><ruby>ul<rt class="XL_L">
+        人</rt></ruby>a <ruby>Regn<rt class="M_M">[法]国家</rt></ruby>o), <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>montr<rt class="L_L">(を)示す</rt></ruby><ruby>it<rt
+        class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>konciz<rt class="XXL_L">簡潔な</rt></ruby>e. (Vd. p. 24)<br>
+    <br>
+    <ruby>Oni<rt class="L_L">人々</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>nun<rt class="XXL_L">今</rt></ruby>
+    <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> 5000
+    <ruby>divers<rt class="XXL_L">様々な</rt></ruby>aj <ruby>lingv<rt class="XXL_L">言語</rt></ruby>oj, majoritataj <ruby>kaj
+      <rt class="L_L">and</rt>
+    </ruby> minoritataj. <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt>
+    </ruby> <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o, <ruby>ke<rt
+        class="XXS_S">という<br>こと</rt></ruby> <ruby>hom<rt class="XXL_L">人</rt></ruby>oj, <ruby>re<rt class="S_S">再び</rt>
+    </ruby>spekt<ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lingv
+      <rt class="XXL_L">言語</rt>
+    </ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~
+      </rt></ruby> <ruby>naci<rt class="XXL_L">国民</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ĉiu<rt
+        class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>region<rt class="XL_L">[地]地方</rt></ruby>o, <ruby>uz<rt class="S_S">使う
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on,
+    <ruby>neŭtral<rt class="XXL_L">中立の</rt></ruby>an <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>sen<rt class="XS_S">
+        (~)なしで</rt></ruby><ruby>parti<rt class="S_S">[政]党派</rt></ruby>an, <ruby>en<rt class="M_M">中で</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>scen<rt class="XL_L">[劇]場</rt></ruby>oj <ruby>de<rt class="XS_S">の;から
+      </rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci<rt class="XXL_L">国民</rt></ruby>aj
+    <ruby>kontakt<rt class="XXL_L">接触</rt></ruby>oj.<br>
+    D-ro L.L. <ruby>Zamenhof<rt class="M_M">[人名]ザメンホフ</rt></ruby>, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kre<rt
+        class="XS_S">創造する</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>o <ruby>de<rt class="XS_S">の;から
+      </rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o, <ruby>nask<rt class="M_M">(を)生む</rt>
+    </ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">
+        中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>o
+    1859, <ruby>en<rt class="M_M">中で</rt></ruby> Bjalistoko, <ruby>Pol<rt class="XXS_S">ポーラ<br>ンド人</rt></ruby><ruby>land
+      <rt class="XXL_L">国</rt>
+    </ruby>o (<ruby>si<rt class="XS_S">自分</rt></ruby>a<ruby>temp<rt class="XXL_L">時間</rt>
+    </ruby>e <ruby>teritori<rt class="XL_L">[政]領土</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>Car<rt class="XS_S">ツァーリ</rt></ruby><ruby>ism<rt class="XL_L">主義</rt></ruby>a
+    <ruby>Rus<rt class="XS_S">ロシア人</rt></ruby>io). <ruby>En<rt class="M_M">中で</rt></ruby> <ruby>tiu<rt class="XXS_S">
+        その;あ<br>のひと</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>a Bjalistoko <ruby>loĝ<rt class="XS_S">(に)住む
+      </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>divers<rt class="XXL_L">様々な</rt></ruby>aj
+    <ruby>ras<rt class="L_L">人種</rt></ruby>oj, <ruby>nom<rt class="XXL_L">名前</rt></ruby>e, <ruby>pol<rt class="XXS_S">
+        ポーラ<br>ンド人</rt></ruby>oj, <ruby>german<rt class="XL_L">ドイツ人</rt></ruby>oj, <ruby>jud<rt class="XS_S">ユダヤ人</rt>
+    </ruby>oj, <ruby>rus<rt class="XS_S">ロシア人</rt></ruby>oj k.a., <ruby>kaj<rt class="L_L">and</rt></ruby> ĉi
+    <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>is<rt
+        class="XXS_S">過去<br>形</rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>si<rt class="XS_S">自分</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sam<rt class="M_M">
+        同一の</rt></ruby>ajn <ruby>lingv<rt class="XXL_L">言語</rt></ruby>ojn. <ruby>Ne<rt class="M_M">ない</rt></ruby>
+    <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>, <ruby>sed<rt
+        class="S_S">しかし</rt></ruby> diferencis <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>ili<rt class="XXS_S">
+        それ<br>ら</rt></ruby>aj <ruby>religi<rt class="XXL_L">宗教</rt></ruby>oj, <ruby>nom<rt class="XXL_L">名前</rt>
+    </ruby>e, <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> iuj
+    <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>katolik<rt
+        class="XXS_S">[宗]カトリ<br>ック教徒</rt></ruby>an, iuj <ruby>protest<rt class="L_L">抗議する</rt></ruby><ruby>ant<rt
+        class="XXS_S">能動;<br>継続</rt></ruby><ruby>ism<rt class="XL_L">主義</rt></ruby>an, iuj <ruby>rus<rt class="XS_S">
+        ロシア人</rt></ruby>-<ruby>ortodoks<rt class="XXL_L">正統の</rt></ruby>an, iuj <ruby>jud<rt class="XS_S">ユダヤ人</rt>
+    </ruby><ruby>ism<rt class="XL_L">主義</rt></ruby>an <ruby>k.t.p.<rt class="M_M">kaj tiel plu</rt></ruby>. <ruby>Do
+      <rt class="XS_S">そこで</rt>
+    </ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら
+      </rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby><ruby>tag<rt class="XXL_L">日</rt></ruby>e <ruby>okaz
+      <rt class="L_L">起こる</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kverel<rt class="L_L">口論する</rt>
+    </ruby>oj.<br>
+    <br>
+    En <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>situaci<rt class="XXL_L">事態</rt></ruby>o <ruby>la<rt class="M_M">
+        the</rt></ruby> D-ro <ruby>Zamenhof<rt class="M_M">[人名]ザメンホフ</rt></ruby> <ruby>iniciat<rt class="S_S">(を)発起する
+      </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci
+      <rt class="XXL_L">国民</rt>
+    </ruby>an <ruby>komun<rt class="XXL_L">共通の</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語
+      </rt></ruby>on, <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>pren<rt class="XS_S">(を)手に取る</rt>
+    </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>la<rt class="M_M">the</rt></ruby> <ruby>el<rt
+        class="XXS_S">中か<br>ら</rt></ruby><ruby>star<rt class="XS_S">立っている</rt></ruby>ajn <ruby>part<rt class="XL_L">部分
+      </rt></ruby>ojn <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mult
+      <rt class="M_M">多くの</rt>
+    </ruby>aj <ruby>lingv<rt class="XXL_L">言語</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>publik<rt class="XXL_L">公衆</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt
+        class="XXS_S">過去<br>形</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>en<rt class="M_M">中で</rt>
+    </ruby> 1887. <ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>real<rt
+        class="M_M">現実の</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>instal<rt class="XS_S">(を)据え付ける</rt></ruby>o
+    <ruby>lud<rt class="XS_S">(を)遊ぶ</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>grav<rt class="M_M">
+        重要な</rt></ruby>an <ruby>rol<rt class="XXS_S">[劇]役<br>割</rt></ruby>on <ruby>li<rt class="S_S">彼</rt></ruby>a
+    <ruby>fort<rt class="L_L">強い</rt></ruby>a <ruby>aspir<rt class="XS_S">(を)熱望する</rt></ruby>o <ruby>al<rt
+        class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>pac<rt class="XL_L">平和</rt>
+    </ruby>a <ruby>mond<rt class="XXL_L">世界</rt></ruby>o, <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>kiu<rt
+        class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>e <ruby>viv<rt class="XXS_S">
+        生きて<br>いる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sam
+      <rt class="M_M">同一の</rt>
+    </ruby>aj <ruby>ras<rt class="L_L">人種</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sam<rt class="M_M">同一の</rt></ruby>aj <ruby>religi<rt
+        class="XXL_L">宗教</rt></ruby>oj <ruby>inter<rt class="S_S">(の)間に</rt></ruby> si, <ruby>kaj<rt class="L_L">and
+      </rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>hom<rt
+        class="XXL_L">人</rt></ruby>oj <ruby>ne<rt class="M_M">ない</rt></ruby> diskriminaci<ruby>os<rt class="XS_S">未来形
+      </rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby> si.<br>
+    <br>
+    Ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on, <ruby>Esperant
+      <rt class="M_M">エスペラント</rt>
+    </ruby>on, <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>o DEGUĈI <ruby>Oni<rt class="L_L">人々</rt></ruby>saburo
+    <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>pren<rt class="XS_S">
+        (を)手に取る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby>
+    Oomoto <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>juni<rt class="XL_L">６月</rt></ruby>o, 1923, <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o-<ruby>Propagand
+      <rt class="XL_L">(を)宣伝する</rt>
+    </ruby>an <ruby>Asoci<rt class="XXL_L">協会</rt></ruby>on (<ruby>post<rt class="S_S">
+        (~の)後で</rt></ruby>e <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o-<ruby>popular<rt class="L_L">人気のある</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>a <ruby>Asoci<rt class="XXL_L">協会</rt></ruby>o). <ruby>Post<rt
+        class="S_S">(~の)後で</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby>, <ruby>dum<rt class="S_S">
+        (~する)間</rt></ruby> 90 <ruby>jar<rt class="XXL_L">年</rt></ruby>oj EPA <ruby>daŭr<rt class="XXL_L">継続</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>si<rt
+        class="XS_S">自分</rt></ruby>an <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為
+      </rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ekster<rt
+        class="L_L">(の)外で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>land<rt class="XXL_L">国</rt>
+    </ruby>o, <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>gvid<rt
+        class="XXS_S">(を)案内<br>する</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>sin<rt class="XXL_L">懐</rt></ruby><ruby>sekv<rt class="XS_S">(に)付き従う</rt></ruby>aj <ruby>Gvid
+      <rt class="XXS_S">(を)案内<br>する</rt>
+    </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">
+        女性</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby>g<ruby>vid
+      <rt class="XXS_S">見る;<br>会う</rt>
+    </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>oj.<br>
+    <br>
+    Ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>libr<rt class="XXL_L">本</rt></ruby><ruby>et<rt
+        class="XS_S">弱小</rt></ruby>o <ruby>prezent<rt class="M_M">(を)差し出す</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby>, <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kronologi<rt
+        class="XXL_L">年代学</rt></ruby>a <ruby>tabel<rt class="L_L">一覧表</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>fot<rt class="XXS_S">写真を<br>撮る</rt></ruby>oj, <ruby>la<rt class="M_M">the</rt></ruby> ins<ruby>tru
+      <rt class="XXL_L">穴</rt>
+    </ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>ojn <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sin<rt class="XXL_L">懐</rt></ruby><ruby>sekv<rt class="XS_S">
+        (に)付き従う</rt></ruby>aj <ruby>Gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続
+      </rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby>g<ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby><ruby>ant<rt
+        class="XXS_S">能動;<br>継続</rt></ruby>oj <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>Esperant<rt class="M_M">
+        エスペラント</rt></ruby>o, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ĉef
+      <rt class="XXL_L">主</rt>
+    </ruby>ajn <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>ad<rt class="XXS_S">
+        継続<br>行為</rt></ruby>ojn <ruby>dum<rt class="S_S">(~する)間</rt></ruby> 90 <ruby>jar<rt class="XXL_L">年</rt>
+    </ruby>oj, <ruby>plen<rt class="XS_S">いっぱいの</rt></ruby><ruby>um<rt class="XS_S">不定意味</rt></ruby><ruby>it<rt
+        class="XXXS_S">受動<br>完<br>了</rt></ruby>ajn <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ni<rt class="XS_S">私達
+      </rt></ruby>aj <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby>oj. <ruby>Trans
+      <rt class="XS_S">(~の)向こうに</rt>
+    </ruby><ruby>pas<rt class="XS_S">通過する</rt></ruby>ante <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>grand<rt class="XL_L">大きい</rt></ruby>an <ruby>jubile<rt class="XL_L">記念祭</rt></ruby>an
+    <ruby>jar<rt class="XXL_L">年</rt></ruby>on (la <ruby>jar<rt class="XXL_L">年</rt></ruby>o <ruby>de<rt class="XS_S">
+        の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> 120-a <ruby>jubile<rt class="XL_L">記念祭</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fond<rt class="XS_S">(を)創立する
+      </rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto), <ruby>kaj
+      <rt class="L_L">and</rt>
+    </ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>nov<rt class="S_S">新しい</rt></ruby>e
+    <ruby>re<rt class="S_S">再び</rt></ruby><ruby>memor<rt class="S_S">(を)覚えている</rt></ruby><ruby>ant<rt class="XXS_S">
+        能動;<br>継続</rt></ruby>e <ruby>la<rt class="M_M">the</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby>ajn
+    <ruby>tag<rt class="XXL_L">日</rt></ruby>ojn <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> EPA, <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt>
+    </ruby>e <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>u ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt>
+    </ruby>n <ruby>pac<rt class="XL_L">平和</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>Esperant
+      <rt class="M_M">エスペラント</rt>
+    </ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に
+      </rt></ruby>e <ruby>klopod<rt class="L_L">奔走する</rt></ruby>u <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為
+      </rt></ruby>o <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>vast<rt class="XXL_L">広い</rt></ruby><ruby>ig<rt
+        class="XXS_S">させ<br>る</rt></ruby>i <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on <ruby>en<rt class="M_M">中で
+      </rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ekster<rt class="L_L">(の)外で</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>land<rt class="XXL_L">国</rt></ruby>o.<br>
+    <br>
+    En <ruby>juni<rt class="XL_L">６月</rt></ruby>o, 2013 (EPA: <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>o-<ruby>Popular<rt class="L_L">人気のある</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>a <ruby>Asoci
+      <rt class="XXL_L">協会</rt>
+    </ruby>o)<br>
+    <br>
+    ---<br>
+    <br>
+    ### 【3ページ目】 <ruby>La<rt class="M_M">The</rt></ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    **La <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto**<br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>o **DEGUĈI <ruby>Oni<rt class="L_L">人々</rt></ruby>saburo**<br>
+    (<ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby><ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>int<rt
+        class="XXS_S">能動;<br>完了</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto)<br>
+    <br>
+    **Utaoj(<ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>long<rt class="XXL_L">長い</rt></ruby>aj <ruby>poem<rt
+        class="XXL_L">詩</rt></ruby>oj)**<br>
+    <br>
+    <ruby>Jen<rt class="XXS_S">そらこ<br>こに</rt></ruby>, <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby> <ruby>konsider<rt
+        class="L_L">(を)考慮する</rt></ruby>'<br>
+    al <ruby>land<rt class="XXL_L">国</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>popol<rt
+        class="XXL_L">人民</rt></ruby>oj,<br>
+    <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>tut<rt class="XS_S">
+        全部の</rt></ruby>a <ruby>ter<rt class="M_M">土地</rt></ruby>'<br>
+    <ruby>seren<rt class="S_S">おだやかな</rt></ruby>e <ruby>tra<rt class="XS_S">通って</rt></ruby><ruby>sonor<rt class="XXL_L">
+        音響</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby><br>
+    la <ruby>parol<rt class="S_S">話しをする</rt></ruby>' <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esper<rt
+        class="XS_S">(を)希望する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>'.<br>
+    <br>
+    Dank' <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby><ruby>favor<rt
+        class="M_M">好意的な</rt></ruby>',<br>
+    la <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>vast<rt class="XXL_L">広い</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+    </ruby>' <ruby>de<rt class="XS_S">の;から</rt></ruby> l' <ruby>sankt<rt class="S_S">[宗]神聖な</rt></ruby>a<br>
+    <ruby>instru<rt class="S_S">(を)教える</rt></ruby>aro de<br>
+    l' <ruby>hom<rt class="XXL_L">人</rt></ruby><ruby>am<rt class="S_S">愛する</rt></ruby>o, <ruby>real<rt class="M_M">現実の
+      </rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby><br>
+    <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lingv<rt class="XXL_L">言語
+      </rt></ruby>o <ruby>Esper<rt class="XS_S">(を)希望する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt>
+    </ruby>'.<br>
+    <br>
+    <ruby>Ĝust<rt class="M_M">正しい</rt></ruby>e <ruby>Esper<rt class="XS_S">(を)希望する</rt></ruby><ruby>ant<rt
+        class="XXS_S">能動;<br>継続</rt></ruby>'<br>
+    <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>fort<rt class="L_L">強い</rt></ruby>a <ruby>influ<rt class="XXS_S">
+        影響を<br>与える</rt></ruby><ruby>pov<rt class="S_S">できる</rt></ruby>o<br>
+    de <ruby>la<rt class="M_M">the</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>anim'<br>
+    ja <ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>grand<rt class="XL_L">大きい
+      </rt></ruby>a <ruby>help<rt class="XS_S">手助けする</rt></ruby>o<br>
+    <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>nobl<rt class="M_M">高潔な</rt>
+    </ruby>a <ruby>misi<rt class="XXL_L">使命</rt></ruby>ad'.<br>
+    <br>
+    Nu, <ruby>amik<rt class="XXL_L">友達</rt></ruby>oj, vi<br>
+    <ruby>rapid<rt class="XXL_L">速い</rt></ruby>e <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>vast<rt class="XXL_L">広い
+      </rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>u<br>
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>Esper<rt class="XS_S">(を)希望する</rt></ruby><ruby>ant<rt
+        class="XXS_S">能動;<br>継続</rt></ruby>'<br>
+    <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>lum<rt class="XXS_S">
+        光って<br>いる</rt></ruby>o<ruby>plen<rt class="XS_S">いっぱいの</rt></ruby>a<br>
+    nian <ruby>mond<rt class="XXL_L">世界</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> l' <ruby>mal<rt
+        class="S_S">正反対</rt></ruby><ruby>lum<rt class="XXS_S">光って<br>いる</rt></ruby>'.<br>
+    <br>
+    En Fu<ruby>des<rt class="XS_S">ますます</rt></ruby>aki ("Diaj <ruby>Revelaci<rt class="XXL_L">[宗]啓示</rt></ruby>oj")
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>int<rt class="XXS_S">
+        能動;<br>完了</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto
+    <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby>j <ruby>vort<rt class="M_M">[文]語</rt></ruby>oj,<br>
+    "La <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>os<rt
+        class="XS_S">未来形</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby><ruby>ec<rt class="S_S">性質</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>per
+      <rt class="S_S">よって</rt>
+    </ruby> 48 <ruby>liter<rt class="XL_L">文字</rt></ruby>oj".<br>
+    Ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j "48 <ruby>liter<rt class="XL_L">文字</rt></ruby>oj"
+    <ruby>signif<rt class="XS_S">(を)意味する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>simpl<rt
+        class="XL_L">簡単な</rt></ruby>an <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>facil<rt class="M_M">容易な</rt>
+    </ruby>an <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> japana <ruby>esprim<rt class="S_S">(を)表現する</rt></ruby>o. <ruby>Ĝeneral<rt
+        class="XXL_L">全般の</rt></ruby>e <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>it<rt class="XXXS_S">
+        受動<br>完<br>了</rt></ruby>e, <ruby>Di<rt class="XL_L">神</rt></ruby>o <ruby>komunik<rt class="XL_L">(を)伝える</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>vol<rt
+        class="XXS_S">意志が<br>ある</rt></ruby>on <ruby>per<rt class="S_S">よって</rt></ruby>e <ruby>de<rt class="XS_S">の;から
+      </rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>intelekt<rt class="XXL_L">知性</rt></ruby>o, <ruby>vol<rt
+        class="XXS_S">意志が<br>ある</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>memor<rt class="S_S">
+        (を)覚えている</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>koncern<rt class="S_S">(に)関係がある</rt>
+    </ruby>a <ruby>profet<rt class="M_M">[宗]預言者</rt></ruby>o, <ruby>tial<rt class="XXS_S">それ<br>ゆえ</rt></ruby>
+    <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>esprim<rt class="S_S">(を)表現する</rt></ruby>o.<br>
+    <ruby>Post<rt class="S_S">(~の)後で</rt></ruby><ruby>nun<rt class="XXL_L">今</rt></ruby>a <ruby>task<rt class="XXL_L">任務
+      </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ĉiu<rt
+        class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>respektiv<rt class="XL_L">それぞれの</rt></ruby>e <ruby>dis<rt
+        class="M_M">分散</rt></ruby><ruby>vast<rt class="XXL_L">広い</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt>
+    </ruby>u <ruby>la<rt class="M_M">the</rt></ruby> <ruby>evangeli<rt class="XL_L">[宗]福音書</rt></ruby>on <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>a <ruby>regn<rt class="M_M">[法]国家</rt>
+    </ruby>o. <ruby>Tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as
+      <rt class="XS_S">現在形</rt>
+    </ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>facil<rt class="M_M">容易な</rt>
+    </ruby>e <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>n <ruby>plen<rt class="XS_S">いっぱいの</rt></ruby><ruby>um<rt
+        class="XS_S">不定意味</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby>a
+    <ruby>mond<rt class="XXL_L">世界</rt></ruby>o, <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>kiu<rt class="XXS_S">
+        だれ;<br>どれ</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>naci<rt class="XXL_L">国民</rt>
+    </ruby>o <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mal<rt
+        class="S_S">正反対</rt></ruby><ruby>sam<rt class="M_M">同一の</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語</rt>
+    </ruby>on. <ruby>Sed<rt class="S_S">しかし</rt></ruby>, <ruby>ĉar<rt class="XXS_S">だから<br>;車</rt></ruby>
+    <ruby>universal<rt class="XXL_L">普遍的な</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>o <ruby>funkci<rt class="XXL_L">機能</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> 28 <ruby>liter
+      <rt class="XL_L">文字</rt>
+    </ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>jam<rt class="XL_L">既に</rt>
+    </ruby> <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>vast<rt class="XXL_L">広い</rt></ruby><ruby>iĝ<rt class="XS_S">
+        なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tra<rt class="XS_S">通って</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>a <ruby>mond<rt class="XXL_L">世界</rt>
+    </ruby>o, <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>konform<rt class="XXL_L">適合した</rt></ruby>e <ruby>al<rt class="XXS_S">~の方<br>へ
+      </rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o. <ruby>En<rt
+        class="M_M">中で</rt></ruby> <ruby>Bibli<rt class="XXL_L">聖書</rt></ruby>o <ruby>trov<rt class="XXS_S">(を)見つ<br>ける
+      </rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>fraz<rt class="XXL_L">文</rt></ruby>o, "En <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is
+      <rt class="XXS_S">過去<br>形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Vort<rt class="M_M">[文]語</rt>
+    </ruby>o, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Vort<rt
+        class="M_M">[文]語</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形
+      </rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>o, <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Vort<rt class="M_M">[文]語</rt></ruby>o
+    <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>Di<rt
+        class="XL_L">神</rt></ruby>o". <ruby>La<rt class="M_M">The</rt></ruby> <ruby>dis<rt class="M_M">分散</rt>
+    </ruby><ruby>vast<rt class="XXL_L">広い</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>on <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>a <ruby>voj<rt class="XXL_L">道</rt></ruby>o
+    (<ruby>ver<rt class="S_S">本当の</rt></ruby>o) <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>dev<rt class="L_L">must
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby>i <ruby>per
+      <rt class="S_S">よって</rt>
+    </ruby> "<ruby>vort<rt class="M_M">[文]語</rt></ruby>oj".<br>
+    Mi <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>kor<rt class="XXL_L">
+        心</rt></ruby>e <ruby>dezir<rt class="M_M">(を)望む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ke<rt
+        class="XXS_S">という<br>こと</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>sufiĉ<rt
+        class="L_L">十分な</rt></ruby>e <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby>u ĉi <ruby>tiu<rt class="XXS_S">
+        その;あ<br>のひと</rt></ruby>n <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on (<ruby>Esperant<rt class="M_M">エスペラント
+      </rt></ruby>on). <ruby>Kvankam<rt class="M_M">(~だ)けれども</rt></ruby> <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt>
+    </ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>hom<rt class="XXL_L">
+        人</rt></ruby>oj, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>dir<rt class="XXS_S">(を)言<br>う</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ĉe<rt
+        class="XXS_S">とこ<br>ろで</rt></ruby> Oomoto <ruby>sufiĉ<rt class="L_L">十分な</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt>
+    </ruby><ruby>prezent<rt class="M_M">(を)差し出す</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>bon<rt
+        class="XL_L">良い</rt></ruby>aj <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>oj, <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt
+        class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nur<rt class="XXS_S">
+        ただ~<br>だけ</rt></ruby> <ruby>model<rt class="XXL_L">模型</rt></ruby>a. <ruby>Ĉiu<rt class="XXS_S">各々の<br>;各~</rt>
+    </ruby> <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby>u <ruby>serioz<rt
+        class="L_L">まじめな</rt></ruby>e.<br>
+    <br>
+    (la 1a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Juli<rt class="M_M">７月</rt></ruby>o, 1923)<br>
+    <br>
+    ---<br>
+    <br>
+    ### 【5ページ目】 Utaoj "<ruby>Gem<rt class="XXL_L">宝石</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Ananai"<br>
+    <br>
+    **Utaoj(<ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>long<rt class="XXL_L">長い</rt></ruby>aj <ruby>poem<rt
+        class="XXL_L">詩</rt></ruby>oj) <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Majstr<rt class="XXL_L">巨匠</rt>
+    </ruby>o DEGUĈI <ruby>Oni<rt class="L_L">人々</rt></ruby>saburo**<br>
+    **Utaoj "<ruby>Gem<rt class="XXL_L">宝石</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Ananai"** ¹⁾<br>
+    <br>
+    **<ruby>Tri<rt class="XL_L">三</rt></ruby> <ruby>Gem<rt class="XXL_L">宝石</rt></ruby>oj (<ruby>Spirit<rt
+        class="XXL_L">精神</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Mizu)**<br>
+    La cinta<ruby>mani<rt class="L_L">マニア</rt></ruby>' ²⁾,<br>
+    la <ruby>vort<rt class="M_M">[文]語</rt></ruby>animo <ruby>de<rt class="XS_S">の;から</rt></ruby> Mizu<br>
+    <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>Di<rt class="XL_L">神
+      </rt></ruby>a <ruby>gem<rt class="XXL_L">宝石</rt></ruby>',<br>
+    <ruby>lig<rt class="XXS_S">結ぶ;<br>連盟</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>harmoni<rt
+        class="XXL_L">調和</rt></ruby>e<br>
+    la <ruby>ĉiel<rt class="S_S">色々に</rt></ruby>on <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>ter<rt class="M_M">土地</rt></ruby>'.<br>
+    <br>
+    La <ruby>viol<rt class="XXS_S">[植]ス<br>ミレ</rt></ruby>a <ruby>gem<rt class="XXL_L">宝石</rt></ruby>'<br>
+    <ruby>lig<rt class="XXS_S">結ぶ;<br>連盟</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>ĉiel<rt class="S_S">色々に</rt></ruby>on<br>
+    <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ter<rt class="M_M">土地</rt>
+    </ruby>on, <ruby>jen<rt class="XXS_S">そらこ<br>こに</rt></ruby><br>
+    "<ruby>Rakont<rt class="M_M">(を)物語る</rt></ruby>oj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>Spirit<rt
+        class="XXL_L">精神</rt></ruby>a<br>
+    <ruby>Mond<rt class="XXL_L">世界</rt></ruby>'" <ruby>de<rt class="XS_S">の;から</rt></ruby> l' <ruby>Di<rt class="XL_L">神
+      </rt></ruby>o <ruby>Mir<rt class="XXS_S">不思議<br>に思う</rt></ruby>oku.<br>
+    <br>
+    L' <ruby>or<rt class="XS_S">[化]金</rt></ruby><ruby>kolor<rt class="XXL_L">色</rt></ruby>a <ruby>gem<rt class="XXL_L">
+        宝石</rt></ruby>',<br>
+    ja <ruby>tem<rt class="M_M">テーマ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pri<rt class="XS_S">ついて
+      </rt></ruby> l' <ruby>organ<rt class="L_L">[解]器官</rt></ruby>o,<br>
+    <ruby>liver<rt class="XXS_S">(を)供給<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a en<br>
+    <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ekster<rt class="L_L">(の)外で</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>doktrin<rt class="XXL_L">学説</rt></ruby>oj<br>
+    <ruby>or<rt class="XS_S">[化]金</rt></ruby>ajn <ruby>vort<rt class="M_M">[文]語</rt></ruby>ojn <ruby>por<rt class="S_S">
+        ために</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sav<rt class="XS_S">救助する</rt></ruby>'.<br>
+    <br>
+    **<ruby>Kvin<rt class="XXL_L">五</rt></ruby> <ruby>Gem<rt class="XXL_L">宝石</rt></ruby>oj (<ruby>Spirit<rt
+        class="XXL_L">精神</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Izu)**<br>
+    La <ruby>Viol<rt class="XXS_S">[植]ス<br>ミレ</rt></ruby>a <ruby>Gem<rt class="XXL_L">宝石</rt></ruby>'<br>
+    de <ruby>Mani<rt class="L_L">マニア</rt></ruby>, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>spirit<rt class="XXL_L">
+        精神</rt></ruby>o<br>
+    de Fu<ruby>des<rt class="XS_S">ますます</rt></ruby>aki,<br>
+    aŭ <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Spirit<rt class="XXL_L">精神</rt></ruby>o Izu,<br>
+    la <ruby>reg<rt class="XS_S">統治する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt>
+    </ruby>'.<br>
+    <br>
+    <ruby>Ruĝ<rt class="L_L">赤い</rt></ruby><ruby>kolor<rt class="XXL_L">色</rt></ruby>a <ruby>Gem<rt class="XXL_L">宝石
+      </rt></ruby>'<br>
+    de <ruby>Mani<rt class="L_L">マニア</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o<br>
+    <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a en<br>
+    <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby><ruby>nom<rt class="XXL_L">名前</rt></ruby><ruby>at<rt
+        class="XXS_S">受動<br>継続</rt></ruby>a <ruby>regn<rt class="M_M">[法]国家</rt></ruby>o<br>
+    Japanio, <ruby>Di<rt class="XL_L">神</rt></ruby>a <ruby>land<rt class="XXL_L">国</rt></ruby>'.<br>
+    <br>
+    <ruby>Blank<rt class="XXL_L">白い</rt></ruby><ruby>kolor<rt class="XXL_L">色</rt></ruby>a <ruby>Gem<rt class="XXL_L">宝石
+      </rt></ruby>'<br>
+    de <ruby>Mani<rt class="L_L">マニア</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>angl<rt class="XS_S">イギリス人</rt></ruby>a<br>
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>jam<rt
+        class="XL_L">既に</rt></ruby><br>
+    <ruby>sufiĉ<rt class="L_L">十分な</rt></ruby>e <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>vast<rt class="XXL_L">広い
+      </rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby><br>
+    en <ruby>la<rt class="M_M">the</rt></ruby> <ruby>land<rt class="XXL_L">国</rt></ruby>oj <ruby>sur<rt class="XXS_S">
+        (~の)<br>上に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ter<rt class="M_M">土地</rt></ruby>'.<br>
+    <br>
+    <ruby>Verd<rt class="XXL_L">緑の</rt></ruby><ruby>kolor<rt class="XXL_L">色</rt></ruby>a <ruby>Gem<rt class="XXL_L">宝石
+      </rt></ruby>'<br>
+    de <ruby>Mani<rt class="L_L">マニア</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o<br>
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o ja<br>
+    <ruby>neŭtral<rt class="XXL_L">中立の</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>komun<rt
+        class="XXL_L">共通の</rt></ruby>a<br>
+    al <ruby>ajn<rt class="XXS_S">であろ<br>うと</rt></ruby> <ruby>land<rt class="XXL_L">国</rt></ruby>oj <ruby>sur<rt
+        class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ter<rt class="M_M">土地</rt>
+    </ruby>'.<br>
+    <br>
+    <ruby>Flav<rt class="S_S">黄色の</rt></ruby><ruby>kolor<rt class="XXL_L">色</rt></ruby>a <ruby>Gem<rt class="XXL_L">宝石
+      </rt></ruby>'<br>
+    de <ruby>Mani<rt class="L_L">マニア</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o<br>
+    ĉina, <ruby>kies<rt class="XXS_S">だれの<br>(所有)</rt></ruby> <ruby>flag<rt class="XXL_L">旗</rt></ruby>'<br>
+    <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>desegn<rt class="XXL_L">(を)描く</rt></ruby><ruby>aĵ<rt
+        class="XS_S">事物</rt></ruby>' <ruby>de<rt class="XS_S">の;から</rt></ruby> l' <ruby>flav<rt class="S_S">黄色の</rt>
+    </ruby>a<br>
+    <ruby>drak<rt class="XXL_L">竜</rt></ruby>o, <ruby>flirt<rt class="XXS_S">(旗など<br>が)翻る</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>vent<rt class="L_L">[気]風</rt></ruby>'.<br>
+    <br>
+    1) Ananai : <ruby>signif<rt class="XS_S">(を)意味する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ambaŭ<rt
+        class="XXL_L">両方の</rt></ruby> <ruby>spirit<rt class="XXL_L">精神</rt></ruby>ojn Mizu <ruby>kaj<rt class="L_L">and
+      </rt></ruby> Izu, <ruby>kaj<rt class="L_L">and</rt></ruby> Mizu <ruby>signif<rt class="XS_S">(を)意味する</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nombr<rt class="XXL_L">数</rt></ruby>on <ruby>tri<rt
+        class="XL_L">三</rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> Izu <ruby>nombr<rt class="XXL_L">数</rt>
+    </ruby>on <ruby>kvin<rt class="XXL_L">五</rt></ruby>. Mizu <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as
+      <rt class="XS_S">現在形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>senc<rt class="XXL_L">意味</rt>
+    </ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Di<rt
+        class="XL_L">神</rt></ruby><ruby>karakter<rt class="XXL_L">性格</rt></ruby>o <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>a, <ruby>bel<rt
+        class="S_S">美しい</rt></ruby>a, <ruby>am<rt class="S_S">愛する</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>a,
+    <ruby>ver<rt class="S_S">本当の</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pur<rt class="S_S">純粋な</rt>
+    </ruby>a, <ruby>dum<rt class="S_S">(~する)間</rt></ruby> Izu <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as
+      <rt class="XS_S">現在形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>senc<rt class="XXL_L">意味</rt>
+    </ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Di<rt
+        class="XL_L">神</rt></ruby><ruby>karakter<rt class="XXL_L">性格</rt></ruby>o <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>rigor<rt class="L_L">厳格な</rt></ruby>a, <ruby>alt<rt
+        class="S_S">高い</rt></ruby>a, <ruby>nobl<rt class="M_M">高潔な</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby>
+    <ruby>sankt<rt class="S_S">[宗]神聖な</rt></ruby>a.<br>
+    2) <ruby>La<rt class="M_M">The</rt></ruby> cinta<ruby>mani<rt class="L_L">マニア</rt></ruby>o : cinta<ruby>mani<rt
+        class="L_L">マニア</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> sanskrito.<br>
+    (el "la <ruby>Rakont<rt class="M_M">(を)物語る</rt></ruby>oj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>Spirit<rt class="XXL_L">精神</rt></ruby>a <ruby>Mond<rt class="XXL_L">世界</rt>
+    </ruby>o", <ruby>la<rt class="M_M">the</rt></ruby> 48-a vol.)<br>
+    <br>
+    ---<br>
+    <br>
+    ### 【6ページ目】 <ruby>La<rt class="M_M">The</rt></ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    **La <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto**<br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino **DEGUĈI Naohi**<br>
+    <ruby>Tri<rt class="XL_L">三</rt></ruby>a <ruby>Spirit<rt class="XXL_L">精神</rt></ruby>a <ruby>Gvid<rt class="XXS_S">
+        (を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    **<ruby>Sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>konsider<rt class="L_L">(を)考慮する</rt></ruby>e <ruby>pri<rt
+        class="XS_S">ついて</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>talent<rt class="XXL_L">才能</rt>
+    </ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>lingv<rt class="XXL_L">
+        言語</rt></ruby>o**<br>
+    <ruby>Kiom<rt class="XXS_S">何番目;ど<br>れほど</rt></ruby> <ruby>oportun<rt class="XXL_L">便利な</rt></ruby>a <ruby>lingv<rt
+        class="XXL_L">言語</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>komun<rt class="XXL_L">共通の</rt></ruby>a <ruby>lingv<rt class="XXL_L">
+        言語</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt
+        class="XXL_L">世界</rt></ruby>o, <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>ĉiu<rt class="XXS_S">
+        各々の<br>;各~</rt></ruby> <ruby>naci<rt class="XXL_L">国民</rt></ruby>o <ruby>posed<rt class="S_S">(を)所有する</rt>
+    </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>ĝi<rt
+        class="XS_S">それ</rt></ruby>n <ruby>krom<rt class="S_S">(の)ほかに</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>naci<rt class="XXL_L">国民</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on, <ruby>sen<rt
+        class="XS_S">(~)なしで</rt></ruby><ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>pend<rt class="S_S">掛っている</rt>
+    </ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>individu<rt class="XXL_L">個人</rt></ruby>a <ruby>talent<rt
+        class="XXL_L">才能</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby>
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o.<br>
+    Mi <ruby>dezir<rt class="M_M">(を)望む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">
+        という<br>こと</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby><ruby>nun<rt class="XXL_L">今</rt></ruby>aj
+    <ruby>hom<rt class="XXL_L">人</rt></ruby>oj, eĉ <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>ne<rt
+        class="M_M">ない</rt></ruby><ruby>talent<rt class="XXL_L">才能</rt></ruby>aj <ruby>en<rt class="M_M">中で</rt></ruby>
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o, <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby>u <ruby>energi<rt
+        class="M_M">エネルギー</rt></ruby>on <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>lern<rt class="XXS_S">
+        (を)学習<br>する</rt></ruby>i <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on, <ruby>kiel<rt class="XXS_S">
+        いかに;の<br>ように</rt></ruby> <ruby>iu<rt class="XXS_S">ある<br>人</rt></ruby> <ruby>ne<rt class="M_M">ない</rt>
+    </ruby><ruby>instru<rt class="S_S">(を)教える</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>el
+      <rt class="XXS_S">中か<br>ら</rt>
+    </ruby><ruby>migr<rt class="S_S">移動する</rt></ruby><ruby>int<rt class="XXS_S">
+        能動;<br>完了</rt></ruby>o <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt>
+    </ruby><ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>lingv<rt
+        class="XXL_L">言語</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>aktual<rt class="XXL_L">現存の</rt>
+    </ruby>a <ruby>lok<rt class="M_M">場所</rt></ruby>o <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>kiel<rt
+        class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>iu<rt class="XXS_S">ある<br>人</rt></ruby> <ruby>infan<rt
+        class="XXL_L">子供</rt></ruby>o <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>komunik<rt class="XL_L">
+        (を)伝える</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>vol
+      <rt class="XXS_S">意志が<br>ある</rt>
+    </ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>balbut<rt class="XXL_L">どもる
+      </rt></ruby>o.<br>
+    Mi <ruby>esper<rt class="XS_S">(を)希望する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt
+        class="XXS_S">という<br>こと</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>tia<rt class="XS_S">そんな
+      </rt></ruby> <ruby>energi<rt class="M_M">エネルギー</rt></ruby>o <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>
+    <ruby>daŭr<rt class="XXL_L">継続</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>u <ruby>laŭ<rt class="S_S">
+        沿って</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>an <ruby>klopod<rt class="L_L">奔走する</rt></ruby>on.<br>
+    <ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby><ruby>ter<rt class="M_M">
+        土地</rt></ruby>e <ruby>star<rt class="XS_S">立っている</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i
+    <ruby>pac<rt class="XL_L">平和</rt></ruby>on <ruby>unu<rt class="XXL_L">一</rt></ruby>e <ruby>ĉiu<rt class="XXS_S">
+        各々の<br>;各~</rt></ruby> <ruby>hom<rt class="XXL_L">人</rt></ruby>o <ruby>dev<rt class="L_L">must</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>star<rt class="XS_S">立っている</rt></ruby><ruby>ig<rt
+        class="XXS_S">させ<br>る</rt></ruby>i <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o, <ruby>kio<rt
+        class="XXL_L">何</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>grav<rt class="M_M">重要な</rt></ruby>a <ruby>faktor<rt
+        class="XXL_L">要因</rt></ruby>o. <ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby> ĉi <ruby>tio<rt class="XXS_S">
+        それ;<br>あれ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>profund<rt class="XXL_L">深い</rt></ruby>e
+    <ruby>sent<rt class="XS_S">(を)感じる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>grav<rt class="M_M">重要な</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>on <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>mov<rt class="M_M">動かす
+      </rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>for<rt
+        class="XS_S">離れて</rt></ruby><ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby>i <ruby>lingv<rt class="XXL_L">言語</rt>
+    </ruby>an <ruby>bar<rt class="L_L">障害</rt></ruby>on, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>mal<rt
+        class="S_S">正反対</rt></ruby><ruby>help<rt class="XS_S">手助けする</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>real<rt class="M_M">現実の</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby>a <ruby>mond<rt class="XXL_L">世界</rt>
+    </ruby>o: <ruby>la<rt class="M_M">the</rt></ruby> <ruby>grav<rt class="M_M">重要な</rt></ruby><ruby>ec<rt class="S_S">
+        性質</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>a <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>kiel<rt
+        class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>konkret<rt class="XL_L">具体的な</rt></ruby>a <ruby>rimed<rt
+        class="XXL_L">手段</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>al<rt class="XXS_S">
+        ~の方<br>へ</rt></ruby><ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby>
+    <ruby>tiom<rt class="XXS_S">そんな;あ<br>んなに</rt></ruby> <ruby>da<rt class="XXL_L">の</rt></ruby> <ruby>frukt<rt
+        class="XXL_L">果実</rt></ruby>oj, <ruby>kiom<rt class="XXS_S">何番目;ど<br>れほど</rt></ruby> <ruby>ni<rt class="XS_S">私達
+      </rt></ruby> <ruby>daŭr<rt class="XXL_L">継続</rt></ruby>e <ruby>klopod<rt class="L_L">奔走する</rt></ruby><ruby>os<rt
+        class="XS_S">未来形</rt></ruby>.<br>
+    (el "<ruby>Kok<rt class="XS_S">ニワトリ</rt></ruby>oro no ĉjou")<br>
+    <br>
+    **<ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad<rt
+        class="XXS_S">継続<br>行為</rt></ruby>o <ruby>laŭ<rt class="S_S">沿って</rt></ruby> <ruby>Di<rt class="XL_L">神</rt>
+    </ruby>a <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>o**<br>
+    El <ruby>la<rt class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>afer<rt class="XL_L">物事
+      </rt></ruby>oj <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>ĝis<rt class="XS_S">(~)まで</rt></ruby>
+    <ruby>nun<rt class="XXL_L">今</rt></ruby> Oomoto <ruby>praktik<rt class="XXL_L">実践</rt></ruby>a<ruby>dis<rt
+        class="M_M">分散</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>mov<rt class="M_M">動かす
+      </rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>ojn <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>pac
+      <rt class="XL_L">平和</rt>
+    </ruby>o, <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o, <ruby>al<rt
+        class="XXS_S">~の方<br>へ</rt></ruby><ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>it<rt class="XXXS_S">
+        受動<br>完<br>了</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Majstr<rt class="XXL_L">巨匠</rt>
+    </ruby>o <ruby>Oni<rt class="L_L">人々</rt></ruby>saburo, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mov<rt
+        class="M_M">動かす</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby><ruby>feder<rt class="XS_S">(を)連合させる</rt></ruby>o, <ruby>al<rt
+        class="XXS_S">~の方<br>へ</rt></ruby><ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>it<rt class="XXXS_S">
+        受動<br>完<br>了</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Du<rt class="XXL_L">二</rt></ruby>a
+    <ruby>Gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt
+        class="XS_S">女性</rt></ruby>o; <ruby>ambaŭ<rt class="XXL_L">両方の</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>laŭ<rt class="S_S">沿って</rt></ruby> <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>profund<rt class="XXL_L">深い</rt></ruby>a <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>o, <ruby>al<rt class="XXS_S">
+        ~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ŝajn<rt class="XS_S">(~と)見える</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+    <ruby>Koncern<rt class="S_S">(に)関係がある</rt></ruby>e <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on, <ruby>mi<rt
+        class="XXL_L">私</rt></ruby> <ruby>opini<rt class="XS_S">意見である</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>jen<rt class="XXS_S">そらこ<br>こに</rt></ruby>e, <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>el<rt
+        class="XXS_S">中か<br>ら</rt></ruby><ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i <ruby>pli<rt class="S_S">
+        より</rt></ruby> <ruby>grav<rt class="M_M">重要な</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ol<rt
+        class="XXS_S">~より<br>も</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>a <ruby>mov<rt class="M_M">動かす</rt>
+    </ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ĝi<rt
+        class="XS_S">それ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>nepr<rt class="L_L">必然の</rt></ruby>e <ruby>neces<rt class="XXL_L">必要な</rt></ruby>a <ruby>por<rt
+        class="S_S">ために</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+    </ruby>i <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>ont<rt class="XXS_S">能動;<br>将然</rt></ruby>a <ruby>pac<rt class="XL_L">平和</rt></ruby>a <ruby>mond<rt
+        class="XXL_L">世界</rt></ruby>o. <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">
+        (~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>,
+    <ruby>kio<rt class="XXL_L">何</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby><ruby>ec<rt class="S_S">性質</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>on <ruby>super<rt class="S_S">(~の)上方に</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>bar<rt class="L_L">障害</rt></ruby>oj <ruby>de<rt class="XS_S">
+        の;から</rt></ruby> <ruby>politik<rt class="XXL_L">政治</rt></ruby>o, <ruby>religi<rt class="XXL_L">宗教
+      </rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ras<rt class="L_L">人種</rt></ruby>o, <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>kio<rt class="XXL_L">何</rt></ruby> <ruby>ĉiam<rt class="L_L">いつも</rt></ruby>
+    <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby> <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>pozici<rt class="XXL_L">位置</rt></ruby>o
+    <ruby>komun<rt class="XXL_L">共通の</rt></ruby>a <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ambaŭ<rt
+        class="XXL_L">両方の</rt></ruby><ruby>flank<rt class="XXL_L">側</rt></ruby>oj, <ruby>dekstr<rt class="XXL_L">右の</rt>
+    </ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>dekstr<rt
+        class="XXL_L">右の</rt></ruby>a. Do, <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">
+        (~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nenio<rt class="S_S">何も~ない</rt></ruby>
+    <ruby>ali<rt class="S_S">他の</rt></ruby>a <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>tiu<rt class="XXS_S">
+        その;あ<br>のひと</rt></ruby>, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>tiom<rt class="XXS_S">
+        そんな;あ<br>んなに</rt></ruby> <ruby>konkret<rt class="XL_L">具体的な</rt></ruby>e <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>parti<rt class="S_S">[政]党派</rt></ruby>e <ruby>ag<rt
+        class="XXS_S">行動<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>sur<rt class="XXS_S">(~の)<br>上に
+      </rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>on.<br>
+    (el "<ruby>Sun<rt class="XL_L">太陽</rt></ruby>'jou-ŝjuu")<br>
+    <br>
+    **La <ruby>baz<rt class="XL_L">基礎</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o<ruby>pac<rt class="XL_L">平和</rt></ruby>o**<br>
+    <ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>real<rt class="M_M">現実の</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る
+      </rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o<ruby>pac<rt
+        class="XL_L">平和</rt></ruby>on <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>naci<rt class="XXL_L">国民
+      </rt></ruby>oj <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>est<rt
+        class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>met<rt class="S_S">(を)置く</rt></ruby><ruby>it<rt class="XXXS_S">
+        受動<br>完<br>了</rt></ruby>aj <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>egal<rt class="M_M">等しい</rt></ruby>a <ruby>pozici<rt class="XXL_L">位置</rt></ruby>o. <ruby>La<rt class="M_M">
+        The</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>element<rt class="XXL_L">要素</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>a <ruby>baz<rt class="XL_L">基礎</rt>
+    </ruby>o, <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>inter<rt
+        class="S_S">(の)間に</rt></ruby><ruby>naci<rt class="XXL_L">国民</rt></ruby>a <ruby>komun<rt class="XXL_L">共通の</rt>
+    </ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o; ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>
+    <ruby>komun<rt class="XXL_L">共通の</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>dev<rt class="L_L">
+        must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i
+    <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a <ruby>kiel<rt class="XXS_S">
+        いかに;の<br>ように</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby>a
+    <ruby>naci<rt class="XXL_L">国民</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o.<br>
+    Al <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby>
+    <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>supoz<rt class="S_S">(を)想定する</rt></ruby>o <ruby>pli<rt class="S_S">より
+      </rt></ruby> <ruby>fru<rt class="M_M">早い</rt></ruby>e <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby><ruby>os
+      <rt class="XS_S">未来形</rt>
+    </ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>n <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>temp<rt class="XXL_L">時間</rt></ruby>o, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>hom<rt class="XXL_L">
+        人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o <ruby>koncentr<rt class="L_L">(を)集中する</rt></ruby><ruby>os
+      <rt class="XS_S">未来形</rt>
+    </ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>tut<rt class="XS_S">全部の</rt>
+    </ruby>an <ruby>saĝ<rt class="S_S">賢明な</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ter<rt
+        class="M_M">土地</rt></ruby><ruby>glob<rt class="XXL_L">球体</rt></ruby><ruby>skal<rt class="XXL_L">尺度</rt></ruby>e
+    <ruby>decid<rt class="XS_S">(を)決定する</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>direkt<rt class="XXL_L">方向</rt></ruby>on.<br>
+    En <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>oni<rt
+        class="L_L">人々</rt></ruby> <ruby>maksimum<rt class="XXL_L">最大</rt></ruby>e <ruby>akcept<rt class="S_S">(を)受入れる
+      </rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>individu<rt class="XXL_L">個人</rt></ruby>an <ruby>viv<rt
+        class="XXS_S">生きて<br>いる</rt></ruby><ruby>ĝoj<rt class="L_L">喜ぶ</rt></ruby>on, <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby>, <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>strik<rt
+        class="XXS_S">ストライ<br>キをする</rt></ruby>e <ruby>akord<rt class="XXL_L">一致</rt></ruby><ruby>ig<rt class="XXS_S">
+        させ<br>る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>individu<rt class="XXL_L">個人</rt></ruby>on
+    <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>o, <ruby>kaj<rt class="L_L">
+        and</rt></ruby> <ruby>individu<rt class="XXL_L">個人</rt></ruby>o <ruby>ricev<rt class="S_S">(を)受取る</rt>
+    </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>grand<rt class="XL_L">大きい</rt></ruby>an <ruby>profit<rt
+        class="XXL_L">利益</rt></ruby>on. <ruby>Nepr<rt class="L_L">必然の</rt></ruby>e <ruby>ven<rt class="XS_S">(に)来る</rt>
+    </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>temp<rt
+        class="XXL_L">時間</rt></ruby>o.<br>
+    (el <ruby>la<rt class="M_M">the</rt></ruby> <ruby>revu<rt class="S_S">専門雑誌</rt></ruby>o "Oomoto", <ruby>el<rt
+        class="XXS_S">中か<br>ら</rt></ruby><ruby>don<rt class="M_M">与える</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了
+      </rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> jan., 1980)<br>
+    <br>
+    ---<br>
+    <br>
+    ### 【8ページ目】 <ruby>La<rt class="M_M">The</rt></ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    **La <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto**<br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>o **DEGUĈI H<ruby>ide<rt class="L_L">観念</rt></ruby><ruby>mar<rt
+        class="XXL_L">海</rt></ruby>u**<br>
+    <ruby>Tri<rt class="XL_L">三</rt></ruby>a <ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby><ruby>gvid<rt class="XXS_S">
+        (を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> Oomoto<br>
+    <br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>o DEGUĈI H<ruby>ide<rt class="L_L">観念</rt></ruby><ruby>mar<rt
+        class="XXL_L">海</rt></ruby>u, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby>
+    <ruby>labor<rt class="XXL_L">働く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で
+      </rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>redakci<rt class="XXL_L">編集部</rt></ruby>a <ruby>fak<rt
+        class="L_L">専門</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>o 1926, <ruby>skrib<rt
+        class="M_M">(を)書く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt>
+    </ruby>an <ruby>trakt<rt class="XS_S">(を)取り扱う</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>on <ruby>sub<rt
+        class="XS_S">(~の)下に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>titol<rt class="XL_L">題名</rt>
+    </ruby>o "<ruby>Neces<rt class="XXL_L">必要な</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>lern<rt
+        class="XXS_S">(を)学習<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">
+        の;から</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o".<br>
+    Ĉi-<ruby>sub<rt class="XS_S">(~の)下に</rt></ruby>aj <ruby>fraz<rt class="XXL_L">文</rt></ruby>oj <ruby>est<rt
+        class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ekstrakt<rt class="XXL_L">抜粋
+      </rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>aj <ruby>de<rt class="XS_S">の;から</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>trakt<rt class="XS_S">(を)取り扱う</rt></ruby><ruby>aĵ<rt class="XS_S">事物
+      </rt></ruby>o. (<ruby>Redakci<rt class="XXL_L">編集部</rt></ruby>o)<br>
+    <br>
+    **Dia <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o**<br>
+    La <ruby>nun<rt class="XXL_L">今</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>a <ruby>pens<rt class="XXL_L">
+        思う</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>a <ruby>medi<rt class="XXL_L">環境</rt></ruby>o, <ruby>fal
+      <rt class="XS_S">落ちる</rt>
+    </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>tag<rt class="XXL_L">日
+      </rt></ruby>on <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>tag<rt class="XXL_L">日</rt></ruby>o <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>kaos<rt class="XXL_L">混沌</rt></ruby>on, <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>kor<rt class="XXL_L">心</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>publik<rt class="XXL_L">
+        公衆</rt></ruby>o, <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>sav
+      <rt class="XS_S">救助する</rt>
+    </ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>aj, <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>rezult
+      <rt class="XL_L">起きる</rt>
+    </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>aj <ruby>ĉiu<rt class="XXS_S">
+        各々の<br>;各~</rt></ruby><ruby>tag<rt class="XXL_L">日</rt></ruby>aj <ruby>okaz<rt class="L_L">起こる</rt>
+    </ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>oj, <ruby>mizer<rt
+        class="XXL_L">悲惨</rt></ruby>aj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mem<rt class="XXL_L">自身</rt>
+    </ruby><ruby>kontraŭ<rt class="M_M">(に)向かって</rt></ruby>aj — <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>kio<rt
+        class="XXL_L">何</rt></ruby> <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> ĉi <ruby>tiu<rt
+        class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j?<br>
+    <ruby>Tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>ven<rt class="XS_S">
+        (に)来る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>o, <ruby>dis<rt class="M_M">分散</rt>
+    </ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>a <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>grand<rt class="XL_L">大きい</rt>
+    </ruby>ajn <ruby>individu<rt class="XXL_L">個人</rt></ruby>ojn, <ruby>kor<rt class="XXL_L">心</rt></ruby>o, <ruby>kiu
+      <rt class="XXS_S">だれ;<br>どれ</rt>
+    </ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pov<rt class="S_S">できる</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby>i <ruby>hom<rt class="XXL_L">
+        人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> eĉ
+    <ruby>ali<rt class="S_S">他の</rt></ruby><ruby>land<rt class="XXL_L">国</rt></ruby><ruby>an<rt class="M_M">会員</rt>
+    </ruby>ojn. <ruby>Ali<rt class="S_S">他の</rt></ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>e, <ruby>tio<rt
+        class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>ven<rt class="XS_S">(に)来る
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tio<rt
+        class="XXS_S">それ;<br>あれ</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>pli<rt class="S_S">より
+      </rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> 40 <ruby>ŝtat<rt class="XL_L">国家</rt></ruby>oj
+    <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>proksim<rt class="XXL_L">近い
+      </rt></ruby><ruby>um<rt class="XS_S">不定意味</rt></ruby>e 1200 <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sam<rt
+        class="M_M">同一の</rt></ruby>ajn <ruby>lingv<rt class="XXL_L">言語</rt></ruby>ojn. <ruby>Kio<rt class="XXL_L">何</rt>
+    </ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>korekt<rt
+        class="S_S">(を)訂正する</rt></ruby>i <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n <ruby>mem<rt class="XXL_L">
+        自身</rt></ruby><ruby>kontraŭ<rt class="M_M">(に)向かって</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>on,
+    <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nur<rt
+        class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>fort<rt class="L_L">強い</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>inter
+      <rt class="S_S">(の)間に</rt>
+    </ruby><ruby>lig<rt class="XXS_S">結ぶ;<br>連盟</rt></ruby><ruby>os<rt class="XS_S">未来形</rt>
+    </ruby> <ruby>kor<rt class="XXL_L">心</rt></ruby>ojn <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>iĝ<rt class="XS_S">
+        なる</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>ajn <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>individu<rt class="XXL_L">個人</rt></ruby>ojn. <ruby>Kia<rt class="XXS_S">どのよ<br>うな</rt></ruby>
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>ĝi<rt class="XS_S">それ
+      </rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>est<rt
+        class="XXS_S">(~)で<br>ある</rt></ruby>i?<br>
+    Ĝi <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>est<rt class="XXS_S">
+        (~)で<br>ある</rt></ruby>i <ruby>absolut<rt class="XXL_L">絶対の</rt></ruby>e <ruby>neŭtral<rt class="XXL_L">中立の</rt>
+    </ruby>a.<br>
+    <ruby>Krom<rt class="S_S">(の)ほかに</rt></ruby>e <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>dev<rt class="L_L">must
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i
+    <ruby>konciz<rt class="XXL_L">簡潔な</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>facil<rt class="M_M">
+        容易な</rt></ruby>e <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>lern<rt class="XXS_S">(を)学習<br>する</rt>
+    </ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>a.<br>
+    En <ruby>muzik<rt class="XXL_L">音楽</rt></ruby>o <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>poem<rt
+        class="XXL_L">詩</rt></ruby>o <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>dev<rt class="L_L">must</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ebl<rt class="L_L">可能</rt></ruby><ruby>ig<rt class="XXS_S">
+        させ<br>る</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>uz<rt class="S_S">使う</rt>
+    </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o <ruby>liber<rt class="M_M">自由な</rt></ruby>an <ruby>esprim
+      <rt class="S_S">(を)表現する</rt>
+    </ruby>on.<br>
+    <ruby>Pli<rt class="S_S">より</rt></ruby>e, ĝi, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>lingv<rt
+        class="XXL_L">言語</rt></ruby>o, <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby>i <ruby>komplet<rt class="XXL_L">完全な</rt></ruby><ruby>ec<rt
+        class="S_S">性質</rt></ruby>on, <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>ideal<rt class="XXL_L">理想
+      </rt></ruby>an.<br>
+    <ruby>Kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>do<rt
+        class="XS_S">そこで</rt></ruby> <ruby>kontent<rt class="XXL_L">満足な</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> tiajn <ruby>kondiĉ<rt class="XXL_L">条件</rt></ruby>ojn?<br>
+    Ĉu <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>angl<rt class="XS_S">イギリス人</rt>
+    </ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o? Ne!<br>
+    Ĝi <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci<rt class="XXL_L">国民</rt>
+    </ruby>a <ruby>help<rt class="XS_S">手助けする</rt></ruby><ruby>lingv<rt class="XXL_L">言語</rt></ruby>o, <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>absolut<rt class="XXL_L">絶対の</rt></ruby>e <ruby>neŭtral<rt class="XXL_L">中立の
+      </rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o, t. e. <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o.<br>
+    <br>
+    **<ruby>Hom<rt class="XXL_L">人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o!!**<br>
+    Vi <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>ferm<rt class="XS_S">(を)閉める</rt></ruby>u <ruby>trankvil
+      <rt class="XXL_L">平静な</rt>
+    </ruby>e <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>ajn <ruby>okul<rt class="L_L">[解]目</rt></ruby>ojn
+    <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>re<rt class="S_S">再び</rt>
+    </ruby><ruby>cit<rt class="XXS_S">引用<br>する</rt></ruby>u <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>fraz<rt
+        class="XXL_L">文</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと
+      </rt></ruby> ĉi <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci<rt class="XXL_L">国民</rt></ruby>a
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o.<br>
+    <ruby>Kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>sonor<rt class="XXL_L">音響</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">
+        あな<br>た(<br>達)</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>agrabl<rt class="XXL_L">快い
+      </rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>a <ruby>melodi<rt
+        class="XL_L">[楽]旋律</rt></ruby>o?<br>
+    <ruby>Gust<rt class="XXL_L">味</rt></ruby><ruby>um<rt class="XS_S">不定意味</rt></ruby>u <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby>an <ruby>mild<rt class="M_M">温和な</rt></ruby><ruby>ec<rt
+        class="S_S">性質</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>trankvil<rt class="XXL_L">平静な</rt>
+    </ruby><ruby>ec<rt class="S_S">性質</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>vi<rt
+        class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o.<br>
+    <ruby>Ĝust<rt class="M_M">正しい</rt></ruby>e ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>est<rt class="XXS_S">
+        (~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>o,
+    <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>Di<rt class="XL_L">神
+      </rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o.<br>
+    <ruby>Kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby> <ruby>uz<rt class="S_S">使う</rt></ruby>i ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on, <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>trov<rt
+        class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>on.<br>
+    <br>
+    ---<br>
+    <br>
+    ### 【10ページ目】 <ruby>La<rt class="M_M">The</rt></ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    **La <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto**<br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino **DEGUĈI Kijoko**<br>
+    <ruby>Kvar<rt class="XXL_L">四</rt></ruby>a <ruby>Spirit<rt class="XXL_L">精神</rt></ruby>a <ruby>Gvid<rt
+        class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性
+      </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino DEGUĈI Kijoko <ruby>far<rt class="XXS_S">(を)す<br>る</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby>an <ruby>salut<rt
+        class="XS_S">(に)挨拶する</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント
+      </rt></ruby>o, <ruby>la<rt class="M_M">the</rt></ruby> 9an <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>aŭgust
+      <rt class="XXL_L">８月</rt>
+    </ruby>o, 1993, <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>memor<rt class="S_S">(を)覚えている</rt></ruby>a <ruby>ceremoni<rt class="XXL_L">儀式</rt></ruby>o
+    <ruby>okaz<rt class="L_L">起こる</rt></ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> 70-a <ruby>jubile<rt class="XL_L">記念祭</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la
+      <rt class="M_M">the</rt>
+    </ruby> <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> EPA <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>sankt<rt class="S_S">[宗]神聖な</rt></ruby><ruby>ej<rt class="XS_S">場所</rt>
+    </ruby>o Ĉoosej-den, Ajabe.<br>
+    <br>
+    **<ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> "<ruby>hodiaŭ<rt class="XXL_L">今日</rt></ruby>a <ruby>universal<rt class="XXL_L">
+        普遍的な</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o"**<br>
+    <ruby>Estim<rt class="XS_S">(を)尊敬する</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>aj <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>kar<rt class="S_S">親愛な</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt>
+    </ruby><ruby>sinjor<rt class="XXL_L">紳士</rt></ruby>oj, <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>ven<rt
+        class="XS_S">(に)来る</rt></ruby>on <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">
+        あな<br>た(<br>達)</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>en<rt class="M_M">中で</rt>
+    </ruby> Ajabe. Ajabe <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>nask<rt class="M_M">(を)生む</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>lok<rt class="M_M">場所</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>tiu<rt
+        class="XXS_S">その;あ<br>のひと</rt></ruby> ĉi <ruby>templ<rt class="XXL_L">寺院</rt></ruby>o <ruby>fin<rt class="XS_S">
+        終える</rt></ruby><ruby>konstru<rt class="M_M">(を)建造する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is
+      <rt class="XXS_S">過去<br>形</rt>
+    </ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>last<rt class="S_S">最後の</rt></ruby><ruby>jar<rt class="XXL_L">年</rt></ruby>a <ruby>maj<rt
+        class="XL_L">５月</rt></ruby>o, <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt>
+    </ruby>a <ruby>sopir<rt class="XS_S">(を)恋しがる</rt></ruby>a <ruby>atend<rt class="L_L">(を)待つ</rt></ruby><ruby>ad<rt
+        class="XXS_S">継続<br>行為</rt></ruby>o <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby>e <ruby>de<rt class="XS_S">
+        の;から</rt></ruby> oomot<ruby>an<rt class="M_M">会員</rt></ruby>oj. <ruby>Tiam<rt class="XXS_S">その時;<br>あの時</rt>
+    </ruby> Oomoto <ruby>fest<rt class="XS_S">(を)祝う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la
+      <rt class="M_M">the</rt>
+    </ruby> <ruby>cent<rt class="XXL_L">百</rt></ruby><ruby>jar<rt class="XXL_L">年</rt>
+    </ruby>an <ruby>jubile<rt class="XL_L">記念祭</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>si<rt
+        class="XS_S">自分</rt></ruby>a <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+    </ruby>o.<br>
+    <ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> oomot<ruby>an<rt class="M_M">会員
+      </rt></ruby>oj, <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>grand<rt class="XL_L">大きい</rt></ruby>a <ruby>ĝoj<rt class="L_L">喜ぶ</rt></ruby>o, <ruby>ke<rt class="XXS_S">
+        という<br>こと</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>
+    ĉi <ruby>templ<rt class="XXL_L">寺院</rt></ruby>o <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>pov<rt class="S_S">できる
+      </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>ig<rt
+        class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>memor<rt class="S_S">(を)覚えている
+      </rt></ruby>an <ruby>ceremoni<rt class="XXL_L">儀式</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>la
+      <rt class="M_M">the</rt>
+    </ruby> <ruby>sep<rt class="XXL_L">七</rt></ruby>-<ruby>dek<rt class="XXL_L">十</rt></ruby>a
+    <ruby>jubile<rt class="XL_L">記念祭</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>o-<ruby>Propagand<rt class="XL_L">(を)宣伝する</rt></ruby>a <ruby>Asoci<rt
+        class="XXL_L">協会</rt></ruby>o (<ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o-<ruby>Popular<rt class="L_L">
+        人気のある</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>a <ruby>Asoci<rt class="XXL_L">協会</rt></ruby>o)
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto, <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>ĉe<rt class="XXS_S">とこ<br>ろで</rt></ruby><ruby>est<rt class="XXS_S">(~)で<br>ある
+      </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>doktor<rt class="XXL_L">博士</rt></ruby>o L. C.
+    Z<ruby>ale<rt class="S_S">並木道</rt></ruby><ruby>ski<rt class="XS_S">スキー</rt></ruby>-<ruby>Zamenhof<rt class="M_M">
+        [人名]ザメンホフ</rt></ruby>, <ruby>nep<rt class="XXL_L">孫</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>doktor<rt class="XXL_L">博士</rt></ruby>o L.L. <ruby>Zamenhof<rt
+        class="M_M">[人名]ザメンホフ</rt></ruby>, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>li<rt class="S_S">彼</rt>
+    </ruby>a <ruby>edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>kaj<rt class="L_L">
+        and</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> s-ro Simo <ruby>Mil<rt class="XXL_L">千
+      </rt></ruby>ojeviĉ, <ruby>ĝeneral<rt class="XXL_L">全般の</rt></ruby>a <ruby>direktor<rt class="XXL_L">管理者</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Universal<rt class="XXL_L">普遍的な</rt></ruby>a
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o-<ruby>Asoci<rt class="XXL_L">協会</rt></ruby>o, <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt>
+    </ruby>aj <ruby>ali<rt class="S_S">他の</rt></ruby>aj <ruby>honor<rt class="XXL_L">名誉</rt></ruby>aj <ruby>gast<rt
+        class="XXL_L">客</rt></ruby>oj <ruby>en<rt class="M_M">中で</rt></ruby><ruby>land<rt class="XXL_L">国</rt></ruby>aj
+    <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby><ruby>land<rt class="XXL_L">国</rt>
+    </ruby>aj.<br>
+    La <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby><ruby>in<rt
+        class="XS_S">女性</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto, DEGUĈI Nao, <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> DEGUĈI <ruby>Oni<rt class="L_L">人々
+      </rt></ruby>saburo, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby>
+    <ruby>fru<rt class="M_M">早い</rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby><ruby>konduk<rt class="XL_L">(を)導く
+      </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on
+    <ruby>en<rt class="M_M">中で</rt></ruby> Oomoton, <ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>profund<rt
+        class="XXL_L">深い</rt></ruby>e <ruby>ĝoj<rt class="L_L">喜ぶ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>rigard<rt class="L_L">(を)見る</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>el<rt
+        class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>spirit<rt class="XXL_L">精神</rt>
+    </ruby>a <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n ĉi
+    <ruby>scen<rt class="XL_L">[劇]場</rt></ruby>on.<br>
+    Nu, <ruby>ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>jam<rt class="XL_L">
+        既に</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt></ruby>an <ruby>temp<rt class="XXL_L">時間</rt></ruby>on
+    <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>ad<rt class="XXS_S">
+        継続<br>行為</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt>
+    </ruby> <ruby>universal<rt class="XXL_L">普遍的な</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>morgaŭ<rt class="XXL_L">明日</rt></ruby>.<br>
+    <ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>opini<rt class="XS_S">意見である
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>nun<rt
+        class="XXL_L">今</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>e, <ruby>kiam<rt class="M_M">いつ(時)</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>trov<rt
+        class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>konfuz<rt class="XS_S">(を)混乱させる</rt></ruby>o, <ruby>oni<rt
+        class="L_L">人々</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pov<rt class="S_S">できる</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>plu<rt class="S_S">さらに</rt></ruby> <ruby>dir<rt class="XXS_S">
+        (を)言<br>う</rt></ruby>i <ruby>vort<rt class="M_M">[文]語</rt></ruby>ojn <ruby>tiom<rt class="XXS_S">
+        そんな;あ<br>んなに</rt></ruby> <ruby>indiferent<rt class="XXL_L">無関心な</rt></ruby>ajn, <ruby>ke<rt class="XXS_S">
+        という<br>こと</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> "<ruby>morgaŭ<rt class="XXL_L">明日</rt></ruby>a <ruby>lingv<rt
+        class="XXL_L">言語</rt></ruby>o".<br>
+    <ruby>Post<rt class="S_S">(~の)後で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>dis<rt class="M_M">分散
+      </rt></ruby><ruby>fal<rt class="XS_S">落ちる</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> Sovetunia <ruby>reĝim<rt class="L_L">[政]政体</rt></ruby>o, <ruby>rapid<rt
+        class="XXL_L">速い</rt></ruby>e <ruby>mult<rt class="M_M">多くの</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>de<rt
+        class="XS_S">の;から</rt></ruby><ruby>pend<rt class="S_S">掛っている</rt></ruby>aj <ruby>regn<rt class="M_M">[法]国家</rt>
+    </ruby>oj <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>divers<rt class="XXL_L">様々な</rt></ruby>aj <ruby>lok<rt
+        class="M_M">場所</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt>
+    </ruby> <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>e <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>konflikt<rt class="XXL_L">葛藤</rt></ruby>oj <ruby>inter<rt class="S_S">(の)間に
+      </rt></ruby> <ruby>naci<rt class="XXL_L">国民</rt></ruby>oj. <ruby>Ĝust<rt class="M_M">正しい</rt></ruby>e <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> ĉi <ruby>temp<rt class="XXL_L">時間
+      </rt></ruby>o <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>util<rt class="XS_S">有用な</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>universal<rt
+        class="XXL_L">普遍的な</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>Esperant<rt class="M_M">
+        エスペラント</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>reciprok<rt class="XXL_L">相互の</rt></ruby>a
+    <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>kor<rt class="XXL_L">
+        心</rt></ruby>o, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>doktor<rt class="XXL_L">博士</rt></ruby>o L.L. <ruby>Zamenhof<rt class="M_M">[人名]ザメンホフ</rt></ruby>, <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>iniciat<rt class="S_S">(を)発起する</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了
+      </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o,
+    <ruby>long<rt class="XXL_L">長い</rt></ruby>e <ruby>dezir<rt class="M_M">(を)望む</rt></ruby><ruby>is<rt class="XXS_S">
+        過去<br>形</rt></ruby>. <ruby>Jen<rt class="XXS_S">そらこ<br>こに</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと
+      </rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as
+      <rt class="XS_S">現在形</rt>
+    </ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby>!<br>
+    Do, <ruby>kar<rt class="S_S">親愛な</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>sinjor<rt class="XXL_L">
+        紳士</rt></ruby>oj, <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>jam<rt class="XL_L">既に</rt></ruby>
+    <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby> "<ruby>morgaŭ<rt class="XXL_L">明日</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o";
+    <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる
+      </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> "<ruby>hodiaŭ<rt class="XXL_L">今日</rt></ruby>a
+    <ruby>universal<rt class="XXL_L">普遍的な</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o".<br>
+    Mi <ruby>dezir<rt class="M_M">(を)望む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ke<rt class="XXS_S">
+        という<br>こと</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e
+    <ruby>util<rt class="XS_S">有用な</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>u <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>klopod<rt class="L_L">奔走する</rt></ruby>u <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby>
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o.<br>
+    <ruby>Hodiaŭ<rt class="XXL_L">今日</rt></ruby>, <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>maten<rt
+        class="XXL_L">朝</rt></ruby>o <ruby>ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>vesper<rt class="XXL_L">夕方</rt>
+    </ruby>o, <ruby>sin<rt class="XXL_L">懐</rt></ruby><ruby>sekv<rt class="XS_S">(に)付き従う</rt></ruby>e <ruby>okaz<rt
+        class="L_L">起こる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>event<rt class="XXL_L">事件</rt>
+    </ruby>oj, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>el<rt
+        class="XXS_S">中か<br>ら</rt></ruby><ruby>kor<rt class="XXL_L">心</rt></ruby>e <ruby>dezir<rt class="M_M">(を)望む</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>vi<rt
+        class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>ĝu<rt
+        class="XS_S">楽しむ</rt></ruby>u <ruby>ĝoj<rt class="L_L">喜ぶ</rt></ruby>an <ruby>temp<rt class="XXL_L">時間</rt>
+    </ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>amik<rt
+        class="XXL_L">友達</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o, <ruby>en<rt class="M_M">中で</rt></ruby>e
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>dispon<rt
+        class="XS_S">(を)自由に使う</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>a <ruby>temp<rt class="XXL_L">時間</rt>
+    </ruby>o.<br>
+    <br>
+    ---<br>
+    <br>
+    ### 【12〜14ページ目】 <ruby>La<rt class="M_M">The</rt></ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    **La <ruby>instru<rt class="S_S">(を)教える</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto**<br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino **DEGUĈI Ku<ruby>ren<rt class="XS_S">[解]腎臓</rt></ruby>ai**<br>
+    <ruby>Kvin<rt class="XXL_L">五</rt></ruby>a <ruby>Spirit<rt class="XXL_L">精神</rt></ruby>a <ruby>Gvid<rt
+        class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性
+      </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto<br>
+    <br>
+    <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino DEGUĈI Ku<ruby>ren<rt class="XS_S">[解]腎臓</rt></ruby>ai <ruby>far<rt
+        class="XXS_S">(を)す<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sub<rt class="XS_S">
+        (~の)下に</rt></ruby>an <ruby>salut<rt class="XS_S">(に)挨拶する</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby>
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o, <ruby>ĉe<rt class="XXS_S">とこ<br>ろで</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>ferm<rt class="XS_S">(を)閉める</rt>
+    </ruby>a <ruby>solen<rt class="XL_L">荘厳な</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> 90-a Japana <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o-<ruby>Kongres<rt
+        class="XXL_L">大会</rt></ruby>o <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt>
+    </ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Kame<rt class="S_S">[美]カメオ</rt></ruby>oka, <ruby>la<rt
+        class="M_M">the</rt></ruby> 12an <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>oktobr<rt class="XXL_L">１０月
+      </rt></ruby>o, 2003.<br>
+    <br>
+    <ruby>Estim<rt class="XS_S">(を)尊敬する</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>aj <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>kar<rt class="S_S">親愛な</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt>
+    </ruby><ruby>sam<rt class="M_M">同一の</rt></ruby><ruby>ide<rt class="L_L">観念</rt></ruby><ruby>an<rt class="M_M">会員
+      </rt></ruby>oj!<br>
+    <ruby>Bon<rt class="XL_L">良い</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby>on <ruby>al<rt class="XXS_S">
+        ~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~
+      </rt></ruby>j <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Kame<rt class="S_S">[美]カメオ</rt></ruby>oka. <ruby>Mi<rt
+        class="XXL_L">私</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>kor<rt class="XXL_L">心</rt>
+    </ruby>e <ruby>salut<rt class="XS_S">(に)挨拶する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt
+        class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>grand<rt
+        class="XL_L">大きい</rt></ruby>a <ruby>ĝoj<rt class="L_L">喜ぶ</rt></ruby>o <ruby>ĉe<rt class="XXS_S">とこ<br>ろで</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> 90-a Japana <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>o-<ruby>Kongres<rt class="XXL_L">大会</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>
+    <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>si<rt class="XS_S">自分
+      </rt></ruby>an <ruby>lok<rt class="M_M">場所</rt></ruby>on ĉi <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>urb<rt class="XXL_L">市</rt></ruby>o
+    <ruby>Kame<rt class="S_S">[美]カメオ</rt></ruby>oka.<br>
+    Ĉe <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>ferm<rt class="XS_S">(を)閉める
+      </rt></ruby>a <ruby>solen<rt class="XL_L">荘厳な</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tiu<rt
+        class="XXS_S">その;あ<br>のひと</rt></ruby> ĉi <ruby>kongres<rt class="XXL_L">大会</rt></ruby>o, <ruby>mi<rt
+        class="XXL_L">私</rt></ruby> <ruby>sincer<rt class="XXL_L">誠実な</rt></ruby>e <ruby>esprim<rt class="S_S">(を)表現する
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>grand<rt class="XL_L">大きい</rt></ruby>ajn <ruby>ĝoj<rt
+        class="L_L">喜ぶ</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>dank<rt class="XS_S">(に)感謝する</rt>
+    </ruby>on <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j
+    <ruby>part<rt class="XL_L">部分</rt></ruby>o<ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>ant<rt class="XXS_S">
+        能動;<br>継続</rt></ruby>oj <ruby>en<rt class="M_M">中で</rt></ruby><ruby>land<rt class="XXL_L">国</rt></ruby>aj
+    <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby><ruby>land<rt class="XXL_L">国</rt>
+    </ruby>aj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>apart<rt class="L_L">別々の</rt></ruby>e <ruby>al<rt
+        class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>gast<rt class="XXL_L">客</rt>
+    </ruby>oj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>divers<rt class="XXL_L">様々な</rt></ruby>aj <ruby>land
+      <rt class="XXL_L">国</rt>
+    </ruby>oj.<br>
+    <ruby>Inter<rt class="S_S">(の)間に</rt></ruby><ruby>ali<rt class="S_S">他の</rt></ruby>e, <ruby>mi<rt class="XXL_L">私
+      </rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>n <ruby>turn<rt class="S_S">(を)回す</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>special<rt class="XXL_L">特別の
+      </rt></ruby>aj <ruby>salut<rt class="XS_S">(に)挨拶する</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby>
+    <ruby>dank<rt class="XS_S">(に)感謝する</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>profesor<rt
+        class="XXL_L">教授(人)</rt></ruby>o S<ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>ten<rt class="XS_S">支え持つ
+      </rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>German<rt class="XL_L">ドイツ人</rt></ruby>io,
+    <ruby>Nobel<rt class="XXL_L">貴族</rt></ruby>-<ruby>premi<rt class="XXL_L">賞品</rt></ruby><ruby>it<rt class="XXXS_S">
+        受動<br>完<br>了</rt></ruby>o <ruby>pri<rt class="XS_S">ついて</rt></ruby> ekonomiko <ruby>en<rt class="M_M">中で</rt>
+    </ruby> 1994, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>vol
+      <rt class="XXS_S">意志が<br>ある</rt>
+    </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>far<rt class="XXS_S">
+        (を)す<br>る</rt></ruby>i <ruby>memor<rt class="S_S">(を)覚えている</rt></ruby>an <ruby>preleg<rt class="S_S">(を)講演する
+      </rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kongres<rt
+        class="XXL_L">大会</rt></ruby>a <ruby>period<rt class="XL_L">[理]周期</rt></ruby>o.<br>
+    De <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> D-ro <ruby>Zamenhof<rt class="M_M">[人名]ザメンホフ</rt></ruby> <ruby>publik
+      <rt class="XXL_L">公衆</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形
+      </rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>o 1887, <ruby>jam<rt class="XL_L">既に</rt>
+    </ruby> <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>pli<rt
+        class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>cent<rt class="XXL_L">百</rt>
+    </ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>mov<rt class="M_M">動かす</rt>
+    </ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>en<rt class="M_M">中で</rt>
+    </ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>du<rt class="XXL_L">二</rt></ruby>an
+    <ruby>jar<rt class="XXL_L">年</rt></ruby><ruby>cent<rt class="XXL_L">百</rt></ruby>on. <ruby>Ankaŭ<rt class="M_M">
+        (~も)また</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> japana <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>a <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>baldaŭ<rt
+        class="L_L">まもなく</rt></ruby> (2006) <ruby>ating<rt class="M_M">(に)着く</rt></ruby><ruby>os<rt class="XS_S">未来形
+      </rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an 100-an <ruby>dat<rt class="L_L">日付</rt></ruby><ruby>re<rt
+        class="S_S">再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby>on, <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>iĝ<rt
+        class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> Japana <ruby>Esperant<rt class="M_M">
+        エスペラント</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>a <ruby>Asoci<rt class="XXL_L">協会</rt></ruby>o,
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>origin<rt class="XXL_L">起源</rt></ruby>o <ruby>de<rt class="XS_S">の;から
+      </rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby>a Japana
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o-<ruby>Institut<rt class="XXL_L">研究所</rt></ruby>o. <ruby>Mi<rt
+        class="XXL_L">私</rt></ruby> <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>esprim<rt class="S_S">(を)表現する</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>profund<rt class="XXL_L">深い</rt></ruby>an <ruby>respekt<rt
+        class="M_M">(を)尊敬する</rt></ruby>on <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ĉiu<rt class="XXS_S">
+        各々の<br>;各~</rt></ruby>j <ruby>sam<rt class="M_M">同一の</rt></ruby><ruby>ide<rt class="L_L">観念</rt></ruby><ruby>an
+      <rt class="M_M">会員</rt>
+    </ruby>oj, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>dum<rt class="S_S">
+        (~する)間</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt></ruby>a <ruby>period<rt class="XL_L">[理]周期</rt></ruby>o
+    <ruby>si<rt class="XS_S">自分</rt></ruby>n <ruby>dediĉ<rt class="S_S">(を)捧げる</rt></ruby><ruby>is<rt class="XXS_S">
+        過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad<rt class="XXS_S">
+        継続<br>行為</rt></ruby>o.<br>
+    <ruby>Dum<rt class="S_S">(~する)間</rt></ruby>e, <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>nun<rt class="XXL_L">今
+      </rt></ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby>en<ruby>puŝ<rt class="XS_S">(を)押す</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ag<rt class="XXS_S">行動<br>する</rt>
+    </ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>invit<rt
+        class="XXS_S">(を)招待<br>する</rt></ruby>i <ruby>Universal<rt class="XXL_L">普遍的な</rt></ruby>an <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>o-<ruby>Kongres<rt class="XXL_L">大会</rt></ruby>on <ruby>al<rt class="XXS_S">
+        ~の方<br>へ</rt></ruby> Japanio <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>jar<rt class="XXL_L">年</rt></ruby>o 2007, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>se<rt class="XXS_S">
+        もし~<br>なら</rt></ruby> <ruby>real<rt class="M_M">現実の</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>os
+      <rt class="XS_S">未来形</rt>
+    </ruby> ĉi <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>, <ruby>en<rt class="M_M">中で
+      </rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>land<rt class="XXL_L">国</rt></ruby>o <ruby>ni<rt
+        class="XS_S">私達</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt>
+    </ruby> UK-on ekde <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby>, <ruby>kiam<rt class="M_M">いつ(時)</rt>
+    </ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>is<rt class="XXS_S">
+        過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> Tokio <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>o 1965. <ruby>En<rt
+        class="M_M">中で</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt>
+    </ruby> <ruby>sent<rt class="XS_S">(を)感じる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>nov<rt class="S_S">新しい</rt></ruby>an tajdon <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> Japana <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>mov
+      <rt class="M_M">動かす</rt>
+    </ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o.<br>
+    <ruby>Ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>organiz<rt class="M_M">
+        (を)組織する</rt></ruby>o EPA ĉi-<ruby>jar<rt class="XXL_L">年</rt></ruby>e <ruby>ating<rt class="M_M">(に)着く</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an 80-an <ruby>dat<rt
+        class="L_L">日付</rt></ruby><ruby>re<rt class="S_S">再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby>on,
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>mi<rt class="XXL_L">私
+      </rt></ruby>a <ruby>pra<rt class="L_L">原始</rt></ruby><ruby>av<rt class="S_S">祖父</rt></ruby>o DEGUĈI <ruby>Oni<rt
+        class="L_L">人々</rt></ruby>saburo <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形
+      </rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>organiz<rt class="M_M">(を)組織する</rt></ruby>on <ruby>en
+      <rt class="M_M">中で</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>o
+    1923, <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ide<rt class="L_L">
+        観念</rt></ruby>o <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nepr<rt
+        class="L_L">必然の</rt></ruby>e <ruby>neces<rt class="XXL_L">必要な</rt></ruby>a <ruby>por<rt class="S_S">ために</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o<ruby>pac<rt
+        class="XL_L">平和</rt></ruby>o. <ruby>Kaj<rt class="L_L">And</rt></ruby>, <ruby>ĉe<rt class="XXS_S">とこ<br>ろで</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fond<rt class="XS_S">(を)創立する</rt></ruby>o <ruby>mi<rt
+        class="XXL_L">私</rt></ruby>a <ruby>pra<rt class="L_L">原始</rt></ruby><ruby>av<rt class="S_S">祖父</rt></ruby>o
+    <ruby>konfes<rt class="S_S">(を)告白する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>si<rt
+        class="XS_S">自分</rt></ruby>an <ruby>entuziasm<rt class="XXL_L">熱狂</rt></ruby>on, "<ruby>Koncern<rt class="S_S">
+        (に)関係がある</rt></ruby>e <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on, ĉi <ruby>tiu<rt class="XXS_S">
+        その;あ<br>のひと</rt></ruby>n <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby>
+    <ruby>intenc<rt class="S_S">(を)意図する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>dis<rt class="M_M">分散
+      </rt></ruby><ruby>vast<rt class="XXL_L">広い</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>ne<rt
+        class="M_M">ない</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>en<rt class="M_M">中で</rt>
+    </ruby><ruby>land<rt class="XXL_L">国</rt></ruby>e, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>ankaŭ<rt
+        class="M_M">(~も)また</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>direkt<rt class="XXL_L">方向</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>nask<rt class="M_M">(を)生む</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>land<rt
+        class="XXL_L">国</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> D-ro <ruby>Zamenhof<rt class="M_M">
+        [人名]ザメンホフ</rt></ruby> <ruby>tra<rt class="XS_S">通って</rt></ruby> <ruby>Orient<rt class="XS_S">方位定める;東</rt>
+    </ruby>a <ruby>Azi<rt class="XS_S">アジア</rt></ruby>o: <ruby>nom<rt class="XXL_L">名前</rt></ruby>e <ruby>re<rt
+        class="S_S">再び</rt></ruby><ruby>turn<rt class="S_S">(を)回す</rt></ruby>e <ruby>eksport<rt class="M_M">(を)輸出する</rt>
+    </ruby>i <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>import<rt class="S_S">(を)輸入する</rt></ruby><ruby>it<rt
+        class="XXXS_S">受動<br>完<br>了</rt></ruby>an". Ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>
+    <ruby>entuziasm<rt class="XXL_L">熱狂</rt></ruby>o <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">
+        過去<br>形</rt></ruby> <ruby>hered<rt class="S_S">(を)相続する</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt>
+    </ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>sin<rt class="XXL_L">懐</rt></ruby><ruby>sekv<rt
+        class="XS_S">(に)付き従う</rt></ruby>aj <ruby>Gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ant<rt
+        class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby>g<ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby><ruby>ant<rt
+        class="XXS_S">能動;<br>継続</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto <ruby>kaj<rt class="L_L">
+        and</rt></ruby> <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>a <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> EPA <ruby>daŭr<rt class="XXL_L">継続</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形
+      </rt></ruby> <ruby>ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>hodiaŭ<rt class="XXL_L">今日</rt></ruby>.<br>
+    <br>
+    En <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>o 1980 <ruby>mi<rt class="XXL_L">
+        私</rt></ruby>a <ruby>av<rt class="S_S">祖父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o DEGUĈI Naohi,
+    <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Tri<rt class="XL_L">三</rt></ruby>a <ruby>Gvid<rt class="XXS_S">
+        (を)案内<br>する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto, <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt
+        class="XXS_S">過去<br>形</rt></ruby>, "<ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>real<rt class="M_M">現実の</rt>
+    </ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt
+        class="XXL_L">世界</rt></ruby>o<ruby>pac<rt class="XL_L">平和</rt></ruby>on <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~
+      </rt></ruby>j <ruby>naci<rt class="XXL_L">国民</rt></ruby>oj <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>met<rt class="S_S">(を)置く
+      </rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>aj <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la
+      <rt class="M_M">the</rt>
+    </ruby> <ruby>egal<rt class="M_M">等しい</rt></ruby>a <ruby>pozici<rt class="XXL_L">位置</rt>
+    </ruby>o. <ruby>La<rt class="M_M">The</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>element<rt
+        class="XXL_L">要素</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>far<rt class="XXS_S">
+        (を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>ĝi<rt
+        class="XS_S">それ</rt></ruby>a <ruby>baz<rt class="XL_L">基礎</rt></ruby>o, <ruby>est<rt class="XXS_S">(~)で<br>ある
+      </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci<rt
+        class="XXL_L">国民</rt></ruby>a <ruby>komun<rt class="XXL_L">共通の</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt>
+    </ruby>o; ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>komun<rt class="XXL_L">共通の</rt></ruby>a
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>at<rt
+        class="XXS_S">受動<br>継続</rt></ruby>a <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby>a <ruby>naci<rt class="XXL_L">国民</rt></ruby>a
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o", <ruby>sed<rt class="S_S">しかし</rt></ruby>, <ruby>kiam<rt class="M_M">
+        いつ(時)</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>rigard<rt class="L_L">(を)見る</rt></ruby><ruby>as
+      <rt class="XS_S">現在形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>situaci<rt class="XXL_L">事態</rt>
+    </ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt
+        class="XXL_L">世界</rt></ruby>o, <ruby>bedaŭr<rt class="S_S">(を)残念に思う</rt></ruby><ruby>ind<rt class="L_L">価値</rt>
+    </ruby>e, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>opini<rt class="XS_S">意見である</rt></ruby>o <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>av<rt class="S_S">祖父</rt>
+    </ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>ankoraŭ<rt class="XXL_L">まだ</rt></ruby> <ruby>ne<rt
+        class="M_M">ない</rt></ruby> <ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>real<rt class="M_M">現実の</rt></ruby><ruby>iĝ<rt class="XS_S">
+        なる</rt></ruby>on. <ruby>Ali<rt class="S_S">他の</rt></ruby><ruby>flank<rt class="XXL_L">側</rt>
+    </ruby>e, <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>dir<rt
+        class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, "Al <ruby>mi<rt class="XXL_L">
+        私</rt></ruby> <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke
+      <rt class="XXS_S">という<br>こと</rt>
+    </ruby> <ruby>ekster<rt class="L_L">(の)外で</rt></ruby><ruby>supoz<rt class="S_S">
+        (を)想定する</rt></ruby>e <ruby>fru<rt class="M_M">早い</rt></ruby>e <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt>
+    </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>n <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby>
+    <ruby>hom<rt class="XXL_L">人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o <ruby>koncentr<rt class="L_L">
+        (を)集中する</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>tut
+      <rt class="XS_S">全部の</rt>
+    </ruby>an <ruby>saĝ<rt class="S_S">賢明な</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>ter<rt class="M_M">土地</rt></ruby><ruby>glob<rt class="XXL_L">球体</rt></ruby><ruby>skal<rt
+        class="XXL_L">尺度</rt></ruby>e <ruby>decid<rt class="XS_S">(を)決定する</rt></ruby><ruby>os<rt class="XS_S">未来形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>direkt<rt class="XXL_L">方向</rt></ruby>on".<br>
+    La <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>a <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad<rt
+        class="XXS_S">継続<br>行為</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby> <ruby>tiom<rt class="XXS_S">そんな;あ<br>んなに</rt></ruby> <ruby>grand<rt class="XL_L">大きい</rt>
+    </ruby>a <ruby>afer<rt class="XL_L">物事</rt></ruby>o, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ĝi<rt
+        class="XS_S">それ</rt></ruby> eĉ <ruby>reg<rt class="XS_S">統治する</rt></ruby><ruby>os<rt class="XS_S">未来形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>ont<rt
+        class="XXS_S">能動;<br>将然</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt>
+    </ruby> <ruby>hom<rt class="XXL_L">人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o, <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>feliĉ<rt class="M_M">幸福な</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby>
+    <ruby>etern<rt class="L_L">永遠の</rt></ruby>e <ruby>daŭr<rt class="XXL_L">継続</rt></ruby>aj <ruby>generaci<rt
+        class="XXL_L">世代</rt></ruby>oj; <ruby>tial<rt class="XXS_S">それ<br>ゆえ</rt></ruby>, <ruby>tiom<rt class="XXS_S">
+        そんな;あ<br>んなに</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>neces<rt class="XXL_L">必要な</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>kaj<rt
+        class="L_L">and</rt></ruby> <ruby>klopod<rt class="L_L">奔走する</rt></ruby>o, <ruby>egal<rt class="M_M">等しい</rt>
+    </ruby>aj <ruby>je<rt class="XS_S">(~)に</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>valor
+      <rt class="XXL_L">価値</rt>
+    </ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pens<rt class="XXL_L">思う</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>. <ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>tamen<rt
+        class="M_M">とはいえ;</rt></ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ
+      </rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>fakt
+      <rt class="XL_L">事実</rt>
+    </ruby>o, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>oft<rt
+        class="XXS_S">たび<br>たび</rt></ruby>e <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> eĉ <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>afer<rt
+        class="XL_L">物事</rt></ruby>o, <ruby>kia<rt class="XXS_S">どのよ<br>うな</rt></ruby>n <ruby>oni<rt class="L_L">人々</rt>
+    </ruby> <ruby>konsider<rt class="L_L">(を)考慮する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tut<rt
+        class="XS_S">全部の</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>real<rt class="M_M">現実の</rt>
+    </ruby>og<ruby>ebl<rt class="L_L">可能</rt></ruby>a, <ruby>iam<rt class="S_S">ある時</rt></ruby> <ruby>ne<rt class="M_M">
+        ない</rt></ruby><ruby>atend<rt class="L_L">(を)待つ</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了
+      </rt></ruby>e <ruby>real<rt class="M_M">現実の</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby>.<br>
+    En <ruby>la<rt class="M_M">the</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>a <ruby>period<rt
+        class="XL_L">[理]周期</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Oomoto <ruby>oft<rt class="XXS_S">
+        たび<br>たび</rt></ruby>e <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>
+    <ruby>tia<rt class="XS_S">そんな</rt></ruby>j <ruby>simil<rt class="S_S">よく似た</rt></ruby>aj <ruby>afer<rt class="XL_L">
+        物事</rt></ruby>oj. <ruby>Bon<rt class="XL_L">良い</rt></ruby><ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>u
+    <ruby>permes<rt class="M_M">(を)許可する</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt
+        class="XXL_L">私</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>prezent<rt class="M_M">(を)差し出す</rt>
+    </ruby>i <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>interes<rt class="XS_S">(に)興味を持たせる</rt></ruby>an <ruby>el
+      <rt class="XXS_S">中か<br>ら</rt>
+    </ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>.<br>
+    Ni <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>centr<rt class="XXL_L">中心</rt></ruby>an <ruby>ofic<rt class="XL_L">職務</rt></ruby><ruby>ej
+      <rt class="XS_S">場所</rt>
+    </ruby>on <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>en<rt class="M_M">中で
+      </rt></ruby> <ruby>Kame<rt class="S_S">[美]カメオ</rt></ruby>oka, <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby>
+    <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> Ajabe. <ruby>En<rt class="M_M">
+        中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sankt<rt class="S_S">[宗]神聖な</rt></ruby>a
+    <ruby>ĝarden<rt class="XXL_L">庭</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Ajabe <ruby>trov<rt
+        class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>lag<rt class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o <ruby>nom<rt class="XXL_L">
+        名前</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a "<ruby>Kin<rt class="M_M">映画</rt>
+    </ruby>rjuu-<ruby>kaj<rt class="L_L">and</rt></ruby>". Ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>
+    <ruby>lag<rt class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o <ruby>est<rt class="XXS_S">
+        (~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>fos<rt class="XS_S">(を)掘る</rt>
+    </ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tiam
+      <rt class="XXS_S">その時;<br>あの時</rt>
+    </ruby>aj <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>oj <ruby>de
+      <rt class="XS_S">の;から</rt>
+    </ruby> Oomoto <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby> <ruby>la<rt class="M_M">the
+      </rt></ruby> <ruby>instrukci<rt class="XXL_L">指令</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>pra<rt
+        class="L_L">原始</rt></ruby><ruby>av<rt class="S_S">祖父</rt></ruby>o <ruby>Oni<rt class="L_L">人々</rt></ruby>saburo,
+    <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt>
+    </ruby>o 1914, <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> Oomoto
+    <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>is<rt
+        class="XXS_S">過去<br>形</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on. <ruby>Kaj<rt class="L_L">
+        And</rt></ruby>, <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt
+        class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>konstru<rt class="M_M">(を)建造する</rt></ruby><ruby>it<rt
+        class="XXXS_S">受動<br>完<br>了</rt></ruby>aj <ruby>kvin<rt class="XXL_L">五</rt></ruby> <ruby>insul<rt
+        class="XXL_L">島</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>oj <ruby>kiel<rt class="XXS_S">いかに;の<br>ように
+      </rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>model<rt class="XXL_L">模型</rt></ruby>oj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>kvin<rt class="XXL_L">五</rt></ruby> <ruby>kontinent<rt class="XXL_L">大陸</rt>
+    </ruby>oj, <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>aj <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hom<rt class="XXL_L">人</rt>
+    </ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o.<br>
+    <ruby>Sed<rt class="S_S">しかし</rt></ruby>, <ruby>neniu<rt class="XS_S">どの~も~ない</rt></ruby> <ruby>sci<rt
+        class="XXS_S">知って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>de<rt class="XS_S">の;から
+      </rt></ruby> <ruby>kie<rt class="XS_S">どこで</rt></ruby> <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>os<rt
+        class="XS_S">未来形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>akv<rt class="XXL_L">水</rt></ruby>o.
+    <ruby>La<rt class="M_M">The</rt></ruby> <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>ant<rt class="XXS_S">
+        能動;<br>継続</rt></ruby>oj, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>fos<rt class="XS_S">(を)掘る</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt
+        class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>on, <ruby>far<rt class="XXS_S">(を)す<br>る</rt>
+    </ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mal<rt
+        class="S_S">正反対</rt></ruby><ruby>trankvil<rt class="XXL_L">平静な</rt></ruby>aj, <ruby>kaj<rt class="L_L">and</rt>
+    </ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>urb<rt
+        class="XXL_L">市</rt></ruby><ruby>an<rt class="M_M">会員</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby>
+    Ajabe eĉ <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby><ruby>mok<rt class="S_S">あざける
+      </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, "<ruby>Kio<rt class="XXL_L">何</rt></ruby>n <ruby>pens
+      <rt class="XXL_L">思う</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> Oomoto, <ruby>fos<rt class="XS_S">(を)掘る
+      </rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>tia<rt
+        class="XS_S">そんな</rt></ruby> <ruby>lok<rt class="M_M">場所</rt></ruby>o <ruby>lag<rt class="XXL_L">湖</rt>
+    </ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>on". <ruby>Sed<rt class="S_S">しかし</rt></ruby>, <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>januar<rt class="XXL_L">１月</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sekv<rt class="XS_S">(に)付き従う
+      </rt></ruby>a <ruby>jar<rt class="XXL_L">年</rt></ruby>o, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>fin<rt
+        class="XS_S">終える</rt></ruby><ruby>konstru<rt class="M_M">(を)建造する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+    </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt
+        class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o, <ruby>tut<rt class="XS_S">全部の</rt></ruby>e
+    <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>atend<rt class="L_L">(を)待つ</rt></ruby><ruby>it<rt class="XXXS_S">
+        受動<br>完<br>了</rt></ruby>e <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt>
+    </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>pet<rt class="XS_S">(を)頼む</rt></ruby>o <ruby>de<rt
+        class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>urb<rt class="XXL_L">市</rt></ruby>o,
+    <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>vol<rt class="XXS_S">
+        意志が<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>util<rt class="XS_S">有用な</rt></ruby><ruby>ig
+      <rt class="XXS_S">させ<br>る</rt>
+    </ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt class="XXL_L">湖</rt>
+    </ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>on <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>part
+      <rt class="XL_L">部分</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>flu<rt class="XS_S">流れる</rt>
+    </ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o. <ruby>Tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby>, <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>lag<rt class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o
+    "<ruby>Kin<rt class="M_M">映画</rt></ruby>rjuu-<ruby>kaj<rt class="L_L">and</rt></ruby>" <ruby>far<rt class="XXS_S">
+        (を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>
+    <ruby>plen<rt class="XS_S">いっぱいの</rt></ruby><ruby>plen<rt class="XS_S">いっぱいの</rt></ruby>a <ruby>de<rt class="XS_S">
+        の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>abund<rt class="XS_S">有り余るほどの</rt></ruby>a
+    <ruby>akv<rt class="XXL_L">水</rt></ruby>o. <ruby>Ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>nun<rt class="XXL_L">
+        今</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt class="XXL_L">湖</rt></ruby><ruby>et<rt
+        class="XS_S">弱小</rt></ruby>o <ruby>spegul<rt class="XXL_L">鏡</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>bel<rt class="S_S">美しい</rt></ruby>ajn <ruby>arb<rt class="XXL_L">木</rt></ruby>o<ruby>figur<rt
+        class="XXL_L">姿</rt></ruby>ojn <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>ĝarden<rt class="XXL_L">庭</rt></ruby>o.<br>
+    <br>
+    *[写真キャプション]*<br>
+    En <ruby>la<rt class="M_M">the</rt></ruby> 90a Japana <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>o-<ruby>Kongres<rt class="XXL_L">大会</rt></ruby>o; <ruby>Majstr<rt class="XXL_L">巨匠</rt></ruby>ino DEGUĈI
+    Ku<ruby>ren<rt class="XS_S">[解]腎臓</rt></ruby>ai <ruby>salut<rt class="XS_S">(に)挨拶する</rt></ruby><ruby>is<rt
+        class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント
+      </rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> 2003, <ruby>la<rt class="M_M">the</rt></ruby> 12a (~13a)
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> okt.<br>
+    <br>
+    Mi <ruby>pens<rt class="XXL_L">思う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">
+        という<br>こと</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>ad
+      <rt class="XXS_S">継続<br>行為</rt>
+    </ruby>o <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>Esperant<rt class="M_M">
+        エスペラント</rt></ruby>o <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>simil<rt class="S_S">よく似た</rt></ruby><ruby>as
+      <rt class="XS_S">現在形</rt>
+    </ruby> <ruby>je<rt class="XS_S">(~)に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>labor<rt class="XXL_L">働く</rt></ruby>o, <ruby>nom<rt class="XXL_L">名前</rt></ruby>e, <ruby>la<rt class="M_M">
+        the</rt></ruby> <ruby>fos<rt class="XS_S">(を)掘る</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o
+    <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt class="XXL_L">湖</rt>
+    </ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o. Eĉ <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>ni<rt
+        class="XS_S">私達</rt></ruby> <ruby>rest<rt class="XL_L">残り</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>trankvil<rt class="XXL_L">平静な</rt></ruby>aj <ruby>aŭ<rt class="XS_S">
+        または</rt></ruby> <ruby>najbar<rt class="XXL_L">隣人</rt></ruby>oj <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>on
+      <rt class="M_M">分数</rt>
+    </ruby><ruby>mok<rt class="S_S">あざける</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>,
+    <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+    </ruby> <ruby>daŭr<rt class="XXL_L">継続</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>klopod<rt class="L_L">奔走する</rt></ruby>on <ruby>sen<rt class="XS_S">(~)なしで</rt>
+    </ruby><ruby>ĉes<rt class="XL_L">止む</rt></ruby>e <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pacienc<rt
+        class="XL_L">我慢強い</rt></ruby>e. <ruby>Iam<rt class="S_S">ある時</rt></ruby> <ruby>nepr<rt class="L_L">必然の</rt>
+    </ruby>e <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o, <ruby>kiam<rt class="M_M">いつ(時)</rt>
+    </ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>at<rt
+        class="XXS_S">受動<br>継続</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>hom<rt class="XXL_L">人</rt></ruby>oj <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>kvin<rt class="XXL_L">五</rt></ruby> <ruby>kontinent<rt class="XXL_L">大陸</rt>
+    </ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ter<rt
+        class="M_M">土地</rt></ruby><ruby>glob<rt class="XXL_L">球体</rt></ruby>o, <ruby>sam<rt class="M_M">同一の</rt></ruby>e
+    <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lag<rt
+        class="XXL_L">湖</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>on <ruby>kun<rt class="XS_S">(~と)共に</rt>
+    </ruby> <ruby>kvin<rt class="XXL_L">五</rt></ruby> <ruby>kontinent<rt class="XXL_L">大陸</rt></ruby>oj <ruby>ne<rt
+        class="M_M">ない</rt></ruby><ruby>atend<rt class="L_L">(を)待つ</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了
+      </rt></ruby>e <ruby>plen<rt class="XS_S">いっぱいの</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt
+        class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>abund<rt class="XS_S">有り余るほどの
+      </rt></ruby>a <ruby>akv<rt class="XXL_L">水</rt></ruby>o.<br>
+    Nu, <ruby>kar<rt class="S_S">親愛な</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>kongres<rt class="XXL_L">
+        大会</rt></ruby><ruby>an<rt class="M_M">会員</rt></ruby>oj, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>plej<rt
+        class="XL_L">最も</rt></ruby> <ruby>grav<rt class="M_M">重要な</rt></ruby>a, <ruby>laŭ<rt class="S_S">沿って</rt></ruby>
+    mi, <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tio<rt
+        class="XXS_S">それ;<br>あれ</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ni<rt class="XS_S">私達
+      </rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>u <ruby>ĉiam<rt class="L_L">いつも</rt></ruby>
+    <ruby>pret<rt class="XXS_S">用意の<br>整った</rt></ruby>aj <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>tiu<rt
+        class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>tag<rt class="XXL_L">日</rt></ruby>o, <ruby>kiam<rt class="M_M">いつ(時)
+      </rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>atend<rt class="L_L">(を)待つ</rt></ruby><ruby>it<rt
+        class="XXXS_S">受動<br>完<br>了</rt></ruby>e <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>os<rt class="XS_S">未来形
+      </rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt
+        class="XXL_L">世界</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+    <ruby>hom<rt class="XXL_L">人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o <ruby>bezon<rt class="XS_S">(を)必要とする
+      </rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on, <ruby>ne
+      <rt class="M_M">ない</rt>
+    </ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>ankaŭ<rt
+        class="M_M">(~も)また</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>an <ruby>intern<rt class="XL_L">内部の</rt>
+    </ruby>an <ruby>ide<rt class="L_L">観念</rt></ruby>on. Do, <ruby>mi<rt class="XXL_L">私</rt></ruby>a<ruby>flank<rt
+        class="XXL_L">側</rt></ruby>e, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt>
+    </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pret<rt class="XXS_S">用意の<br>整った</rt></ruby>a <ruby>diligent
+      <rt class="XXL_L">勤勉な</rt>
+    </ruby>e <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>konstant<rt class="XXL_L">不変の
+      </rt></ruby>e <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i <ruby>Esperant<rt class="M_M">エスペラント</rt>
+    </ruby>on <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>tut<rt
+        class="XS_S">全部の</rt></ruby>a <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o.<br>
+    <br>
+    Ĉe <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fin<rt class="XS_S">終える</rt></ruby>o, <ruby>mi<rt class="XXL_L">私
+      </rt></ruby> <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+    <ruby>prezent<rt class="M_M">(を)差し出す</rt></ruby>i <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>ajn <ruby>fraz<rt
+        class="XXL_L">文</rt></ruby>ojn <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+    </ruby> eseo, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>n <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>av
+      <rt class="S_S">祖父</rt>
+    </ruby>o DEGUĈI H<ruby>ide<rt class="L_L">観念</rt></ruby><ruby>mar<rt class="XXL_L">海</rt>
+    </ruby>u <ruby>verk<rt class="XXL_L">著作</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt
+        class="M_M">中で</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a <ruby>jun<rt class="L_L">若い</rt>
+    </ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o, <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby> <ruby>la<rt
+        class="M_M">the</rt></ruby> <ruby>titol<rt class="XL_L">題名</rt></ruby>o "<ruby>Neces<rt class="XXL_L">必要な</rt>
+    </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby><ruby>ad<rt
+        class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Esperant<rt class="M_M">
+        エスペラント</rt></ruby>o".<br>
+    <br>
+    <ruby>Hom<rt class="XXL_L">人</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o!!<br>
+    Vi <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>ferm<rt class="XS_S">(を)閉める</rt></ruby>u <ruby>trankvil
+      <rt class="XXL_L">平静な</rt>
+    </ruby>e <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>ajn <ruby>okul<rt class="L_L">[解]目</rt></ruby>ojn
+    <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>re<rt class="S_S">再び</rt>
+    </ruby><ruby>cit<rt class="XXS_S">引用<br>する</rt></ruby>u <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>fraz<rt
+        class="XXL_L">文</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと
+      </rt></ruby> ĉi <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>naci<rt class="XXL_L">国民</rt></ruby>a
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o.<br>
+    <ruby>Kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>sonor<rt class="XXL_L">音響</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">
+        あな<br>た(<br>達)</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>agrabl<rt class="XXL_L">快い
+      </rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>a <ruby>melodi<rt
+        class="XL_L">[楽]旋律</rt></ruby>o?<br>
+    <ruby>Gust<rt class="XXL_L">味</rt></ruby><ruby>um<rt class="XS_S">不定意味</rt></ruby>u <ruby>la<rt class="M_M">the</rt>
+    </ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby>an <ruby>mild<rt class="M_M">温和な</rt></ruby><ruby>ec<rt
+        class="S_S">性質</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>trankvil<rt class="XXL_L">平静な</rt>
+    </ruby><ruby>ec<rt class="S_S">性質</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>vi<rt
+        class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o.<br>
+    <ruby>Ĝust<rt class="M_M">正しい</rt></ruby>e ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>Esperant<rt
+        class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形
+      </rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>o, <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+        class="XS_S">現在形</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt>
+    </ruby>o.<br>
+    <ruby>Kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">
+        現在形</rt></ruby> <ruby>uz<rt class="S_S">使う</rt></ruby>i ĉi <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>n
+    <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on, <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>trov<rt
+        class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>en<rt class="M_M">中で</rt>
+    </ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>Di<rt class="XL_L">神</rt></ruby>on.<br>
+    <br>
+    <ruby>Kor<rt class="XXL_L">心</rt></ruby>an <ruby>Dank<rt class="XS_S">(に)感謝する</rt></ruby>on!!<br>
+    (Vd. p. 8)
+  </p>
+</body>
+
+</html>
