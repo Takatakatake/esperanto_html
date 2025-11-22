@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>エスペラント文法まとめ (A3サイズ)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=swap"
+        rel="stylesheet">
+    <style>
+        @media print {
+            @page {
+                size: A3 landscape;
+                margin: 10mm;
+            }
+
+            html {
+                font-size: 11px;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: white;
+                display: block;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .sheet {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                padding: 12mm 18mm;
+                page-break-after: always;
+            }
+        }
+
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Noto Sans JP', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* A3 Landscape Ratio: 420mm / 297mm ≈ 1.414 */
+        .sheet {
+            background-color: white;
+            width: 100%;
+            max-width: 1414px;
+            /* Base width for scaling */
+            aspect-ratio: 1.414 / 1;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .handwritten-feel {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .esp-text {
+            color: #1d4ed8;
+            /* blue-700 */
+            font-weight: 700;
+        }
+
+        .jp-text {
+            color: #374151;
+            /* gray-700 */
+        }
+
+        /* Custom Cross Line (not used currently, kept for possible extension) */
+        .cross-line {
+            position: absolute;
+            background-color: #9ca3af;
+            width: 2px;
+            height: 120%;
+            top: -10%;
+            left: 50%;
+            transform: rotate(15deg);
+        }
+
+        .cross-line-2 {
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Download/Print Hint -->
+    <div class="fixed top-4 right-4 no-print bg-white p-4 rounded shadow-lg z-50 text-sm text-gray-600">
+        <p class="mb-2 font-bold">💡 ヒント</p>
+        <p>この画面はA3横向き比率で作られています。</p>
+        <button onclick="window.print()"
+            class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition w-full font-bold">
+            印刷 / PDF保存
+        </button>
+    </div>
+
+    <!-- A3 Sheet Container -->
+    <div class="sheet">
+
+        <!-- Header -->
+        <header class="w-full border-b-4 border-gray-800 pb-4 mb-6 flex justify-between items-end">
+            <h1 class="text-4xl font-bold text-gray-800 tracking-wider handwritten-feel">エスペラント文法要約</h1>
+            <span class="text-lg text-gray-500">Esperanta gramatiko</span>
+        </header>
+
+        <!-- Main Content Grid (Split Left/Right) -->
+        <div class="flex-1 grid grid-cols-12 gap-10 h-full">
+
+            <!-- LEFT COLUMN: Endings & Verbs (Col-span 5) -->
+            <div class="col-span-5 flex flex-col gap-6 relative">
+                <!-- Vertical Divider Line (Visual only) -->
+                <div class="absolute right-[-24px] top-0 bottom-0 w-[1px] bg-gray-200 rounded-full"></div>
+
+                <!-- 1. 一文字語尾 (Word Endings) -->
+                <section class="bg-blue-50 rounded-xl p-4 border border-blue-100 shadow-sm">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-200 inline-block pb-1">
+                        一文字語尾 (Vortfinaĵoj)</h2>
+                    <ul class="space-y-2 text-xl">
+                        <li class="flex items-baseline">
+                            <span class="esp-text w-16 text-3xl">-o</span>
+                            <span class="text-gray-400 mx-2">:</span>
+                            <span class="jp-text font-bold">名詞</span>
+                            <span class="text-sm text-gray-500 ml-2">(物・事)</span>
+                        </li>
+                        <li class="flex items-baseline">
+                            <span class="esp-text w-16 text-3xl">-a</span>
+                            <span class="text-gray-400 mx-2">:</span>
+                            <span class="jp-text font-bold">形容詞</span>
+                            <span class="text-sm text-gray-500 ml-2">(～い、～な)</span>
+                        </li>
+                        <li class="flex items-baseline">
+                            <span class="esp-text w-16 text-3xl">-e</span>
+                            <span class="text-gray-400 mx-2">:</span>
+                            <span class="jp-text font-bold">副詞</span>
+                            <span class="text-sm text-gray-500 ml-2">(～く、～に)</span>
+                        </li>
+                        <li class="flex items-baseline">
+                            <span class="esp-text w-16 text-3xl">-j</span>
+                            <span class="text-gray-400 mx-2">:</span>
+                            <span class="jp-text font-bold">複数形</span>
+                            <span class="text-sm text-gray-500 ml-2">(名詞・形容詞に付く)</span>
+                        </li>
+                        <li class="flex items-baseline">
+                            <span class="esp-text w-16 text-3xl">-n</span>
+                            <span class="text-gray-400 mx-2">:</span>
+                            <span class="jp-text font-bold">目的格</span>
+                            <span class="text-sm text-gray-500 ml-2">(～を / 対格)</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 2. 動詞・分詞 (Verbs & Participles) -->
+                <section class="flex-1">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-200 inline-block pb-1">
+                        動詞・分詞 (Verboj kaj Participoj)</h2>
+
+                    <!-- Verb Table -->
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b-2 border-gray-300 text-gray-500 text-sm">
+                                <th class="py-2 font-normal w-1/4">時制・法</th>
+                                <th class="py-2 font-normal text-center w-1/4">語尾</th>
+                                <th class="py-2 font-normal text-center w-1/4 text-blue-800 bg-blue-50 rounded-t-lg">
+                                    能動 (～している)</th>
+                                <th
+                                    class="py-2 font-normal text-center w-1/4 text-indigo-800 bg-indigo-50 rounded-t-lg">
+                                    受動 (～されている)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-lg">
+                            <!-- Present -->
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-bold text-gray-700">現在</td>
+                                <td class="py-3 text-center esp-text">-as</td>
+                                <td class="py-3 text-center esp-text bg-blue-50/50">-ant-</td>
+                                <td class="py-3 text-center esp-text bg-indigo-50/50">-at-</td>
+                            </tr>
+                            <!-- Past -->
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-bold text-gray-700">過去</td>
+                                <td class="py-3 text-center esp-text">-is</td>
+                                <td class="py-3 text-center esp-text bg-blue-50/50">-int-</td>
+                                <td class="py-3 text-center esp-text bg-indigo-50/50">-it-</td>
+                            </tr>
+                            <!-- Future -->
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3 font-bold text-gray-700">未来</td>
+                                <td class="py-3 text-center esp-text">-os</td>
+                                <td class="py-3 text-center esp-text bg-blue-50/50">-ont-</td>
+                                <td class="py-3 text-center esp-text bg-indigo-50/50">-ot-</td>
+                            </tr>
+                            <!-- Others -->
+                            <tr class="border-b border-gray-200 text-gray-500">
+                                <td class="py-2 font-bold text-gray-700">
+                                    条件 <span class="text-xs font-normal">(もし～なら)</span>
+                                </td>
+                                <td class="py-2 text-center esp-text">-us</td>
+                                <td class="py-2 text-center text-gray-300">―</td>
+                                <td class="py-2 text-center text-gray-300">―</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 text-gray-500">
+                                <td class="py-2 font-bold text-gray-700">
+                                    命令 <span class="text-xs font-normal">(～しろ / ～しよう)</span>
+                                </td>
+                                <td class="py-2 text-center esp-text">-u</td>
+                                <td class="py-2 text-center text-gray-300">―</td>
+                                <td class="py-2 text-center text-gray-300">―</td>
+                            </tr>
+                            <tr class="text-gray-500">
+                                <td class="py-2 font-bold text-gray-700">
+                                    不定 <span class="text-xs font-normal">(辞書形)</span>
+                                </td>
+                                <td class="py-2 text-center esp-text">-i</td>
+                                <td class="py-2 text-center text-gray-300">―</td>
+                                <td class="py-2 text-center text-gray-300">―</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mt-2 text-gray-500 text-xs text-right">
+                        ※ 分詞の語幹中の母音 <span class="esp-text">(a / i / o)</span> が、それぞれ現在・過去・未来を表します
+                        <span class="ml-2 text-gray-400">例: vidanta / vidinta / vidonta, vidata / vidita / vidota</span>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- RIGHT COLUMN: Correlatives (Col-span 7) -->
+            <div class="col-span-7 h-full flex flex-col pl-4">
+                <h2
+                    class="text-2xl font-bold text-gray-800 mb-2 border-b-2 border-blue-200 inline-block self-start pb-1">
+                    相関詞 (Korelativoj)</h2>
+
+                <p class="text-gray-500 mb-4 text-sm">
+                    左の「前語」と右の「後語」を組み合わせて単語を作ります
+                    <span class="esp-text ml-1">(例: ki- + -u = kiu)</span>
+                </p>
+
+                <!-- The "Cross" Layout Area -->
+                <div
+                    class="flex-1 relative flex items-center justify-center bg-gray-50 rounded-2xl border border-gray-100 p-6">
+
+                    <!-- The Giant X Background -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
+                        <svg width="80%" height="80%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <line x1="20" y1="10" x2="80" y2="90" stroke="#374151" stroke-width="1" />
+                            <line x1="80" y1="10" x2="20" y2="90" stroke="#374151" stroke-width="1" />
+                        </svg>
+                    </div>
+
+                    <div class="flex w-full h-full items-stretch">
+
+                        <!-- Left Side: Prefixes -->
+                        <div
+                            class="w-5/12 flex flex-col justify-center items-end space-y-4 pr-10 border-r-2 border-dashed border-gray-300 relative">
+                            <!-- Label -->
+                            <div
+                                class="absolute -top-4 right-8 bg-gray-600 text-white px-3 py-1 rounded text-xs font-bold tracking-widest">
+                                前語 (PREFIX)</div>
+
+                            <!-- Items -->
+                            <div class="text-right group cursor-pointer hover:scale-105 transition-transform">
+                                <div class="text-4xl esp-text">ki-</div>
+                                <div class="text-lg text-gray-600 font-bold">
+                                    疑問 <span class="text-sm font-normal">(何～)</span>
+                                </div>
+                            </div>
+                            <div class="text-right group cursor-pointer hover:scale-105 transition-transform">
+                                <div class="text-4xl esp-text">ti-</div>
+                                <div class="text-lg text-gray-600 font-bold">
+                                    指示 <span class="text-sm font-normal">(その～ / あの～)</span>
+                                </div>
+                            </div>
+                            <div class="text-right group cursor-pointer hover:scale-105 transition-transform">
+                                <div class="text-4xl esp-text">i-</div>
+                                <div class="text-lg text-gray-600 font-bold">
+                                    不定 <span class="text-sm font-normal">(ある～ / どれかの～)</span>
+                                </div>
+                            </div>
+                            <div class="text-right group cursor-pointer hover:scale-105 transition-transform">
+                                <div class="text-4xl esp-text">ĉi-</div>
+                                <div class="text-lg text-gray-600 font-bold">
+                                    普遍 <span class="text-sm font-normal">(すべての～)</span>
+                                </div>
+                            </div>
+                            <div class="text-right group cursor-pointer hover:scale-105 transition-transform">
+                                <div class="text-4xl esp-text">neni-</div>
+                                <div class="text-lg text-gray-600 font-bold">
+                                    否定 <span class="text-sm font-normal">(何も～ない)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Center Connector (Multiplication Sign) -->
+                        <div class="w-2/12 flex items-center justify-center">
+                            <div class="text-6xl text-gray-300 font-light select-none">×</div>
+                        </div>
+
+                        <!-- Right Side: Suffixes -->
+                        <div
+                            class="w-5/12 flex flex-col justify-center items-start space-y-2 pl-6 border-l-2 border-dashed border-gray-300 relative">
+                            <!-- Label -->
+                            <div
+                                class="absolute -top-4 left-6 bg-gray-600 text-white px-3 py-1 rounded text-xs font-bold tracking-widest">
+                                後語 (SUFFIX)</div>
+
+                            <!-- Items -->
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-u</span>
+                                <span class="text-lg text-gray-700 font-bold">人・個体</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-o</span>
+                                <span class="text-lg text-gray-700 font-bold">物・事</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-a</span>
+                                <span class="text-lg text-gray-700 font-bold">種類・性質</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-e</span>
+                                <span class="text-lg text-gray-700 font-bold">場所</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-am</span>
+                                <span class="text-lg text-gray-700 font-bold">時間</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-al</span>
+                                <span class="text-lg text-gray-700 font-bold">理由</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-el</span>
+                                <span class="text-lg text-gray-700 font-bold">方法・様態</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-om</span>
+                                <span class="text-lg text-gray-700 font-bold">数量</span>
+                            </div>
+                            <div
+                                class="flex items-baseline group cursor-pointer hover:translate-x-2 transition-transform">
+                                <span class="text-3xl esp-text w-20">-es</span>
+                                <span class="text-lg text-gray-700 font-bold">所有</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Example Correlatives Table -->
+                <div class="mt-4">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-1">代表的な相関詞の例</h3>
+                    <table class="w-full text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-gray-200 text-gray-600">
+                                <th class="py-1 pr-2 text-left">意味</th>
+                                <th class="py-1 px-1 text-center esp-text">ki-</th>
+                                <th class="py-1 px-1 text-center esp-text">ti-</th>
+                                <th class="py-1 px-1 text-center esp-text">i-</th>
+                                <th class="py-1 px-1 text-center esp-text">ĉi-</th>
+                                <th class="py-1 px-1 text-center esp-text">neni-</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1 pr-2 text-gray-700">人</td>
+                                <td class="py-1 px-1 text-center">kiu</td>
+                                <td class="py-1 px-1 text-center">tiu</td>
+                                <td class="py-1 px-1 text-center">iu</td>
+                                <td class="py-1 px-1 text-center">ĉiu</td>
+                                <td class="py-1 px-1 text-center">neniu</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1 pr-2 text-gray-700">物・事</td>
+                                <td class="py-1 px-1 text-center">kio</td>
+                                <td class="py-1 px-1 text-center">tio</td>
+                                <td class="py-1 px-1 text-center">io</td>
+                                <td class="py-1 px-1 text-center">ĉio</td>
+                                <td class="py-1 px-1 text-center">nenio</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1 pr-2 text-gray-700">場所</td>
+                                <td class="py-1 px-1 text-center">kie</td>
+                                <td class="py-1 px-1 text-center">tie</td>
+                                <td class="py-1 px-1 text-center">ie</td>
+                                <td class="py-1 px-1 text-center">ĉie</td>
+                                <td class="py-1 px-1 text-center">nenie</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-1 pr-2 text-gray-700">時間</td>
+                                <td class="py-1 px-1 text-center">kiam</td>
+                                <td class="py-1 px-1 text-center">tiam</td>
+                                <td class="py-1 px-1 text-center">iam</td>
+                                <td class="py-1 px-1 text-center">ĉiam</td>
+                                <td class="py-1 px-1 text-center">neniam</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1 pr-2 text-gray-700">理由</td>
+                                <td class="py-1 px-1 text-center">kial</td>
+                                <td class="py-1 px-1 text-center">tial</td>
+                                <td class="py-1 px-1 text-center">ial</td>
+                                <td class="py-1 px-1 text-center">ĉial</td>
+                                <td class="py-1 px-1 text-center">nenial</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-4 text-center border-t border-gray-200 pt-3 text-gray-400 text-xs">
+            作成日: 2024 | エスペラント文法学習用リファレンスシート
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
