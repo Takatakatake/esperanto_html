@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大多数の环境中で正常に运行するRuby显示功能</title>
+    <style>
+
+    html, body {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+  
+      :root {
+        --ruby-color: blue;
+        --ruby-font-size: 0.5em;
+      }
+      html {
+        font-size: 100%; /* 多くのブラウザは16px相当が標準 */
+      }
+
+      .text-M_M {
+        font-size: 1rem!important; 
+        font-family: Arial, sans-serif;
+        line-height: 2.0 !important;  /* text-M_Mのline-heightとrubyのline-heightは一致させる必要がある。 */
+        display: block; /* ブロック要素として扱う */
+        position: relative;
+      }
+  
+      /* ▼ ルビ（フレックスでルビを上に表示） */
+      ruby {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: top !important;
+        line-height: 2.0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 1rem !important;
+      }
+  
+      /* ▼ 追加マイナス余白（ルビサイズ別に上書き） */
+      rt {
+        display: block !important;
+        font-size: var(--ruby-font-size);
+        color: var(--ruby-color);
+        line-height: 1.05;/*ルビを改行するケースにおけるルビの行間*/
+        text-align: center;
+        /* margin-top: 0.2em !important;   
+        transform: translateY(0.4em) !important; */
+      }
+      rt.XXXS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -8.3em !important;/* ルビの高さ位置はここで調節する。 */
+        transform: translateY(-0em) !important;
+      }    
+      rt.XXS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -7.2em !important;/* ルビの高さ位置はここで調節する。 */
+        transform: translateY(-0em) !important;
+      }
+      rt.XS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -6.1em !important;
+        transform: translateY(-0em) !important;
+      }
+      rt.S_S {
+        --ruby-font-size: 0.4em;
+        margin-top: -4.85em !important;
+        transform: translateY(-0em) !important;
+      }
+      rt.M_M {
+        --ruby-font-size: 0.5em;
+        margin-top: -4.00em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.L_L {
+        --ruby-font-size: 0.6em; 
+        margin-top: -3.55em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.XL_L {
+        --ruby-font-size: 0.7em;
+        margin-top: -3.20em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.XXL_L {
+        --ruby-font-size: 0.8em;
+        margin-top: -2.80em !important;
+        transform: translateY(-0.0em) !important;
+      }
+  
+    </style>
+  </head>
+  <body>
+  <p class="text-M_M">
+はい、承知いたしました。エスペラント教科書の各課の会話文に、日本語訳を丁寧に挿入していきます。<br>
+まずは第1課から第5課までの会話と日本語訳です。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>unu<rt class="XXL_L">一</rt></ruby> (第1課) ごきげんいかがですか？**<br>
+<br>
+**出会い、挨拶と会話**<br>
+<br>
+Maria: <ruby>Bon<rt class="XL_L">良い</rt></ruby>an <ruby>Tag<rt class="XXL_L">日</rt></ruby>on, Masao !<br>
+マリア： こんにちは、マサオ！<br>
+<br>
+Masao: <ruby>Salut<rt class="XS_S">(に)挨拶する</rt></ruby>on, Maria !<br>
+マサオ： やあ、マリア！<br>
+<ruby>Kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>fart<rt class="S_S">暮らす</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> ?<br>
+マサオ： 調子はどう？<br>
+<br>
+Maria: <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>fart<rt class="S_S">暮らす</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>e, <ruby>dank<rt class="XS_S">(に)感謝する</rt></ruby>on. <ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> ?<br>
+マリア： ええ、元気よ。あなたはどう？<br>
+<br>
+Masao: <ruby>Ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>fart<rt class="S_S">暮らす</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>e.<br>
+マサオ： ぼくも元気だよ。<br>
+<ruby>Tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sat<rt class="XS_S">満腹した</rt></ruby>a <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>lup<rt class="S_S">[動]狼</rt></ruby>o.<br>
+マサオ： でも今ぼく、狼みたいにおなかがぺこぺこなんだ。<br>
+<br>
+Maria: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>ĉiam<rt class="L_L">いつも</rt></ruby> <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>elefant<rt class="XXL_L">[動]象</rt></ruby>o.<br>
+マリア： そういえばあなたいつも象みたいに食べるものね。<br>
+<br>
+Masao: <ruby>Ĉar<rt class="XXS_S">なぜ<br>なら</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>zoologi<rt class="XXL_L">動物学</rt></ruby>a <ruby>student<rt class="XXL_L">学生</rt></ruby>o !<br>
+マサオ： だってぼくは動物学専攻なんだからね！<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>du<rt class="XXL_L">二</rt></ruby> (第2課) 明日ひまですか？**<br>
+<br>
+**コンサートへ誘う**<br>
+<br>
+Masao: Maria, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>liber<rt class="M_M">自由な</rt></ruby>a <ruby>morgaŭ<rt class="XXL_L">明日</rt></ruby> ?<br>
+マサオ： マリア、明日ひまかい？<br>
+<br>
+Maria: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>dimanĉ<rt class="XXL_L">日曜日</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kutim<rt class="XXL_L">習慣</rt></ruby>e <ruby>liber<rt class="M_M">自由な</rt></ruby>a.<br>
+マリア： ええ、日曜はたいていひまよ。<br>
+<br>
+Masao: Do, <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>ambaŭ<rt class="XXL_L">両方の</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>liber<rt class="M_M">自由な</rt></ruby>aj <ruby>morgaŭ<rt class="XXL_L">明日</rt></ruby>.<br>
+マサオ： じゃあぼくたちは二人とも明日はひまってわけだね。<br>
+<ruby>Morgaŭ<rt class="XXL_L">明日</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby><ruby>tag<rt class="XXL_L">日</rt></ruby><ruby>mez<rt class="M_M">まん中</rt></ruby>e <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>special<rt class="XXL_L">特別の</rt></ruby>a <ruby>koncert<rt class="S_S">[楽]コンサート</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>municip<rt class="S_S">[政]市</rt></ruby>a <ruby>hal<rt class="S_S">ホール</rt></ruby>o, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>jen<rt class="XXS_S">そらこ<br>こに</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>bilet<rt class="XXL_L">切符</rt></ruby>oj <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> !<br>
+マサオ： 明日の午後に市民ホールでスペシャルコンサートがあってね、そしてここにチケットが二枚あるんだ。<br>
+<br>
+Maria: <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>feliĉ<rt class="M_M">幸福な</rt></ruby>a, Masao.<br>
+マリア： 私とっても幸せよ、マサオ。<br>
+<br>
+Masao: <ruby>Ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby>o !<br>
+マサオ： それじゃあね。<br>
+<br>
+Maria: <ruby>Ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>morgaŭ<rt class="XXL_L">明日</rt></ruby> !<br>
+マリア： また明日ね。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>tri<rt class="XL_L">三</rt></ruby> (第3課) コーヒーを飲みますか？**<br>
+<br>
+**コーヒーを飲みながら**<br>
+<br>
+Maria: Masao, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>trink<rt class="S_S">(を)飲む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kaf<rt class="XS_S">コーヒー</rt></ruby>on ?<br>
+マリア： マサオ、コーヒー飲む？<br>
+<br>
+Masao: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>volont<rt class="S_S">自ら進んで</rt></ruby>e ! <ruby>Dank<rt class="XS_S">(に)感謝する</rt></ruby>on.<br>
+マサオ： うん、いただくよ、ありがとう。<br>
+Mi <ruby>leg<rt class="XS_S">(を)読む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>interes<rt class="XS_S">(に)興味を持たせる</rt></ruby>an <ruby>roman<rt class="L_L">長編小説</rt></ruby>on, “<ruby>Murd<rt class="XS_S">(を)殺害する</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>sonĝ<rt class="S_S">夢を見る</rt></ruby>o”.<br>
+マサオ： 今とても面白い小説を読んでるんだ、「夢の中の殺人」ていうの。<br>
+<br>
+Maria: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>detektiv<rt class="XL_L">探偵</rt></ruby>ajn <ruby>roman<rt class="L_L">長編小説</rt></ruby>ojn, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ?<br>
+マリア： あなたって推理小説が好きよね？<br>
+<br>
+Masao: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+マサオ： うん、ご承知の通りさ。<br>
+<br>
+Maria: <ruby>Nun<rt class="XXL_L">今</rt></ruby> <ruby>hieraŭ<rt class="XXL_L">昨日</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>hazard<rt class="XXL_L">偶然</rt></ruby>e <ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>fianĉ<rt class="L_L">婚約者</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>on.<br>
+マリア： ところで昨日偶然あなたのフィアンセを見かけたわ。<br>
+<br>
+Masao: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>e ? <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sol<rt class="XS_S">唯一の</rt></ruby>a ?<br>
+マサオ： 本当に？ 一人だった？<br>
+<br>
+Maria: Ne, <ruby>bedaŭr<rt class="S_S">(を)残念に思う</rt></ruby><ruby>ind<rt class="L_L">価値</rt></ruby>e <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>jun<rt class="L_L">若い</rt></ruby>a <ruby>lup<rt class="S_S">[動]狼</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a.<br>
+マリア： いいえ、あいにくだけど見かけない若い男（狼）と一緒だったわ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>kvar<rt class="XXL_L">四</rt></ruby> (第4課) 塩を取って下さい！**<br>
+<br>
+**食卓での親子の会話**<br>
+<br>
+<ruby>Fil<rt class="XS_S">息子</rt></ruby>o: <ruby>Don<rt class="M_M">与える</rt></ruby>u <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sal<rt class="XXL_L">塩</rt></ruby>on, <ruby>Panj<rt class="XXL_L">ママ</rt></ruby>o !<br>
+息子： 塩ちょうだい、ママ！<br>
+<br>
+<ruby>Patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Dir<rt class="XXS_S">(を)言<br>う</rt></ruby>u <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> mi, “<ruby>Bon<rt class="XL_L">良い</rt></ruby><ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>u <ruby>trans<rt class="XS_S">(~の)向こうに</rt></ruby><ruby>don<rt class="M_M">与える</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sal<rt class="XXL_L">塩</rt></ruby>on.”<br>
+母： 「塩を取って下さい」っておっしゃい。<br>
+<br>
+<ruby>Fil<rt class="XS_S">息子</rt></ruby>o: <ruby>La<rt class="M_M">The</rt></ruby> <ruby>sal<rt class="XXL_L">塩</rt></ruby>on, <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>e !<br>
+息子： 塩ってば！<br>
+<br>
+<ruby>Patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>efektiv<rt class="XXL_L">現実の</rt></ruby>e <ruby>simil<rt class="S_S">よく似た</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>Paĉj<rt class="XXL_L">パパ</rt></ruby>o.<br>
+母： もう本当にパパにそっくりなんだから。<br>
+<br>
+<ruby>Fil<rt class="XS_S">息子</rt></ruby>o: <ruby>Kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ? <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby>a <ruby>sol<rt class="XS_S">唯一の</rt></ruby>a <ruby>fil<rt class="XS_S">息子</rt></ruby>o !<br>
+息子： 当然だよ。ぼくはパパの一人息子なんだもん！<br>
+<br>
+<ruby>Patr<rt class="XXL_L">父</rt></ruby>o: <ruby>Ne<rt class="M_M">ない</rt></ruby> <ruby>kverel<rt class="L_L">口論する</rt></ruby>u <ruby>plu<rt class="S_S">さらに</rt></ruby>, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pet<rt class="XS_S">(を)頼む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+父： お願いだから、もうけんかはよしてくれないか。<br>
+<br>
+<ruby>Patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Ne<rt class="M_M">ない</rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt></ruby>u <ruby>ĵurnal<rt class="XXL_L">新聞</rt></ruby>on <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o !<br>
+母： 食事中に新聞読まないでよ！<br>
+<br>
+<ruby>Fil<rt class="XS_S">息子</rt></ruby>o: <ruby>Prefer<rt class="S_S">(を)より好む</rt></ruby>e <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>u <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>Paĉj<rt class="XXL_L">パパ</rt></ruby>o, “<ruby>Bon<rt class="XL_L">良い</rt></ruby><ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>u <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt></ruby>i ...”<br>
+息子：「読まないで下さい」ってパパには言うんでしょ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>kvin<rt class="XXL_L">五</rt></ruby> (第5課) どんなご用でしょうか？**<br>
+<br>
+**案内所で**<br>
+<br>
+<ruby>turist<rt class="L_L">観光客</rt></ruby>o: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>verd<rt class="XXL_L">緑の</rt></ruby>an <ruby>stel<rt class="XXL_L">星</rt></ruby>on <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>brust<rt class="XXL_L">胸</rt></ruby>o.<br>
+旅行者： 胸に緑星章を付けておられますね。<br>
+Ĉu <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on ?<br>
+旅行者： ひょっとしてエスペラント語が話せるのですか？<br>
+<br>
+<ruby>gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+案内担当者： はい、できますよ。<br>
+<ruby>Per<rt class="S_S">よって</rt></ruby> <ruby>kio<rt class="XXL_L">何</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>serv<rt class="M_M">仕える</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> ?<br>
+案内担当者： どんなご用でしょうか？<br>
+<br>
+<ruby>turist<rt class="L_L">観光客</rt></ruby>o: <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ofic<rt class="XL_L">職務</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> UEA.<br>
+旅行者： 世界エスペラント協会の事務局に行きたいのです。<br>
+<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>ating<rt class="M_M">(に)着く</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lok<rt class="M_M">場所</rt></ruby>on <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>facil<rt class="M_M">容易な</rt></ruby>e <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>perd<rt class="S_S">(を)失う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>voj<rt class="XXL_L">道</rt></ruby>on.<br>
+旅行者： でもその場所にたどり着くのが難しくて、道に迷ってしまいまして。<br>
+<br>
+<ruby>gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Bon<rt class="XL_L">良い</rt></ruby>e, <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>u <ruby>rigard<rt class="L_L">(を)見る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>urb<rt class="XXL_L">市</rt></ruby>o<ruby>map<rt class="XXL_L">地図</rt></ruby>on.<br>
+案内担当者： わかりました。この市街地図をご覧下さい。<br>
+Vi <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>turn<rt class="S_S">(を)回す</rt></ruby>i <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n ĉi <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>dekstr<rt class="XXL_L">右の</rt></ruby>en <ruby>kaj<rt class="L_L">and</rt></ruby>…<br>
+案内担当者： ここを右に曲がらなければなりません、それから…。<br>
+<br>
+---<br>
+<br>
+まずは第1課から第5課までをお届けします。ご確認いただき、続きが必要でしたらお申し付けください。<br>
+<br>
+<br>
+<br>
+はい、承知いたしました。第6課から第10課までの会話文と日本語訳を、前回同様に丁寧にお届けします。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>ses<rt class="XXL_L">六</rt></ruby> (第6課) どういたしまして**<br>
+<br>
+**路上で**<br>
+<br>
+Carmen: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>afabl<rt class="XS_S">愛想のよい</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>invit<rt class="XXS_S">(を)招待<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>o.<br>
+カルメン： 私をお宅へ招いて下さるとは、あなたはとてもご親切な方ですね。<br>
+Mi <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>kor<rt class="XXL_L">心</rt></ruby>e <ruby>dank<rt class="XS_S">(に)感謝する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n.<br>
+カルメン： 心よりお礼を申し上げます。<br>
+<br>
+Masao: <ruby>Tut<rt class="XS_S">全部の</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>dank<rt class="XS_S">(に)感謝する</rt></ruby><ruby>ind<rt class="L_L">価値</rt></ruby>e.<br>
+マサオ： お礼には及びませんよ。<br>
+<ruby>Kia<rt class="XXS_S">どのよ<br>うな</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>impres<rt class="XXL_L">印象</rt></ruby>o <ruby>pri<rt class="XS_S">ついて</rt></ruby> Tokio ?<br>
+マサオ： 東京の第一印象はいかがですか？<br>
+<br>
+Carmen: <ruby>Tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>modern<rt class="XXL_L">現代の</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>hom<rt class="XXL_L">人</rt></ruby><ruby>plen<rt class="XS_S">いっぱいの</rt></ruby>a <ruby>urb<rt class="XXL_L">市</rt></ruby><ruby>eg<rt class="M_M">強大</rt></ruby>o !<br>
+カルメン： とてもモダンで、人がいっぱいの大都市ですね。<br>
+<ruby>Preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>ĉio<rt class="XS_S">すべて</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>interes<rt class="XS_S">(に)興味を持たせる</rt></ruby><ruby>eg<rt class="M_M">強大</rt></ruby>a.<br>
+カルメン： 何もかもが私にはとても興味深く思えます。<br>
+Ĉu <ruby>la<rt class="M_M">the</rt></ruby> <ruby>dom<rt class="XXL_L">家</rt></ruby><ruby>eg<rt class="M_M">強大</rt></ruby>o <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>cert<rt class="M_M">確かな</rt></ruby>e <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ofic<rt class="XL_L">職務</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> JEI ?<br>
+カルメン： あそこのビルはきっと日本エスペラント学会の事務所ですよね。<br>
+<br>
+Masao: Ne, <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Parlament<rt class="XXL_L">国会</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> Japanio.<br>
+マサオ： いいえ、あれは日本の国会議事堂です。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>sep<rt class="XXL_L">七</rt></ruby> (第7課) エスペラント語はやさしいですか？**<br>
+<br>
+**図書館で**<br>
+<br>
+Maria: <ruby>Kio<rt class="XXL_L">何</rt></ruby>n <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>fervor<rt class="XL_L">熱心な</rt></ruby>e ?<br>
+マリア： そこで何をそんなに夢中でやってるの？<br>
+<br>
+Goro: <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>on <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>oj.<br>
+ゴロー： 二ヶ月前にエスペラント語の勉強を始めたんだ。<br>
+<ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby><ruby>tag<rt class="XXL_L">日</rt></ruby>e <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>hor<rt class="L_L">時間</rt></ruby>on <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on.<br>
+ゴロー： そこでこうして毎日 1 時間勉強しているというわけさ。<br>
+<br>
+Maria: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>facil<rt class="M_M">容易な</rt></ruby>a <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> ?<br>
+マリア： エスペラント語はあなたにとってやさしい言葉なの？<br>
+<br>
+Goro: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>facil<rt class="M_M">容易な</rt></ruby>a <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e <ruby>la<rt class="M_M">the</rt></ruby> <ruby>angl<rt class="XS_S">イギリス人</rt></ruby>a.<br>
+ゴロー： うん、例えば英語なんかに比べるとずっとやさしいよ。<br>
+<ruby>Ĉar<rt class="XXS_S">なぜ<br>なら</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>regul<rt class="XXL_L">規則</rt></ruby>an <ruby>gramatik<rt class="XXL_L">文法</rt></ruby>on.<br>
+ゴロー： だって文法が全く規則的だからね。<br>
+<br>
+Maria: <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> japanan.<br>
+マリア： 私は今日本語の勉強してるの。<br>
+<ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>facil<rt class="M_M">容易な</rt></ruby>aj <ruby>lingv<rt class="XXL_L">言語</rt></ruby>oj <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o !<br>
+マリア： で、私には日本語って世界で一番難しい言葉の一つに思えるわ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>ok<rt class="XXL_L">八</rt></ruby> (第8課) 双子の男の子が生まれた**<br>
+<br>
+**夫婦の会話**<br>
+<br>
+Taro: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>memor<rt class="S_S">(を)覚えている</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> Miki <ruby>kaj<rt class="L_L">and</rt></ruby> Adam <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>edz<rt class="XXL_L">夫</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> ?<br>
+タロー： ミキとアダムが結婚したの覚えてるかい？<br>
+<br>
+Yumi: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>jar<rt class="XXL_L">年</rt></ruby>oj, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ?<br>
+ユミ： ええ、2 年前のことよね？<br>
+<br>
+Taro: <ruby>En<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>last<rt class="S_S">最後の</rt></ruby>a <ruby>semajn<rt class="XXL_L">一週間</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>nask<rt class="M_M">(を)生む</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ĝemel<rt class="XXL_L">双子</rt></ruby>aj <ruby>fil<rt class="XS_S">息子</rt></ruby>oj.<br>
+タロー： 先週 2 人のところに双子の男の子が生まれたんだよ。<br>
+<br>
+Yumi: <ruby>Ĝemel<rt class="XXL_L">双子</rt></ruby>aj ?<br>
+ユミ： 双子？<br>
+<br>
+Taro: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>ĝemel<rt class="XXL_L">双子</rt></ruby>aj.<br>
+タロー： そう、双子さ。<br>
+<br>
+Yumi: Adam <ruby>ĉiam<rt class="L_L">いつも</rt></ruby> <ruby>drink<rt class="M_M">(を)飲む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>obl<rt class="L_L">倍数</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> vi.<br>
+ユミ： アダムはいつもあなたの 2 倍は飲んでたわよね。<br>
+<br>
+Taro: Miki <ruby>ĉiam<rt class="L_L">いつも</rt></ruby> <ruby>babil<rt class="S_S">雑談する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>obl<rt class="L_L">倍数</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> vi.<br>
+タロー： ミキはいつも君の 2 倍はおしゃべりだったな。<br>
+<br>
+Yumi/Taro: <ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>obl<rt class="L_L">倍数</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>ajn <ruby>fil<rt class="XS_S">息子</rt></ruby>ojn <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> !<br>
+ユミ / タロー： そして今度は子供がうちの 2 倍というわけなんだ！<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>naŭ<rt class="XXL_L">九</rt></ruby> (第9課) はじめまして！**<br>
+<br>
+**空港で**<br>
+<br>
+Marta: <ruby>Pardon<rt class="L_L">(を)ゆるす</rt></ruby>on, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>Profesor<rt class="XXL_L">教授(人)</rt></ruby>o Kato ?<br>
+マルタ： 失礼ですが、ひょっとしてカトー先生ではありませんか？<br>
+Mi <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> Marta Ŝarapova.<br>
+マルタ： 私はマルタ・シャラポヴァです。<br>
+<br>
+Kato: Ah, <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>agrabl<rt class="XXL_L">快い</rt></ruby>e, <ruby>fraŭl<rt class="S_S">未婚男子</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o Ŝarapova !<br>
+カトー： ああ、はじめまして、シャラポヴァさん！<br>
+Mi <ruby>dank<rt class="XS_S">(に)感謝する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>afabl<rt class="XS_S">愛想のよい</rt></ruby>a <ruby>akcept<rt class="S_S">(を)受入れる</rt></ruby>o.<br>
+カトー： わざわざお迎え頂きましてありがとうございます。<br>
+<br>
+Marta: <ruby>Ne<rt class="M_M">ない</rt></ruby> <ruby>dank<rt class="XS_S">(に)感謝する</rt></ruby><ruby>ind<rt class="L_L">価値</rt></ruby>e.<br>
+マルタ： どういたしまして。<br>
+Mi <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>cert<rt class="M_M">確かな</rt></ruby>a, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>renkont<rt class="L_L">(に)出会う</rt></ruby>i <ruby>ni<rt class="XS_S">私達</rt></ruby>n <ruby>traf<rt class="XXS_S">(に)命中<br>する</rt></ruby>e.<br>
+マルタ： ちゃんとお会いできるかどうか自信がなかったんですよ。<br>
+<br>
+Kato: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ĉemiz<rt class="XL_L">シャツ</rt></ruby>on <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>portret<rt class="XXL_L">肖像画</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Zamenhof<rt class="M_M">[人名]ザメンホフ</rt></ruby> !<br>
+カトー： ええ、でもあなたはザメンホフの肖像付きのシャツを着ていますからね！<br>
+<br>
+Marta: <ruby>Kaj<rt class="L_L">And</rt></ruby> vi, <ruby>glu<rt class="XXL_L">糊</rt></ruby><ruby>mark<rt class="L_L">しるし</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>verd<rt class="XXL_L">緑の</rt></ruby>a <ruby>stel<rt class="XXL_L">星</rt></ruby>o <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>frunt<rt class="XXL_L">額</rt></ruby>o !<br>
+マルタ： それに先生の方は、おでこに緑星章のシールを貼ってらっしゃるから！<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> (第10課) エスペラント語は 1887 年に誕生した**<br>
+<br>
+**レストランで**<br>
+<br>
+Masao: <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>nask<rt class="M_M">(を)生む</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> 1887, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ?<br>
+マサオ： エスペラント語は 1887 年に誕生したんだよね？<br>
+<br>
+Petra: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> 2007 <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> 92a <ruby>Universal<rt class="XXL_L">普遍的な</rt></ruby>a <ruby>Kongres<rt class="XXL_L">大会</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> Jokohamo<br>
+ペトラ： そうよ、そして 2007 年には横浜で第 92 回世界大会が開催されたの。<br>
+<br>
+Masao: <ruby>Kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>ĉirkaŭ<rt class="S_S">~まわりに;約</rt></ruby> 2000 <ruby>part<rt class="XL_L">部分</rt></ruby>o<ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>oj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> 57 <ruby>land<rt class="XXL_L">国</rt></ruby>oj.<br>
+マサオ： 57 カ国から約 2000 人の参加者があった。<br>
+<br>
+Petra: <ruby>Ili<rt class="XXS_S">それ<br>ら</rt></ruby>aj <ruby>lingv<rt class="XXL_L">言語</rt></ruby>oj <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>divers<rt class="XXL_L">様々な</rt></ruby>aj.<br>
+ペトラ： 参加者たちの言葉は実に様々だったの。<br>
+<br>
+Masao: <ruby>Tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on.<br>
+マサオ： でもそこで話されたのはただ一つの言語だけだった。<br>
+<br>
+Petra: <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>romp<rt class="XS_S">(を)破壊する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mur<rt class="XXL_L">壁</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ?<br>
+ペトラ： エスペラント語が言葉の壁を壊したのよね？<br>
+<br>
+Masao: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>efektiv<rt class="XXL_L">現実の</rt></ruby>e <ruby>funkci<rt class="XXL_L">機能</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>pont<rt class="XXL_L">橋</rt></ruby><ruby>lingv<rt class="XXL_L">言語</rt></ruby>o.<br>
+マサオ： うん、エスペラント語はそこで本当に橋渡しの言語として機能したんだ。<br>
+<br>
+Petra/Masao: <ruby>Tost<rt class="XL_L">乾杯</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pac<rt class="XL_L">平和</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o !<br>
+ペトラ / マサオ： エスペラント語と世界の平和に乾杯！<br>
+<br>
+---<br>
+<br>
+第6課から第10課までをお届けしました。ご確認いただき、続きが必要でしたらお気軽にお申し付けください。<br>
+<br>
+<br>
+はい、承知いたしました。第11課から第15課までの会話文と日本語訳を、引き続き丁寧にお届けします。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> (第11課) 私は手紙を書くのが好きです**<br>
+<br>
+**ペンフレンドを紹介する**<br>
+<br>
+Masao: Mariko, <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> ĉi <ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>fraŭl<rt class="S_S">未婚男子</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o Wang <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> Pekino.<br>
+マサオ： マリコ、こちらの女性は北京から来た王さんだよ。<br>
+Ŝi <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>leter<rt class="XXL_L">手紙</rt></ruby>amiko.<br>
+マサオ： 彼女はぼくのペンフレンドなんだ。<br>
+<br>
+Mariko: <ruby>Est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>agrabl<rt class="XXL_L">快い</rt></ruby>e <ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>i <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> vi.<br>
+マリコ： お知り合いになれてとてもうれしいわ。<br>
+<br>
+Wang: <ruby>Tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>agrabl<rt class="XXL_L">快い</rt></ruby>e ! <ruby>Kobold<rt class="XS_S">(いたずらな)妖精</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>a <ruby>sort<rt class="XL_L">運命</rt></ruby>o <ruby>donac<rt class="XXL_L">贈り物</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt></ruby>on <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>land<rt class="XXL_L">国</rt></ruby>o.<br>
+ワン： はじめまして。幸運に恵まれてあなたの国に留学することができました。<br>
+<br>
+Masao: <ruby>Ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>aj <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>kvin<rt class="XXL_L">五</rt></ruby> <ruby>leter<rt class="XXL_L">手紙</rt></ruby><ruby>amik<rt class="XXL_L">友達</rt></ruby>oj.<br>
+マサオ： 彼女はぼくの 25 人いるペンフレンドの一人なんだ。<br>
+<br>
+Mariko: <ruby>Du<rt class="XXL_L">二</rt></ruby><ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>kvin<rt class="XXL_L">五</rt></ruby> ?!<br>
+マリコ： 25 人ですって？！<br>
+<br>
+Masao: <ruby>Jes<rt class="M_M">はい</rt></ruby>. <ruby>Al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>tag<rt class="XXL_L">日</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>don<rt class="M_M">与える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sin<rt class="XS_S">自分を</rt></ruby><ruby>sekv<rt class="XS_S">(に)従う</rt></ruby>e <ruby>po<rt class="XS_S">~ずつ</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>nom<rt class="XXL_L">名前</rt></ruby>o <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>aj <ruby>leter<rt class="XXL_L">手紙</rt></ruby><ruby>amik<rt class="XXL_L">友達</rt></ruby>oj.<br>
+マサオ： うん、月のほとんどどの日にも、順に一人ずつペンフレンドの名前がつけてあるんだ。<br>
+Ŝia <ruby>tag<rt class="XXL_L">日</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sep<rt class="XXL_L">七</rt></ruby>a, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>sekv<rt class="XS_S">(に)付き従う</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>skrib<rt class="M_M">(を)書く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>leter<rt class="XXL_L">手紙</rt></ruby>on <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>sep<rt class="XXL_L">七</rt></ruby>a <ruby>tag<rt class="XXL_L">日</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>o !<br>
+マサオ： 彼女の日は 7 日だから、ぼくは毎月 7 日に彼女に手紙を書いていたってわけさ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> (第12課) 彼女が部屋へ戻って来た**<br>
+<br>
+**居間で**<br>
+<br>
+Masao: (al <ruby>si<rt class="XS_S">自分</rt></ruby> <ruby>mem<rt class="XXL_L">自身</rt></ruby>）<ruby>Kie<rt class="XS_S">どこで</rt></ruby>n <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> ? <ruby>Jen<rt class="XXS_S">そらこ<br>こに</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ĉambr<rt class="XXL_L">部屋</rt></ruby>on.<br>
+マサオ：（独り言）彼女どこへ行ったのかな？ おや、部屋に戻って来たぞ。<br>
+<ruby>Kie<rt class="XS_S">どこで</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, Anna ?<br>
+マサオ： どこへ行ってたんだい、アンナ？<br>
+<br>
+Anna: <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>frukt<rt class="XXL_L">果実</rt></ruby>o<ruby>vend<rt class="M_M">(を)売る</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o <ruby>aĉet<rt class="S_S">(を)買う</rt></ruby>i <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>korb<rt class="XXL_L">かご</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>on <ruby>da<rt class="XXL_L">の</rt></ruby> <ruby>ĉeriz<rt class="XXS_S">[果]サク<br>ランボ</rt></ruby>oj.<br>
+アンナ： 果物屋さんへサクランボを 1 かご買いに行ったの。<br>
+<ruby>Tie<rt class="XS_S">そこで</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>demand<rt class="M_M">(を)質問する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>vend<rt class="M_M">(を)売る</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>on japane, “<ruby>Kiom<rt class="XXS_S">何番目;ど<br>れほど</rt></ruby> <ruby>kost<rt class="XS_S">(に)価する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ĉeriz<rt class="XXS_S">[果]サク<br>ランボ</rt></ruby>oj ?”<br>
+アンナ： お店の人に日本語で「このサクランボおいくら」って聞いたのよ。<br>
+<ruby>Tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>respond<rt class="L_L">(を)答える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>perpleks<rt class="L_L">当惑した</rt></ruby>a <ruby>mien<rt class="L_L">顔つき</rt></ruby>o, “Mi <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> !”<br>
+アンナ： なのにお店の人ったら困ったような顔して「知らないよ」って答えたのよ。<br>
+<br>
+Masao: <ruby>Kio<rt class="XXL_L">何</rt></ruby>n <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>efektiv<rt class="XXL_L">現実の</rt></ruby>e <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> japane ?<br>
+マサオ： 日本語で実際のところ何て言ったんだい？<br>
+<br>
+Anna: <ruby>Kio<rt class="XXL_L">何</rt></ruby>n ? <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, “Kore ikutsu ?”<br>
+アンナ： 何って？ 私は「コレイクトゥ？」って言ったのよ。<br>
+<br>
+Masao: <ruby>Ven<rt class="XS_S">(に)来る</rt></ruby><ruby>ont<rt class="XXS_S">能動;<br>将然</rt></ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>prefer<rt class="S_S">(を)より好む</rt></ruby>e <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>u, “Kore ikura ?”<br>
+マサオ： 次の機会には「コレイクラ？」って言った方がいいと思うよ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>tri<rt class="XL_L">三</rt></ruby> (第13課) 彼女は菊の花がお好き**<br>
+<br>
+**公園で**<br>
+<br>
+Petro: <ruby>Kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>nom<rt class="XXL_L">名前</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>flor<rt class="XXL_L">花</rt></ruby>oj ?<br>
+ペトロ： あの花は何ていう名前なの？<br>
+<br>
+Kikumi: <ruby>Ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>krizantem<rt class="XXL_L">[植]キク</rt></ruby>oj.<br>
+菊美： あれは菊の花よ。<br>
+<br>
+Petro: <ruby>Kia<rt class="XXS_S">どのよ<br>うな</rt></ruby>j <ruby>bel<rt class="S_S">美しい</rt></ruby>aj <ruby>flor<rt class="XXL_L">花</rt></ruby>oj <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> !<br>
+ペトロ： 何てきれいな花なんだろう！<br>
+Ju <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>rigard<rt class="L_L">(を)見る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>n, <ruby>des<rt class="XS_S">ますます</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>plaĉ<rt class="S_S">気に入る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> mi.<br>
+ペトロ： 見れば見るほどすきになってきちゃうな。<br>
+<br>
+Kikumi: <ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>nom<rt class="XXL_L">名前</rt></ruby>o “Kikumi” <ruby>signif<rt class="XS_S">(を)意味する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>krizantem<rt class="XXL_L">[植]キク</rt></ruby>on <ruby>bel<rt class="S_S">美しい</rt></ruby>an.<br>
+菊美： 私の名前の「菊美」って、美しい菊の花のことなのよ。<br>
+<br>
+Petro: <ruby>Ĉar<rt class="XXS_S">なぜ<br>なら</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>bel<rt class="S_S">美しい</rt></ruby>a <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>flor<rt class="XXL_L">花</rt></ruby>oj, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ?<br>
+ペトロ： それは君があの花のように美しいからなんだろう？<br>
+<br>
+Kikumi: <ruby>Ho<rt class="S_S">まあ!</rt></ruby> ! <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>akcept<rt class="S_S">(を)受入れる</rt></ruby>i <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>kompliment<rt class="XXL_L">お世辞</rt></ruby>on <ruby>serioz<rt class="L_L">まじめな</rt></ruby>e ?<br>
+菊美： まあ、あなたの言葉本気にしちゃっていいかしら？<br>
+<br>
+Petro: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>afabl<rt class="XS_S">愛想のよい</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>regal<rt class="XS_S">ごちそうする</rt></ruby>i <ruby>mi<rt class="XXL_L">私</rt></ruby>n <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>kuk<rt class="S_S">ケーキ</rt></ruby>o <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>kaf<rt class="XS_S">コーヒー</rt></ruby>o.<br>
+ペトロ： うん、コーヒーとケーキをおごってくれるならね。<br>
+<br>
+Kikumi: (al <ruby>si<rt class="XS_S">自分</rt></ruby> <ruby>mem<rt class="XXL_L">自身</rt></ruby>) <ruby>Regal<rt class="XS_S">ごちそうする</rt></ruby>oj <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>flor<rt class="XXL_L">花</rt></ruby><ruby>petal<rt class="XL_L">花弁</rt></ruby>oj !<br>
+菊美： （ひとり言で）花より団子なんだから！<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>kvar<rt class="XXL_L">四</rt></ruby> (第14課) 講演が始まります**<br>
+<br>
+**大学のキャンパスで**<br>
+<br>
+Kim: <ruby>Pardon<rt class="L_L">(を)ゆるす</rt></ruby>on, <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby>u <ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> mi, <ruby>kie<rt class="XS_S">どこで</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Ĉambr<rt class="XXL_L">部屋</rt></ruby>o 7a ?<br>
+キム： すみませんが、7 番教室はどこにあるか教えて頂けませんか？<br>
+<br>
+Maria: <ruby>Ĝi<rt class="XS_S">それ</rt></ruby> <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tuj<rt class="XS_S">すぐに</rt></ruby> <ruby>apud<rt class="S_S">(の)そばに</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o.<br>
+マリア： それなら入り口のすぐそばの部屋ですよ。<br>
+<ruby>Tie<rt class="XS_S">そこで</rt></ruby> <ruby>baldaŭ<rt class="L_L">まもなく</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>special<rt class="XXL_L">特別の</rt></ruby>a <ruby>preleg<rt class="S_S">(を)講演する</rt></ruby>o: “<ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> 21a <ruby>jar<rt class="XXL_L">年</rt></ruby><ruby>cent<rt class="XXL_L">百</rt></ruby>o.”<br>
+マリア： そこで間もなく「21 世紀のエスペラント語」という特別講演が始まりますよ。<br>
+<br>
+Kim: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+キム： はい、知っています。<br>
+<br>
+Maria: <ruby>Oni<rt class="L_L">人々</rt></ruby><ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>e <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>sinjor<rt class="XXL_L">紳士</rt></ruby>o Kim, <ruby>la<rt class="M_M">the</rt></ruby> <ruby>preleg<rt class="S_S">(を)講演する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o, <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ĉiam<rt class="L_L">いつも</rt></ruby> <ruby>terur<rt class="XXL_L">恐怖</rt></ruby>e <ruby>enu<rt class="XS_S">退屈する</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>a.<br>
+マリア： 何でも噂では講演者のキムさんの話は、いつも恐ろしくつまらないそうですよ。<br>
+<br>
+Kim: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>e ? <ruby>Tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>nepr<rt class="L_L">必然の</rt></ruby>e <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>tie<rt class="XS_S">そこで</rt></ruby>n.<br>
+キム： 本当ですか？ でも私はどうしてもそこへ行かなければならないものですから。<br>
+<br>
+Maria: <ruby>Kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> ?<br>
+マリア： どうしてですか？<br>
+<br>
+Kim: <ruby>Ĉar<rt class="XXS_S">なぜ<br>なら</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>preleg<rt class="S_S">(を)講演する</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>neniu<rt class="XS_S">どの~も~ない</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>a <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> !<br>
+キム： それは、そこで講演するのが他ならぬこの私だからですよ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>kvin<rt class="XXL_L">五</rt></ruby> (第15課) ルドは豚肉を食べません**<br>
+<br>
+**食卓で**<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby>o: <ruby>Kio<rt class="XXL_L">何</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> ?<br>
+夫： それは何だ？<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Pork<rt class="L_L">[動]豚</rt></ruby>o<ruby>kotlet<rt class="XS_S">[料]カツレツ</rt></ruby>o, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+妻： ごらんの通り、トンカツよ。<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby>o: <ruby>Pork<rt class="L_L">[動]豚</rt></ruby>o<ruby>kotlet<rt class="XS_S">[料]カツレツ</rt></ruby>on <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>kvar<rt class="XXL_L">四</rt></ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e ĉi-<ruby>semajn<rt class="XXL_L">一週間</rt></ruby>e !<br>
+夫： トンカツは今週もう４回も食べたぞ！<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pork<rt class="L_L">[動]豚</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>on, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> ?<br>
+妻： あなた豚肉が好きだって言ってたじゃないの。<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby>o: <ruby>Tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>pork<rt class="L_L">[動]豚</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>on.<br>
+夫： でも豚肉だけが好きだなんて言った覚えはないぞ。<br>
+<ruby>Don<rt class="M_M">与える</rt></ruby>u <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>hund<rt class="XXL_L">犬</rt></ruby>o !<br>
+夫： うちの犬にでもくれてやれ！<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a Ludo <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>bov<rt class="XXL_L">牛</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby>...<br>
+妻： うちのルドが牛肉しか食べないこと知ってるでしょう？ それに…<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby>o: <ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hund<rt class="XXL_L">犬</rt></ruby>on <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>n !<br>
+夫： それにお前はぼくより犬の方が大事だってわけだろう！<br>
+<br>
+<ruby>Edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o: <ruby>Tut<rt class="XS_S">全部の</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> ! <ruby>Kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hund<rt class="XXL_L">犬</rt></ruby>on <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>salajr<rt class="XXL_L">給料</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>asekur<rt class="XS_S">(に)保険をかける</rt></ruby>o <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o.<br>
+妻： とんでもないわ。もちろん犬なんかよりあなたの方が大事よ、お給料と生命保険もついてるし。<br>
+<br>
+---<br>
+<br>
+第11課から第15課までをお届けしました。ご確認いただき、続きが必要でしたらお申し付けください。<br>
+<br>
+はい、承知いたしました。第16課から最終の第20課までの会話文と日本語訳を、引き続き丁寧にお届けします。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>ses<rt class="XXL_L">六</rt></ruby> (第16課) トンネルを抜けると〜**<br>
+<br>
+**列車の中で**<br>
+<br>
+Mariko: Ho, <ruby>rigard<rt class="L_L">(を)見る</rt></ruby>u ! <ruby>Ekster<rt class="L_L">(の)外で</rt></ruby>e <ruby>ĉio<rt class="XS_S">すべて</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kovr<rt class="XS_S">(を)おおう</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>neĝ<rt class="M_M">[気]雪</rt></ruby>o !<br>
+マリコ： ねえ見てよ！ 外はすっかり雪に覆われているわ！<br>
+<br>
+Petro: <ruby>Jes<rt class="M_M">はい</rt></ruby>. “<ruby>Post<rt class="S_S">(~の)後で</rt></ruby> <ruby>tra<rt class="XS_S">通って</rt></ruby><ruby>vetur<rt class="XS_S">(乗り物で)行く</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt></ruby>a <ruby>land<rt class="XXL_L">国</rt></ruby><ruby>lim<rt class="M_M">境界</rt></ruby>a <ruby>tunel<rt class="S_S">トンネル</rt></ruby>o ...”<br>
+ペトロ： うん。「国境の長いトンネルを抜けると…」<br>
+<br>
+Mariko: <ruby>Unu<rt class="XXL_L">一</rt></ruby>a<ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ek<rt class="S_S">開始</rt></ruby><ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>interes<rt class="XS_S">(に)興味を持たせる</rt></ruby>on <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>a <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>o !<br>
+マリコ： あなたが食べ物以外の何かに興味があるなんて初めて知ったわ！<br>
+<br>
+Petro: <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>universitat<rt class="XXL_L">大学</rt></ruby>o <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>departement<rt class="XXL_L">[政]部</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> japano<ruby>logi<rt class="M_M">学問</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> japanan <ruby>literatur<rt class="XXL_L">文学</rt></ruby>on.<br>
+ペトロ： いいかい、ぼくの大学には日本学科があって、ぼくはそこで日本文学を勉強したんだよ。<br>
+<br>
+Mariko: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>e ! <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>pet<rt class="XS_S">(を)頼む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>pardon<rt class="L_L">(を)ゆるす</rt></ruby>on, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>mis<rt class="XL_L">誤り</rt></ruby><ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n.<br>
+マリコ： 本当？ ごめんなさいね、あなたのことをすっかり誤解していたわ。<br>
+<br>
+Petro: <ruby>Ne<rt class="M_M">ない</rt></ruby> <ruby>grav<rt class="M_M">重要な</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>. Ho, <ruby>blank<rt class="XXL_L">白い</rt></ruby>a <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>fantazi<rt class="XXL_L">幻想</rt></ruby>a <ruby>kvazaŭ<rt class="XS_S">まるで(~の)ように</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>blank<rt class="XXL_L">白い</rt></ruby>a <ruby>fromaĝ<rt class="L_L">[料]チーズ</rt></ruby><ruby>kuk<rt class="S_S">ケーキ</rt></ruby>o !<br>
+ペトロ： どういたしまして。わあ、幻想的な白銀の世界、まるで白いチーズケーキでできているみたいだ！<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>sep<rt class="XXL_L">七</rt></ruby> (第17課) 風邪をひいているだけです**<br>
+<br>
+**病院で**<br>
+<br>
+<ruby>Pacient<rt class="XXL_L">[医]患者</rt></ruby>o: <ruby>Sinjor<rt class="XXL_L">紳士</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>kurac<rt class="XS_S">(を)治療する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>sufer<rt class="L_L">苦しむ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>kancer<rt class="XL_L">[医]癌</rt></ruby>o ?<br>
+患者： 先生（女医）、私の具合が悪いのは癌のせいですか？<br>
+<br>
+<ruby>Kurac<rt class="XS_S">(を)治療する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o: <ruby>Tut<rt class="XS_S">全部の</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> ! <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>varm<rt class="XXL_L">暑い</rt></ruby><ruby>um<rt class="XS_S">不定意味</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+医師： とんでもない！ あなたは風邪をひいているだけですよ。<br>
+<br>
+<ruby>Pacient<rt class="XXL_L">[医]患者</rt></ruby>o: <ruby>Tamen<rt class="M_M">とはいえ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kap<rt class="XXL_L">頭</rt></ruby><ruby>dolor<rt class="XXL_L">痛み</rt></ruby>on, <ruby>stomak<rt class="XXL_L">[解]胃</rt></ruby><ruby>dolor<rt class="XXL_L">痛み</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> eĉ <ruby>gorĝ<rt class="M_M">[解]のど</rt></ruby>o<ruby>dolor<rt class="XXL_L">痛み</rt></ruby>on.<br>
+患者： でも頭痛はするは、胃は痛むは、喉まで痛むんですよ。<br>
+<br>
+<ruby>Kurac<rt class="XS_S">(を)治療する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o: <ruby>Ver<rt class="S_S">本当の</rt></ruby><ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby>e <ruby>kap<rt class="XXL_L">頭</rt></ruby><ruby>dolor<rt class="XXL_L">痛み</rt></ruby>o <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>tro<rt class="XS_S">過度に</rt></ruby>a <ruby>drink<rt class="M_M">(を)飲む</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o, <ruby>stomak<rt class="XXL_L">[解]胃</rt></ruby><ruby>dolor<rt class="XXL_L">痛み</rt></ruby>o <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>tro<rt class="XS_S">過度に</rt></ruby>a <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>gorĝ<rt class="M_M">[解]のど</rt></ruby>o<ruby>dolor<rt class="XXL_L">痛み</rt></ruby>o <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>tro<rt class="XS_S">過度に</rt></ruby>a <ruby>fum<rt class="XXL_L">煙</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o !<br>
+医師： おそらく頭痛は飲み過ぎ、胃痛は食べ過ぎ、喉の痛みはタバコの喫い過ぎでしょう。<br>
+<ruby>Pli<rt class="S_S">より</rt></ruby> <ruby>prudent<rt class="XL_L">思慮深い</rt></ruby>a <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o <ruby>nepr<rt class="L_L">必然の</rt></ruby>e <ruby>neces<rt class="XXL_L">必要な</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> vi, <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ĝu<rt class="XS_S">楽しむ</rt></ruby>u <ruby>san<rt class="M_M">健康な</rt></ruby>an <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>on. <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> ?<br>
+医師： 健康な人生を送りたければ、節度ある生活があなたにはぜひ必要だということです。お分かりになりますか？<br>
+<br>
+<ruby>Pacient<rt class="XXL_L">[医]患者</rt></ruby>o: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>sinjor<rt class="XXL_L">紳士</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>kurac<rt class="XS_S">(を)治療する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o. <ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>najbar<rt class="XXL_L">隣人</rt></ruby>a <ruby>dom<rt class="XXL_L">家</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby>ejo <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>gust<rt class="XXL_L">味</rt></ruby>a <ruby>riz<rt class="XS_S">[料]米</rt></ruby><ruby>vin<rt class="XXS_S">ぶど<br>う酒</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>majstr<rt class="XXL_L">巨匠</rt></ruby>a <ruby>kuir<rt class="XXS_S">(を)料理<br>する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>mem<rt class="XXL_L">自身</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>miks<rt class="XS_S">(を)混ぜる</rt></ruby><ruby>aranĝ<rt class="S_S">(を)整える</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tabak<rt class="XL_L">タバコ</rt></ruby>o !<br>
+患者： はい、先生。でもお分かり頂きたいんですが、うちの隣は銘酒の造り酒屋で、うちの女房はやたらと料理が上手で、おまけに私の仕事はタバコのブレンダーなんです！<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>ok<rt class="XXL_L">八</rt></ruby> (第18課) あの人はだれですか？**<br>
+<br>
+**パーティーで**<br>
+<br>
+Mariko: <ruby>Kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>vir<rt class="XXL_L">男</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby>o ?<br>
+マリコ： あそこであなたのお父様と話している人だれなの？<br>
+<br>
+Masao: <ruby>Li<rt class="S_S">彼</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>sinjor<rt class="XXL_L">紳士</rt></ruby>o Abebe <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> Etiopio, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>teknologi<rt class="XXL_L">技術学</rt></ruby>on <ruby>pri<rt class="XS_S">ついて</rt></ruby> komput<ruby>il<rt class="XXS_S">道<br>具</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>land<rt class="XXL_L">国</rt></ruby>o.<br>
+マサオ： あの人はエチオピアから来たアベベさんで、わが国でコンピュータ技術の勉強をしているんだよ。<br>
+Mia <ruby>patr<rt class="XXL_L">父</rt></ruby>o <ruby>gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>teknologi<rt class="XXL_L">技術学</rt></ruby>a <ruby>institut<rt class="XXL_L">研究所</rt></ruby>o.<br>
+マサオ： 父が工業技術研究所で彼の指導をしているんだ。<br>
+<br>
+Mariko: Komput<ruby>il<rt class="XXS_S">道<br>具</rt></ruby>on <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby><ruby>ne<rt class="M_M">ない</rt></ruby><ruby>long<rt class="XXL_L">長い</rt></ruby>e, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kvazaŭ<rt class="XS_S">まるで(~の)ように</rt></ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>esper<rt class="XS_S">(を)希望する</rt></ruby>a <ruby>konfuz<rt class="XS_S">(を)混乱させる</rt></ruby>ilo <ruby>por<rt class="S_S">ために</rt></ruby> mi.<br>
+マリコ： コンピュータなら私も先日習い始めたけど、私にはまるで希望なき困ピュータもいいところだわ。<br>
+En <ruby>la<rt class="M_M">the</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>tag<rt class="XXL_L">日</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>nenio<rt class="S_S">何も~ない</rt></ruby>n <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> 10 <ruby>tag<rt class="XXL_L">日</rt></ruby>oj, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>klar<rt class="S_S">明瞭な</rt></ruby>e <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>efektiv<rt class="XXL_L">現実の</rt></ruby>e <ruby>nenio<rt class="S_S">何も~ない</rt></ruby>n <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> !<br>
+マリコ： 最初の日は何も分からなくて、そして 10 日たってはっきり分かったことは、私が本当に何も分かってなかったってことなんだもの。<br>
+<br>
+Masao: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>e ? <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>konfuz<rt class="XS_S">(を)混乱させる</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>a <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> komput<ruby>il<rt class="XXS_S">道<br>具</rt></ruby>o.<br>
+マサオ： 本当？ 僕にはコンピュータより君の方がよっぽど理解できないけどね。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>naŭ<rt class="XXL_L">九</rt></ruby> (第19課) もしお宅のお子さんだったら〜**<br>
+<br>
+**商店街で**<br>
+<br>
+Holmes: <ruby>Bon<rt class="XL_L">良い</rt></ruby>an <ruby>tag<rt class="XXL_L">日</rt></ruby>on, <ruby>sinjor<rt class="XXL_L">紳士</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o Okada.<br>
+ホームズ： こんにちは、岡田さんの奥さん。<br>
+<ruby>Kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>et<rt class="XS_S">弱小</rt></ruby>a <ruby>fil<rt class="XS_S">息子</rt></ruby>o <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>plor<rt class="XL_L">泣く</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> ?<br>
+ホームズ： どうしてお宅の坊ちゃん、そんなに泣いているんですか？<br>
+Ĉu <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>ie<rt class="XXS_S">どこ<br>かで</rt></ruby> <ruby>vund<rt class="XXL_L">傷</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> ?<br>
+ホームズ： ひょっとしてどこかケガでも？<br>
+<br>
+Okada: Ne, <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>fil<rt class="XS_S">息子</rt></ruby>o <ruby>pet<rt class="XS_S">(を)頼む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>n <ruby>aĉet<rt class="S_S">(を)買う</rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>glaci<rt class="XXL_L">氷</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>on.<br>
+オカダ： いいえ、この子アイスを買ってくれってせがみましてね。<br>
+Mi <ruby>rifuz<rt class="XS_S">(を)拒絶する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>plor<rt class="XL_L">泣く</rt></ruby><ruby>kri<rt class="XXS_S">(を)叫<br>ぶ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+オカダ： 私がダメだと言ったら泣き叫んでいるというわけなんです。<br>
+<br>
+Holmes: <ruby>Japan<rt class="XXL_L">日本</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>patr<rt class="XXL_L">父</rt></ruby>oj <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tro<rt class="XS_S">過度に</rt></ruby> <ruby>indulg<rt class="S_S">(を)容赦する</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>aj <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>aj <ruby>infan<rt class="XXL_L">子供</rt></ruby>oj.<br>
+ホームズ： 日本のご両親は子供に甘過ぎるんです。<br>
+<ruby>Frap<rt class="XS_S">(を)たたく</rt></ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>u <ruby>li<rt class="S_S">彼</rt></ruby>an <ruby>vang<rt class="M_M">[解]ほお</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby>u <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> li, “<ruby>Infan<rt class="XXL_L">子供</rt></ruby>o <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>obe<rt class="XS_S">服従する</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>a <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>patr<rt class="XXL_L">父</rt></ruby>oj ! ”<br>
+ホームズ： ほっぺをパチンとたたいて教えてやればいいんですよ。子供は親の言うことを聞くものだってね！<br>
+<br>
+Okada: <ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>prav<rt class="M_M">正当な</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.<br>
+オカダ： ええ、その通りですね。<br>
+Se <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>fil<rt class="XS_S">息子</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>cert<rt class="M_M">確かな</rt></ruby>e <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.<br>
+オカダ： もしこの子がお宅のお子さんだったら、おっしゃる通りにするんですけど。<br>
+<br>
+---<br>
+<br>
+**<ruby>Lecion<rt class="XXL_L">授業</rt></ruby>o <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>dek<rt class="XXL_L">十</rt></ruby> (第20課) 何ごとですか？**<br>
+<br>
+**電話で**<br>
+<br>
+Masao: <ruby>Ĉu<rt class="S_S">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>liber<rt class="M_M">自由な</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>ont<rt class="XXS_S">能動;<br>将然</rt></ruby>a <ruby>dimanĉ<rt class="XXL_L">日曜日</rt></ruby>o ?<br>
+マサオ： 今度の日曜日時間ある？<br>
+<br>
+Mariko: <ruby>Jes<rt class="M_M">はい</rt></ruby>. <ruby>Pri<rt class="XS_S">ついて</rt></ruby> <ruby>kio<rt class="XXL_L">何</rt></ruby> <ruby>tem<rt class="M_M">テーマ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> ?<br>
+マリコ： ええ、でも何ごとなの？<br>
+<br>
+Masao: <ruby>Je<rt class="XS_S">(~)に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>amik<rt class="XXL_L">友達</rt></ruby>o, <ruby>sinjor<rt class="XXL_L">紳士</rt></ruby>o Markoviĉ, <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>urb<rt class="XXL_L">市</rt></ruby>o.<br>
+マサオ： １時半にぼくの友人のマルコビッチさんがぼくたちの街に着くんだよ。<br>
+<ruby>Last<rt class="S_S">最後の</rt></ruby><ruby>jar<rt class="XXL_L">年</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> Zagrebo, <ruby>kaj<rt class="L_L">and</rt></ruby> ĉi-<ruby>jar<rt class="XXL_L">年</rt></ruby>e <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby>a <ruby>vic<rt class="L_L">順番</rt></ruby>o <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby>i <ruby>mi<rt class="XXL_L">私</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> Jokohamo.<br>
+マサオ： 昨年ぼくがザグレブの彼（のお宅）を訪ねたから、今年は彼が横浜のぼくの家に来る番というわけさ。<br>
+Ĉu <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby>e <ruby>gvid<rt class="XXS_S">(を)案内<br>する</rt></ruby>u <ruby>li<rt class="S_S">彼</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>a <ruby>urb<rt class="XXL_L">市</rt></ruby>o ?<br>
+マサオ： 一緒に街の案内をしてみないかい？<br>
+<br>
+Mariko: <ruby>Konsent<rt class="XL_L">同意する</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>e ! <ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>cel<rt class="M_M">目的</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ekzerc<rt class="S_S">(を)訓練する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>o, <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ĉiam<rt class="L_L">いつも</rt></ruby> <ruby>Esperant<rt class="M_M">エスペラント</rt></ruby>e !<br>
+マリコ： いいですとも！ そのために私はいつもあなたとエスペラント語で話して、腕を磨いて来たんですもの！<br>
+<br>
+---<br>
+<br>
+これで全20課の会話文と日本語訳が完了しました。<br>
+ご確認いただき、何かご不明な点や追加のご要望がございましたら、お気軽にお申し付けください。<br>
+じっくりと丁寧な作業を心がけましたが、もし至らない点がありましたらご指摘いただけますと幸いです。</p></body></html>
