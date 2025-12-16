@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akrevide, Akreflare - Usui Hiroyuki氏によるエスペラントエッセイ（語根分解付き）</title>
+    <style>
+
+    html, body {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+  
+      :root {
+        --ruby-color: blue;
+        --ruby-font-size: 0.5em;
+      }
+      html {
+        font-size: 100%; /* 多くのブラウザは16px相当が標準 */
+      }
+
+      .text-M_M {
+        font-size: 1rem!important; 
+        font-family: Arial, sans-serif;
+        line-height: 2.0 !important;  /* text-M_Mのline-heightとrubyのline-heightは一致させる必要がある。 */
+        display: block; /* ブロック要素として扱う */
+        position: relative;
+      }
+  
+      /* ▼ ルビ（フレックスでルビを上に表示） */
+      ruby {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: top !important;
+        line-height: 2.0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 1rem !important;
+      }
+  
+      /* ▼ 追加マイナス余白（ルビサイズ別に上書き） */
+      rt {
+        display: block !important;
+        font-size: var(--ruby-font-size);
+        color: var(--ruby-color);
+        line-height: 1.05;/*ルビを改行するケースにおけるルビの行間*/
+        text-align: center;
+        /* margin-top: 0.2em !important;   
+        transform: translateY(0.4em) !important; */
+      }
+      rt.XXXS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -8.3em !important;/* ルビの高さ位置はここで調節する。 */
+        transform: translateY(-0em) !important;
+      }    
+      rt.XXS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -7.2em !important;/* ルビの高さ位置はここで調節する。 */
+        transform: translateY(-0em) !important;
+      }
+      rt.XS_S {
+        --ruby-font-size: 0.3em;
+        margin-top: -6.1em !important;
+        transform: translateY(-0em) !important;
+      }
+      rt.S_S {
+        --ruby-font-size: 0.4em;
+        margin-top: -4.85em !important;
+        transform: translateY(-0em) !important;
+      }
+      rt.M_M {
+        --ruby-font-size: 0.5em;
+        margin-top: -4.00em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.L_L {
+        --ruby-font-size: 0.6em; 
+        margin-top: -3.55em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.XL_L {
+        --ruby-font-size: 0.7em;
+        margin-top: -3.20em !important;
+        transform: translateY(-0.0em) !important;
+      }
+      rt.XXL_L {
+        --ruby-font-size: 0.8em;
+        margin-top: -2.80em !important;
+        transform: translateY(-0.0em) !important;
+      }
+  
+    </style>
+  </head>
+  <body>
+  <p class="text-M_M">
+# **<ruby>Akr<rt class="L_L">鋭い</rt></ruby>e<ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby>e, <ruby>Akr<rt class="L_L">鋭い</rt></ruby>e<ruby>flar<rt class="XS_S">(を)嗅ぐ</rt></ruby>e** −<ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>fos<rt class="XS_S">(を)掘る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>an <ruby>sulk<rt class="S_S">[農]うね</rt></ruby>on? (28)<br>
+# 「鋭く見て、鋭く考える」−私たちはどのように自分の畝を掘るのか？（第28回）<br>
+<br>
+---<br>
+<br>
+## **<ruby>La<rt class="M_M">the</rt></ruby> <ruby>mort<rt class="XXL_L">死ぬ</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>aj <ruby>viv<rt class="XXS_S">生きている</rt></ruby>-<ruby>amar<rt class="L_L">苦い</rt></ruby>oj**<br>
+## 母の死と彼女の人生の苦しみ<br>
+<br>
+**Usui Hiroyuki** (<ruby>redaktor<rt class="XXL_L">編集者</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> *<ruby>La<rt class="M_M">the</rt></ruby> <ruby>Revu<rt class="S_S">専門雑誌</rt></ruby>o <ruby>Orient<rt class="XS_S">方位定める;東</rt></ruby>a*, <ruby>Toki<rt class="XXL_L">東京</rt></ruby>o)<br>
+**臼井裕之**（『<ruby>La<rt class="M_M">the</rt></ruby> <ruby>Revu<rt class="S_S">専門雑誌</rt></ruby>o <ruby>Orient<rt class="XS_S">方位定める;東</rt></ruby>a』編集者、東京）<br>
+<br>
+---<br>
+<br>
+### **<ruby>Batal<rt class="XXL_L">戦う</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>o <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>kaŝ<rt class="XS_S">(を)隠す</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a**<br>
+### 露わになった闘争心<br>
+<br>
+---<br>
+<br>
+**<ruby>Komenc<rt class="L_L">(を)始める</rt></ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>novembr<rt class="XXL_L">１１月</rt></ruby>o <ruby>mort<rt class="XXL_L">死ぬ</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>aĝ<rt class="M_M">年齢</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> 88 <ruby>jar<rt class="XXL_L">年</rt></ruby>oj.**<br>
+11月の初めに、私の母は88歳で亡くなった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Pri<rt class="XS_S">ついて</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>senil<rt class="L_L">老年の</rt></ruby>a <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>skrib<rt class="M_M">(を)書く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>ĉi<rt class="XS_S">これ</rt></ruby> <ruby>revu<rt class="S_S">専門雑誌</rt></ruby>o (p.8-9, <ruby>jan<rt class="XL_L">１月</rt></ruby>. 2025).**<br>
+彼女の老年性認知症については、私はすでにこの雑誌に書いた（2025年1月号、8-9ページ）。<br>
+<br>
+---<br>
+<br>
+**<ruby>En<rt class="M_M">中で</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>artikol<rt class="M_M">記事;冠詞</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>skrib<rt class="M_M">(を)書く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>iu<rt class="XXS_S">ある<br>人</rt></ruby> <ruby>nokt<rt class="XXL_L">夜</rt></ruby>o <ruby>fin<rt class="XS_S">終える</rt></ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>aŭgust<rt class="XXL_L">８月</rt></ruby>o <ruby>last<rt class="S_S">最後の</rt></ruby><ruby>jar<rt class="XXL_L">年</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>kaŭr<rt class="XXS_S">うずくま<br>っている</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>akv<rt class="XXL_L">水</rt></ruby>a <ruby>ban<rt class="XS_S">水浴させる</rt></ruby><ruby>kuv<rt class="XL_L">大桶</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>propr<rt class="XL_L">固有の</rt></ruby>a<ruby>fort<rt class="L_L">強い</rt></ruby>e.**<br>
+その記事で私は、昨年8月末のある夜、私は彼女が水の入っていない浴槽の中にうずくまっているのを見つけ、自力でそこから出られなくなっていたと書いた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby><ruby>okaz<rt class="L_L">起こる</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>detal<rt class="XXL_L">詳細</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ambulanc<rt class="XXL_L">救急車</rt></ruby>o.**<br>
+その時、救急車が来た時に彼女がどう反応したかについては詳しく書かなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>ambulanc<rt class="XXL_L">救急車</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby>aj <ruby>koleg<rt class="XXL_L">同僚</rt></ruby>oj <ruby>vetur<rt class="XS_S">(乗り物で)行く</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>hospital<rt class="XXL_L">病院</rt></ruby>o.**<br>
+その時、救急隊員は私の母に、彼と同僚たちが彼女を病院に運ぶと言った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Je<rt class="XS_S">(~)に</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>vort<rt class="M_M">[文]語</rt></ruby>oj <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>koler<rt class="XS_S">怒っている</rt></ruby>e: "*<ruby>kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>ekster<rt class="L_L">(の)外で</rt></ruby>en <ruby>nud<rt class="XL_L">裸の</rt></ruby>a? <ruby>Al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby>u <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby>n <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby><ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby>i!*"**<br>
+その言葉に私の母は怒って反応した：「*なぜ私が裸で外に出られるというの？何か着るものを持ってきて！*」<br>
+<br>
+---<br>
+<br>
+**<ruby>Nu<rt class="XS_S">さて</rt></ruby>, <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>e <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby>.**<br>
+そして、そのようにされた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sekv<rt class="XS_S">(に)付き従う</rt></ruby>e <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kvar<rt class="XXL_L">四</rt></ruby> <ruby>ambulanc<rt class="XXL_L">救急車</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj, <ruby>fortik<rt class="L_L">頑丈な</rt></ruby>aj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>hard<rt class="L_L">鍛える</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>aj <ruby>jun<rt class="L_L">若い</rt></ruby>aj <ruby>vir<rt class="XXL_L">男</rt></ruby>oj, <ruby>prov<rt class="S_S">(を)試す</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>zorg<rt class="XS_S">世話をする</rt></ruby>e <ruby>lev<rt class="XS_S">上げる</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>fragil<rt class="L_L">もろい</rt></ruby>an <ruby>korp<rt class="XXL_L">体</rt></ruby>on, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>nov<rt class="S_S">新しい</rt></ruby>e <ruby>kri<rt class="XXS_S">(を)叫<br>ぶ</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>: "*<ruby>ve<rt class="XS_S">ああ</rt></ruby>, <ruby>dolor<rt class="XXL_L">痛み</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>e, <ruby>dolor<rt class="XXL_L">痛み</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>e! <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>denunc<rt class="M_M">(を)告発する</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>molest<rt class="S_S">嫌がらせをする</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o!*"**<br>
+続いて、4人の救急隊員のうち2人の、頑丈で鍛えられた若い男性たちが、彼女のもろい体を注意深く持ち上げようとしたところ、彼女は再び叫んだ：「*ああ、痛い、痛い！老女への虐待であなたたちを訴えるわよ！*」<br>
+<br>
+---<br>
+<br>
+**<ruby>Ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>ambulanc<rt class="XXL_L">救急車</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>oj <ruby>rigard<rt class="L_L">(を)見る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>an <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>konstern<rt class="M_M">(を)仰天させる</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o.**<br>
+すべての救急隊員は驚愕のあまり互いを見合った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Fakt<rt class="XL_L">事実</rt></ruby>e <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>fru<rt class="M_M">早い</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sufiĉ<rt class="L_L">十分な</rt></ruby>e <ruby>fort<rt class="L_L">強い</rt></ruby>an, <ruby>eĉ<rt class="L_L">~さえ</rt></ruby> <ruby>batal<rt class="XXL_L">戦う</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>an <ruby>karakter<rt class="XXL_L">性格</rt></ruby>on, <ruby>kvankam<rt class="M_M">(~だ)けれども</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>e <ruby>zorg<rt class="XS_S">世話をする</rt></ruby>e <ruby>kaŝ<rt class="XS_S">(を)隠す</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>n.**<br>
+実際、それ以前から私の母はかなり強い、さらには闘争的な性格を持っていた。ただし彼女はしばしばそれを注意深く隠していたのだが。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>aper<rt class="L_L">現れる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>zorg<rt class="XS_S">世話をする</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>o.**<br>
+しかし認知症のせいで、その気遣いが消えてしまった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Nu<rt class="XS_S">さて</rt></ruby>, <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>e <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>humor<rt class="XXL_L">気分</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>hospital<rt class="XXL_L">病院</rt></ruby>o <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o.**<br>
+とはいえ、彼女は病院や老人ホームではほとんどの場合上機嫌だった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby>aj <ruby>pri<rt class="XS_S">ついて</rt></ruby><ruby>zorg<rt class="XS_S">世話をする</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>oj <ruby>menci<rt class="S_S">(を)言及する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>babil<rt class="S_S">雑談する</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>on <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt></ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>aj <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby>oj.**<br>
+彼女の介護者たちは、私が訪問した際に彼女のおしゃべり好きについて私に言及した。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>inform<rt class="S_S">(を)通報する</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>aj <ruby>insult<rt class="M_M">(を)罵る</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>rezist<rt class="M_M">抵抗する</rt></ruby>oj <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby><ruby>met<rt class="S_S">(を)置く</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>medicin<rt class="XXL_L">医学</rt></ruby>aj <ruby>ekzamen<rt class="XL_L">(を)調べる</rt></ruby>oj.**<br>
+しかし別の時には、例えば医療検査を受けさせようとした時の彼女の暴言や抵抗について知らされなければならなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>En<rt class="M_M">中で</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby>j <ruby>okaz<rt class="L_L">起こる</rt></ruby>oj <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>ve<rt class="S_S">ああ!</rt></ruby>i, <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>ante <ruby>kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby><ruby>manier<rt class="XXL_L">やり方</rt></ruby>e.**<br>
+そのような時、私はただ嘆くしかなかった。なぜ彼女がそのように振る舞うのか理解できずに。<br>
+<br>
+---<br>
+<br>
+### **<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>tener<rt class="L_L">優しい</rt></ruby>on <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>rimark<rt class="M_M">(に)気づく</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>**<br>
+### 彼女の優しさに私は気づかなかった<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>just<rt class="S_S">正義の</rt></ruby>a <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>, <ruby>neces<rt class="XXL_L">必要な</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>don<rt class="M_M">与える</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby>e <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>interpret<rt class="M_M">(を)通訳する</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>ajn <ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby>ojn <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>ojn <ruby>tener<rt class="L_L">優しい</rt></ruby>ajn, <ruby>mis<rt class="XL_L">誤り</rt></ruby><ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>ante <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>n <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>rezult<rt class="XL_L">起きる</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o.**<br>
+しかし彼女に公正であるためには、次のことを付け加える必要がある。どうやら私はしばしば彼女の優しい行動や発言を解釈することに失敗し、それらを単に認知症の結果としてのみ誤解していたようだ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>ek<rt class="S_S">開始</rt></ruby><ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ebl<rt class="L_L">可能</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>a <ruby>interpret<rt class="M_M">(を)通訳する</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>aj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>oj <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>last<rt class="S_S">最後の</rt></ruby>a <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fin<rt class="XS_S">終える</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>oktobr<rt class="XXL_L">１０月</rt></ruby>o.**<br>
+彼女の発言の別の解釈の可能性を、私は10月末の母への最後の訪問でようやく知った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>: "*<ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby>u <ruby>mi<rt class="XXL_L">私</rt></ruby>an <ruby>tag<rt class="XXL_L">日</rt></ruby><ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby>on <ruby>anstataŭ<rt class="L_L">(~)代わりに</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>*".**<br>
+その時彼女は私に言った：「*私の代わりに私の昼食を食べて*」。<br>
+<br>
+---<br>
+<br>
+**<ruby>Nu<rt class="XS_S">さて</rt></ruby>, <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>oj <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>simil<rt class="S_S">よく似た</rt></ruby>e <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>apetit<rt class="XXL_L">食欲</rt></ruby>on <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>e <ruby>rifuz<rt class="XS_S">(を)拒絶する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby>i, <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>gut<rt class="S_S">しずく</rt></ruby>-<ruby>injekt<rt class="XXS_S">[医](を)注<br>射する</rt></ruby>o.**<br>
+ところが、すでに10ヶ月ほど前から彼女は食欲がないだけでなく、実際に食べることを拒否し、点滴で生きていた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Absurd<rt class="L_L">非常識な</rt></ruby>a <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pens<rt class="XXL_L">思う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.**<br>
+ばかげた発言だ、と私は思った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby><ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>pri<rt class="XS_S">ついて</rt></ruby><ruby>zorg<rt class="XS_S">世話をする</rt></ruby>a <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby><ruby>ord<rt class="L_L">順序</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>tuj<rt class="XS_S">すぐに</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ag<rt class="XXS_S">行動<br>する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>: "*<ruby>Ho<rt class="XS_S">ああ</rt></ruby> <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>tener<rt class="L_L">優しい</rt></ruby>a <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>! <ruby>Vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>don<rt class="M_M">与える</rt></ruby>i <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>manĝ<rt class="S_S">(を)食べる</rt></ruby>on <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>fil<rt class="XS_S">息子</rt></ruby>o!*"**<br>
+その時、彼女のケアコーディネーターも一緒にいて、すぐに反応した：「*ああ、なんて優しいの！息子さんにあなたの食事をあげたいのね！*」<br>
+<br>
+---<br>
+<br>
+**<ruby>Sen<rt class="XS_S">(~)なしで</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>i <ruby>io<rt class="XS_S">何か</rt></ruby>n <ruby>ajn<rt class="XXS_S">であろ<br>うと</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>, <ruby>silent<rt class="S_S">黙っている</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>e <ruby>mir<rt class="XXS_S">不思議<br>に思う</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>interpret<rt class="M_M">(を)通訳する</rt></ruby>o.**<br>
+彼らに何も言わずに、私は黙ってその解釈に本当に驚いていた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Jam<rt class="XL_L">既に</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>aj <ruby>jar<rt class="XXL_L">年</rt></ruby>oj <ruby>lac<rt class="XS_S">疲れた</rt></ruby>a <ruby>pro<rt class="S_S">ために</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>eĉ<rt class="L_L">~さえ</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>imag<rt class="XS_S">(を)想像する</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>vort<rt class="M_M">[文]語</rt></ruby>oj <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>font<rt class="XL_L">源泉</rt></ruby>i <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>tener<rt class="L_L">優しい</rt></ruby>o <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>am<rt class="S_S">愛する</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>.**<br>
+すでに何年も母の認知症で疲れていた私は、それらの言葉が彼女の私への優しさや愛情から出てくるものかもしれないとは想像すらできなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>last<rt class="S_S">最後の</rt></ruby>a <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o <ruby>daŭr<rt class="XXL_L">継続</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>dek<rt class="XXL_L">十</rt></ruby> <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>ajn <ruby>minut<rt class="S_S">(時間の)分</rt></ruby>ojn, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby><ruby>em<rt class="L_L">傾向</rt></ruby>a <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>e <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>mut<rt class="XL_L">唖の</rt></ruby>e <ruby>rigard<rt class="L_L">(を)見る</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>plafon<rt class="XXL_L">天井</rt></ruby>o.**<br>
+その最後の面会は十数分続いたが、私の母は口数が少なく、しばしば黙って天井を見つめているだけだった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Serĉ<rt class="S_S">(を)捜す</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>io<rt class="XS_S">何か</rt></ruby>n <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby>i, <ruby>fin<rt class="XS_S">終える</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>traf<rt class="XXS_S">(に)命中<br>する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>tem<rt class="M_M">テーマ</rt></ruby>on, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ĵus<rt class="XXS_S">たっ<br>た今</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>don<rt class="M_M">与える</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby><ruby>traduk<rt class="S_S">(を)翻訳する</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>o: <ruby>la<rt class="M_M">the</rt></ruby> <ruby>japan<rt class="XXL_L">日本</rt></ruby><ruby>lingv<rt class="XXL_L">言語</rt></ruby>a <ruby>traduk<rt class="S_S">(を)翻訳する</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> *<ruby>La<rt class="M_M">the</rt></ruby> <ruby>Danĝer<rt class="XXL_L">危険</rt></ruby>a <ruby>Lingv<rt class="XXL_L">言語</rt></ruby>o*.**<br>
+話すことを探して、ついに私は話題を見つけた。私の共訳書、『危険な言語』の日本語訳がちょうど出版されたことだ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝajn<rt class="XS_S">(~と)見える</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>tre<rt class="XXS_S">たい<br>へん</rt></ruby> <ruby>interes<rt class="XS_S">(に)興味を持たせる</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a, <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>respond<rt class="L_L">(を)答える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>: "*<ruby>Do<rt class="XS_S">そこで</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ricev<rt class="S_S">(を)受取る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>ekzempler<rt class="XXL_L">一冊</rt></ruby>on.*"**<br>
+あまり興味がなさそうだったが、それでも私の母は答えた：「*じゃあ私は一冊もらうわ*」。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>pens<rt class="XXL_L">思う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>probabl<rt class="L_L">ありそうな</rt></ruby>e <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>memor<rt class="S_S">(を)覚えている</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>n <ruby>okaz<rt class="L_L">起こる</rt></ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>sekv<rt class="XS_S">(に)付き従う</rt></ruby>a <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby>o.**<br>
+次の訪問の時には彼女はおそらくそのことを覚えていないだろうと私は思った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt></ruby>o <ruby>neniam<rt class="S_S">決して~ない</rt></ruby> <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ĉar<rt class="S_S">~だから</rt></ruby> <ruby>sekv<rt class="XS_S">(に)付き従う</rt></ruby>a<ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>renkont<rt class="L_L">(に)出会う</rt></ruby>i <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>kadavr<rt class="XXL_L">死体</rt></ruby>on.**<br>
+しかしその機会は決して来なかった。なぜなら次に私が会えたのは彼女の遺体だけだったからだ。<br>
+<br>
+---<br>
+<br>
+### **<ruby>Viv<rt class="XXS_S">生きて<br>いる</rt></ruby>-<ruby>amar<rt class="L_L">苦い</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o**<br>
+### 母の人生の苦しみ<br>
+<br>
+---<br>
+<br>
+**<ruby>Al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ekster<rt class="L_L">(の)外で</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby>oj <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>kontent<rt class="XXL_L">満足な</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>an <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>o <ruby>ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fin<rt class="XS_S">終える</rt></ruby>o.**<br>
+部外者には、私の母は最初から最後まで完全に満足のいく人生を過ごしたように見えるだろう。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>supoz<rt class="S_S">(を)想定する</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>mem<rt class="XXL_L">自身</rt></ruby> <ruby>tuj<rt class="XS_S">すぐに</rt></ruby> <ruby>protest<rt class="L_L">抗議する</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby>n <ruby>rimark<rt class="M_M">(に)気づく</rt></ruby>on.**<br>
+しかしおそらく彼女自身はそのような意見にすぐに抗議しただろう。<br>
+<br>
+---<br>
+<br>
+**<ruby>Jam<rt class="XL_L">既に</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>infan<rt class="XXL_L">子供</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>okaz<rt class="L_L">起こる</rt></ruby>e <ruby>sent<rt class="XS_S">(を)感じる</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kontent<rt class="XXL_L">満足な</rt></ruby>a <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o.**<br>
+私の子供時代から、私は彼女が自分の人生に満足していないと時折感じることができた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Dum<rt class="S_S">(~する)間</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>infan<rt class="XXL_L">子供</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>patr<rt class="XXL_L">父</rt></ruby>oj <ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>adopt<rt class="XS_S">(を)養子にする</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>onkl<rt class="XXL_L">おじ</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>t.e.<rt class="S_S">つまり</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>jun<rt class="L_L">若い</rt></ruby>a <ruby>frat<rt class="L_L">兄弟</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby>o, <ruby>ĉar<rt class="S_S">~だから</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>onkl<rt class="XXL_L">おじ</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>infan<rt class="XXL_L">子供</rt></ruby>ojn <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a <ruby>edz<rt class="XXL_L">夫</rt></ruby>o.**<br>
+子供時代に、彼女の両親は彼女を叔母に、つまり父の姉に養子に出させた。叔母には夫との間に子供がいなかったからだ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Io<rt class="XS_S">何か</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>kutim<rt class="XXL_L">習慣</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Japan<rt class="XXL_L">日本</rt></ruby>io <ruby>si<rt class="XS_S">自分</rt></ruby>a<ruby>temp<rt class="XXL_L">時間</rt></ruby>e - <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>sent<rt class="XS_S">(を)感じる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>patr<rt class="XXL_L">父</rt></ruby>oj <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>las<rt class="XS_S">手放す</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n.**<br>
+当時の日本では全く普通のことだった。しかし私の母は両親が自分を見捨てたと感じた。<br>
+<br>
+---<br>
+<br>
+**<ruby>La<rt class="M_M">the</rt></ruby> <ruby>spert<rt class="XS_S">経験を積んだ</rt></ruby>o <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>traŭmat<rt class="XXL_L">トラウマ</rt></ruby>o.**<br>
+その経験は彼女にとってトラウマになった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>ĉi<rt class="XS_S">これ</rt></ruby> <ruby>histori<rt class="XXL_L">歴史</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a.**<br>
+この話は私には知られていた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>tuj<rt class="XS_S">すぐに</rt></ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>funebr<rt class="XXL_L">喪</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>onkl<rt class="XXL_L">おじ</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>t.e.<rt class="S_S">つまり</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>jun<rt class="L_L">若い</rt></ruby>a <ruby>frat<rt class="L_L">兄弟</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby>n, <ruby>kio<rt class="XXL_L">何</rt></ruby>n <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ĝis<rt class="XS_S">(~)まで</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>sci<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.**<br>
+しかし母の葬儀の直前、私の叔母、つまり母の妹が、それまで私が全く知らなかったことを話してくれた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>iel<rt class="XXS_S">どうに<br>かして</rt></ruby> <ruby>privilegi<rt class="XXL_L">特権</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>ĉar<rt class="S_S">~だから</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>stud<rt class="XS_S">(を)研究する</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>universitat<rt class="XXL_L">大学</rt></ruby>o - <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>cert<rt class="M_M">確かな</rt></ruby>a<ruby>grad<rt class="XXL_L">程度</rt></ruby>e <ruby>rar<rt class="L_L">まれな</rt></ruby>a <ruby>afer<rt class="XL_L">物事</rt></ruby>o <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby>aj <ruby>japan<rt class="XXL_L">日本</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>oj.**<br>
+私の母はある意味恵まれていた。大学で学ぶことができたからだ。完全にではないが、当時の日本女性にとってはある程度珍しいことだった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>fak<rt class="L_L">専門</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>farmaci<rt class="XXL_L">薬学</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>diplom<rt class="XXL_L">免状</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o, <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>a <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>labor<rt class="XXL_L">働く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>apotek<rt class="XXL_L">薬局</rt></ruby>o.**<br>
+彼女の専攻は薬学で、卒業後しばらくの間、薬局で働いた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>onkl<rt class="XXL_L">おじ</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>ek<rt class="S_S">開始</rt></ruby><ruby>am<rt class="S_S">愛する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>koleg<rt class="XXL_L">同僚</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>am<rt class="S_S">愛する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>oj.**<br>
+叔母によると、その時私の母は同僚に恋をし、二人は恋人同士になった。<br>
+<br>
+---<br>
+<br>
+**<ruby>La<rt class="M_M">the</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>patr<rt class="XXL_L">父</rt></ruby>oj <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>do<rt class="XS_S">そこで</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>av<rt class="S_S">祖父</rt></ruby>oj, <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>akcept<rt class="S_S">(を)受入れる</rt></ruby>i <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>ajn <ruby>rilat<rt class="XS_S">関係する</rt></ruby>ojn.**<br>
+私の母の実の両親、つまり私の祖父母は、彼らの関係を受け入れることができなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>dis<rt class="M_M">分散</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>par<rt class="L_L">一対</rt></ruby>on, <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>an <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>on <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>las<rt class="XS_S">手放す</rt></ruby>i <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby>an <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>lok<rt class="M_M">場所</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby>i <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>a <ruby>guberni<rt class="XXL_L">県</rt></ruby>o <ruby>kvankam<rt class="M_M">(~だ)けれども</rt></ruby> - <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> - <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>don<rt class="M_M">与える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>famili<rt class="XXL_L">家族</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>onkl<rt class="XXL_L">おじ</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o.**<br>
+二人を引き離すために、彼らは私の母に当時の住居を離れ、別の県で自分たちと一緒に住むことを強いた。たとえ —私の母が言うには— 彼らは確かに彼女を叔母の家族に譲り渡したのに。<br>
+<br>
+---<br>
+<br>
+**<ruby>De<rt class="XS_S">の;から</rt></ruby><ruby>nov<rt class="S_S">新しい</rt></ruby>e <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>o <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a<ruby>temp<rt class="XXL_L">時間</rt></ruby>a <ruby>Japan<rt class="XXL_L">日本</rt></ruby>io.**<br>
+またそのようなことは当時の日本ではよくあることだったと言われるだろう。<br>
+<br>
+---<br>
+<br>
+**<ruby>Jes<rt class="M_M">はい</rt></ruby> <ruby>ja<rt class="XS_S">実に</rt></ruby>, <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>signif<rt class="XS_S">(を)意味する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>tra<rt class="XS_S">通って</rt></ruby><ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>las<rt class="XS_S">手放す</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>cikatr<rt class="XXL_L">傷跡</rt></ruby>ojn <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o.**<br>
+確かにそうだ。しかしそのような経験があなたの心に傷跡を残さないということを意味しない。<br>
+<br>
+---<br>
+<br>
+**<ruby>Plur<rt class="M_M">複数の</rt></ruby>ajn <ruby>jar<rt class="XXL_L">年</rt></ruby>ojn <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>, <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>edz<rt class="XXL_L">夫</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby>o <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>svat<rt class="XXS_S">(の)仲人<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o.**<br>
+その数年後、私の母は見合いで私の父と結婚した。<br>
+<br>
+---<br>
+<br>
+**<ruby>De<rt class="XS_S">から</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>ja<rt class="XS_S">実に</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>zorg<rt class="XS_S">世話をする</rt></ruby>an <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>dediĉ<rt class="S_S">(を)捧げる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>divers<rt class="XXL_L">様々な</rt></ruby>aj <ruby>ŝat<rt class="XXS_S">価値を<br>認める</rt></ruby><ruby>okup<rt class="XS_S">占めている</rt></ruby>oj, <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>franc<rt class="S_S">フランス人</rt></ruby>a, <ruby>pentr<rt class="XS_S">(色彩画を)描く</rt></ruby>o<ruby>art<rt class="M_M">技術</rt></ruby>o, <ruby>naĝ<rt class="XL_L">泳ぐ</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o, <ruby>akv<rt class="XXL_L">水</rt></ruby>o<ruby>salt<rt class="XS_S">跳躍する</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o...**<br>
+それ以来、私の母は確かに全く心配のない生活を送り、様々な趣味に専念した。例えばフランス語の学習、絵画、水泳、飛び込み...<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>hobi<rt class="XXL_L">趣味</rt></ruby>oj, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>supoz<rt class="S_S">(を)想定する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>komplet<rt class="XXL_L">完全な</rt></ruby>e <ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>plen<rt class="XS_S">いっぱいの</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>vaku<rt class="L_L">空虚</rt></ruby>on <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o.**<br>
+しかしそれらの趣味は、私が思うに、彼女の心の空虚を完全に埋めることはできなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>eĉ<rt class="L_L">~さえ</rt></ruby> <ruby>em<rt class="L_L">傾向</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>hipotez<rt class="XXL_L">仮説</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>far<rt class="XXS_S">(を)する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>e <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>a, <ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>furioz<rt class="S_S">怒り狂った</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>las<rt class="XS_S">手放す</rt></ruby>i <ruby>koler<rt class="XS_S">怒っている</rt></ruby>ojn <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>akumul<rt class="S_S">蓄積する</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>kor<rt class="XXL_L">心</rt></ruby>o <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>infan<rt class="XXL_L">子供</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>o.**<br>
+私はさらに仮説を立てたくなる。認知症になった私の母は、子供時代と若い時代に心に蓄積した怒りを発散させるために時々激昂したのではないかと。<br>
+<br>
+---<br>
+<br>
+**<ruby>Pardon<rt class="L_L">(を)ゆるす</rt></ruby>on, <ruby>panj<rt class="XXL_L">ママ</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ĉi<rt class="XS_S">これ</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>publik<rt class="XXL_L">公衆</rt></ruby>e <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sekret<rt class="XXL_L">秘密</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>sekret<rt class="XXL_L">秘密</rt></ruby>on <ruby>eĉ<rt class="L_L">~さえ</rt></ruby> <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>o <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>tiom<rt class="XXS_S">そんな;あ<br>んなに</rt></ruby> <ruby>grand<rt class="XL_L">大きい</rt></ruby><ruby>eg<rt class="M_M">強大</rt></ruby>a <ruby>nombr<rt class="XXL_L">数</rt></ruby>o <ruby>da<rt class="XXL_L">の</rt></ruby> <ruby>hom<rt class="XXL_L">人</rt></ruby>oj.**<br>
+ごめんね、お母さん。私はここであなたの秘密を公にしてしまった。たとえそれほど多くの人に読まれない言語であっても。<br>
+<br>
+---<br>
+<br>
+**<ruby>Nun<rt class="XXL_L">今</rt></ruby> <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>ĉio<rt class="XS_S">すべて</rt></ruby> <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.**<br>
+しかし今やすべては過ぎ去った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Forges<rt class="M_M">(を)忘れる</rt></ruby>u <ruby>amar<rt class="L_L">苦い</rt></ruby>ojn <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ripoz<rt class="S_S">休息する</rt></ruby>u <ruby>pac<rt class="XL_L">平和</rt></ruby>e, <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>trankvil<rt class="XXL_L">平静な</rt></ruby>e.**<br>
+あなたの人生の苦しみを忘れて、安らかに、最も穏やかに眠ってください。<br>
+<br>
+---<br>
+<br>
+---<br>
+<br>
+# **<ruby>Akr<rt class="L_L">鋭い</rt></ruby>e<ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby>e, <ruby>Akr<rt class="L_L">鋭い</rt></ruby>e<ruby>flar<rt class="XS_S">(を)嗅ぐ</rt></ruby>e** −<ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby> <ruby>fos<rt class="XS_S">(を)掘る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>an <ruby>sulk<rt class="S_S">[農]うね</rt></ruby>on? (19)<br>
+# 「鋭く見て、鋭く考える」−私たちはどのように自分の畝を掘るのか？（第19回）<br>
+<br>
+---<br>
+<br>
+## **<ruby>Tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>progres<rt class="L_L">進歩する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o**<br>
+## このようにして母の認知症は進行した<br>
+<br>
+**Usui Hiroyuki** (<ruby>redaktor<rt class="XXL_L">編集者</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> *<ruby>La<rt class="M_M">the</rt></ruby> <ruby>Revu<rt class="S_S">専門雑誌</rt></ruby>o <ruby>Orient<rt class="XS_S">方位定める;東</rt></ruby>a*, <ruby>Toki<rt class="XXL_L">東京</rt></ruby>o)<br>
+**臼井裕之**（『<ruby>La<rt class="M_M">the</rt></ruby> <ruby>Revu<rt class="S_S">専門雑誌</rt></ruby>o <ruby>Orient<rt class="XS_S">方位定める;東</rt></ruby>a』編集者、東京）<br>
+<br>
+---<br>
+<br>
+**"*<ruby>Kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>spert<rt class="XS_S">経験を積んだ</rt></ruby>i <ruby>io<rt class="XS_S">何か</rt></ruby>n <ruby>tia<rt class="XS_S">そんな</rt></ruby>n, <ruby>kvankam<rt class="M_M">(~だ)けれども</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>kulp<rt class="S_S">罪のある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>nenio<rt class="S_S">何も~ない</rt></ruby>?*" <ruby>Ve<rt class="S_S">ああ!</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>aŭgust<rt class="XXL_L">８月</rt></ruby>o 2022 <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>las<rt class="XS_S">手放す</rt></ruby>i <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>on <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>ajn <ruby>tag<rt class="XXL_L">日</rt></ruby>ojn <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>hotel<rt class="L_L">ホテル</rt></ruby>o.**<br>
+「*なぜ私は何も悪いことをしていないのに、こんなことを経験しなければならないの？*」2022年8月に数日間自宅を離れてホテルに泊まらなければならなかった時、私の母は嘆いた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Nun<rt class="XXL_L">今</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>: "*<ruby>Jes<rt class="M_M">はい</rt></ruby>, <ruby>Panj<rt class="XXL_L">ママ</rt></ruby>o, <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>kulp<rt class="S_S">罪のある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>nenio<rt class="S_S">何も~ない</rt></ruby>. <ruby>Tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>senil<rt class="L_L">老年の</rt></ruby>a <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o*".**<br>
+今なら私は彼女に言うだろう：「*そうだよ、お母さん、あなたは何も悪くない。それはただあなたの老年性認知症の始まりなんだよ*」と。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby>o <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>aŭgust<rt class="XXL_L">８月</rt></ruby>o 2018 <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>aĝ<rt class="M_M">年齢</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> 88 <ruby>jar<rt class="XXL_L">年</rt></ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby><ruby>las<rt class="XS_S">手放す</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>an <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>on.**<br>
+私の父は2018年8月に88歳で亡くなり、私の母を残した。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Kiot<rt class="XXL_L">京都</rt></ruby>o.**<br>
+当時私は京都に住んでいた。<br>
+<br>
+---<br>
+<br>
+**<ruby>En<rt class="M_M">中で</rt></ruby> <ruby>juni<rt class="XL_L">６月</rt></ruby>o 2022 <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>Kanto<rt class="XXL_L">関東</rt></ruby>a <ruby>region<rt class="XL_L">[地]地方</rt></ruby>o（<ruby>Toki<rt class="XXL_L">東京</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>a <ruby>ĉirkaŭ<rt class="S_S">~まわりに;約</rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>o）, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>pens<rt class="XXL_L">思う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> - <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby>e <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby>i - <ruby>almenaŭ<rt class="L_L">少なくとも</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>foj<rt class="XXL_L">回</rt></ruby>on <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>e <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby>u <ruby>mi<rt class="XXL_L">私</rt></ruby>an <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> 85-<ruby>jar<rt class="XXL_L">年</rt></ruby>an <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>on, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sol<rt class="XS_S">唯一の</rt></ruby>a.**<br>
+2022年6月に私は関東地方（東京とその周辺）に戻り、一緒に住まないにしても、少なくとも月に一度は当時85歳で一人暮らしをしていた母を訪ねようと思った。<br>
+<br>
+---<br>
+<br>
+### **<ruby>Komenc<rt class="L_L">(を)始める</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o**<br>
+### 認知症の始まり<br>
+<br>
+---<br>
+<br>
+**<ruby>Unu<rt class="XXL_L">一</rt></ruby>-du <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>ojn <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>trans<rt class="XS_S">(~の)向こうに</rt></ruby><ruby>lok<rt class="M_M">場所</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>sekret<rt class="XXL_L">秘密</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>a <ruby>telefon<rt class="XXL_L">電話</rt></ruby>anto <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mon<rt class="XXL_L">金銭</rt></ruby><ruby>sum<rt class="XXL_L">合計</rt></ruby>on <ruby>depon<rt class="M_M">(を)預ける</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>an <ruby>ĉe<rt class="XXS_S">とこ<br>ろで</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a <ruby>bank<rt class="XXL_L">銀行</rt></ruby><ruby>kont<rt class="XS_S">[商]勘定口座</rt></ruby>o.**<br>
+私の引っ越しから1〜2ヶ月後、彼女は見知らぬ電話の相手に銀行口座に預けている金額を漏らしてしまったと私に言った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Alarm<rt class="XXL_L">警報</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>konsult<rt class="XL_L">相談する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>polic<rt class="XXL_L">警察</rt></ruby>on, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>polic<rt class="XXL_L">警察</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>rekomend<rt class="XL_L">(を)推薦する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby>u <ruby>ekster<rt class="L_L">(の)外で</rt></ruby><ruby>hejm<rt class="XXL_L">家庭</rt></ruby>e <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>ajn <ruby>tag<rt class="XXL_L">日</rt></ruby>ojn <ruby>ĉar<rt class="S_S">~だから</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>telefon<rt class="XXL_L">電話</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>o - <ruby>eventual<rt class="L_L">起こり得る</rt></ruby>e <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>aj <ruby>komplic<rt class="XXL_L">共犯者</rt></ruby>oj - <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby><ruby>trud<rt class="XS_S">押し付ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>on, <ruby>dev<rt class="L_L">must</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>konfes<rt class="S_S">(を)告白する</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>mon<rt class="XXL_L">金銭</rt></ruby>on <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>kont<rt class="XS_S">[商]勘定口座</rt></ruby>o.**<br>
+驚いて私は警察に相談し、その時警察官は、電話をかけてきた人物が —おそらく何人かの共犯者と共に— 彼女の住居に押し入り、パスワードを白状させて口座からお金を盗む可能性があるため、母に数日間家を離れて住むことを勧めた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Jen<rt class="XXS_S">そらこ<br>こに</rt></ruby> <ruby>kial<rt class="XXS_S">なぜ(理由<br>;原因)</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>hotel<rt class="L_L">ホテル</rt></ruby>o.**<br>
+それが私が彼女をホテルに泊まらせた理由だ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>iu<rt class="XXS_S">ある<br>人</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>telefon<rt class="XXL_L">電話</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>a <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>fiks<rt class="XS_S">固定した</rt></ruby>a <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>a <ruby>telefon<rt class="XXL_L">電話</rt></ruby>o, <ruby>dev<rt class="L_L">must</rt></ruby><ruby>us<rt class="XS_S">条件法</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby>i <ruby>registr<rt class="XXL_L">登録簿</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a <ruby>almenaŭ<rt class="L_L">少なくとも</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fakt<rt class="XL_L">事実</rt></ruby>o, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>telefon<rt class="XXL_L">電話</rt></ruby><ruby>vok<rt class="XS_S">(を)呼ぶ</rt></ruby>o.**<br>
+しかしもし誰かが彼女の固定電話か携帯電話に電話をかけていたなら、少なくとも電話があったという事実は記録されているはずだった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>rest<rt class="XL_L">残り</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>neniu<rt class="XS_S">どの~も~ない</rt></ruby> <ruby>spur<rt class="XXL_L">足跡</rt></ruby>o.**<br>
+しかし何の痕跡も残っていなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Nun<rt class="XXL_L">今</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>konvink<rt class="M_M">(を)説得する</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>a, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>tiam<rt class="XXS_S">その時;<br>あの時</rt></ruby> <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>senil<rt class="L_L">老年の</rt></ruby>a <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>sekv<rt class="XS_S">(に)付き従う</rt></ruby>e <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>iluzi<rt class="XL_L">幻想</rt></ruby>on <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>telefon<rt class="XXL_L">電話</rt></ruby><ruby>vok<rt class="XS_S">(を)呼ぶ</rt></ruby>o <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>kned<rt class="S_S">(を)こねる</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>an <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>a <ruby>mens<rt class="XXL_L">精神</rt></ruby>o.**<br>
+今や私は確信している。その時すでに母の老年性認知症が始まっていて、その結果彼女は自分の精神が作り出した電話についての幻想を信じていたのだと。<br>
+<br>
+---<br>
+<br>
+**<ruby>Pli<rt class="S_S">より</rt></ruby> <ruby>fru<rt class="M_M">早い</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>eĉ<rt class="L_L">~さえ</rt></ruby> <ruby>manipul<rt class="M_M">(を)操作する</rt></ruby>i <ruby>komput<rt class="S_S">計算する</rt></ruby><ruby>il<rt class="XXS_S">道<br>具</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>aĉet<rt class="S_S">(を)買う</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>on <ruby>ret<rt class="XXL_L">網</rt></ruby>e.**<br>
+以前は私の母はコンピューターを操作することさえでき、ネットで買い物をしていた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tuj<rt class="XS_S">すぐに</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hejm<rt class="XXL_L">家庭</rt></ruby><ruby>region<rt class="XL_L">[地]地方</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>plend<rt class="XS_S">不満を訴える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>komput<rt class="S_S">計算する</rt></ruby><ruby>il<rt class="XXS_S">道<br>具</rt></ruby>o <ruby>pane<rt class="XXL_L">停止</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.**<br>
+私が地元に戻った直後、母は私にコンピューターが壊れたと訴えた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby>e <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>aĉet<rt class="S_S">(を)買う</rt></ruby>i <ruby>nov<rt class="S_S">新しい</rt></ruby>an.**<br>
+彼女と私は一緒に新しいものを買いに行った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ne<rt class="M_M">ない</rt></ruby> <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>long<rt class="XXL_L">長い</rt></ruby>a <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>kovr<rt class="XS_S">(を)おおう</rt></ruby>u <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>komput<rt class="S_S">計算する</rt></ruby><ruby>il<rt class="XXS_S">道<br>具</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pane<rt class="XXL_L">停止</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>pane<rt class="XXL_L">停止</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>mens<rt class="XXL_L">精神</rt></ruby>o.**<br>
+コンピューターが壊れたのではなく、彼女の精神が壊れつつあったことを発見するまでに長くはかからなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>jen<rt class="XXS_S">そらこ<br>こに</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>memor<rt class="S_S">(を)覚えている</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>on, <ruby>jen<rt class="XXS_S">そらこ<br>こに</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>manier<rt class="XXL_L">やり方</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ek<rt class="S_S">開始</rt></ruby><ruby>funkci<rt class="XXL_L">機能</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>maŝin<rt class="XXL_L">機械</rt></ruby>on.**<br>
+私の母はパスワードを思い出せなかったり、機械を起動する方法を思い出せなかったりした。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>iom<rt class="XL_L">多少</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>iom<rt class="XL_L">多少</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>kapabl<rt class="XXL_L">有能な</rt></ruby>a <ruby>uz<rt class="S_S">使う</rt></ruby>i <ruby>komput<rt class="S_S">計算する</rt></ruby><ruby>il<rt class="XXS_S">道<br>具</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>fin<rt class="XS_S">終える</rt></ruby>e <ruby>tut<rt class="XS_S">全部の</rt></ruby>e <ruby>perd<rt class="S_S">(を)失う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>interes<rt class="XS_S">(に)興味を持たせる</rt></ruby>on <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>.**<br>
+こうして彼女は少しずつコンピューターを使えなくなり、ついには完全にそれへの興味を失った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>konstat<rt class="M_M">(を)確認する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>grand<rt class="XL_L">大きい</rt></ruby>a <ruby>aĝ<rt class="M_M">年齢</rt></ruby>o <ruby>senil<rt class="L_L">老年の</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>o <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>tiom<rt class="XXS_S">そんな;あ<br>んなに</rt></ruby> <ruby>rapid<rt class="XXL_L">速い</rt></ruby>e <ruby>serioz<rt class="L_L">まじめな</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>i.**<br>
+私は、高齢になると老化がこれほど急速に深刻化することがあると認識した。<br>
+<br>
+---<br>
+<br>
+### **<ruby>Persekut<rt class="L_L">(を)迫害する</rt></ruby>a <ruby>delir<rt class="S_S">錯乱する</rt></ruby>o**<br>
+### 被害妄想<br>
+<br>
+---<br>
+<br>
+**<ruby>Est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>facil<rt class="M_M">容易な</rt></ruby>e <ruby>akcept<rt class="S_S">(を)受入れる</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>e, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>iom<rt class="XL_L">多少</rt></ruby> <ruby>da<rt class="XXL_L">の</rt></ruby> <ruby>temp<rt class="XXL_L">時間</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby>i, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>port<rt class="XXS_S">(を)持ち<br>運ぶ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>permes<rt class="M_M">(を)許可する</rt></ruby>o <ruby>grav<rt class="M_M">重要な</rt></ruby>ajn <ruby>dokument<rt class="XXL_L">文書</rt></ruby>ojn, <ruby>libr<rt class="XXL_L">本</rt></ruby>ojn <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>simil<rt class="S_S">よく似た</rt></ruby>ajn <ruby>aĵ<rt class="XS_S">事物</rt></ruby>ojn <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby>i.**<br>
+はるかに受け入れがたかったのは、しばらく後に私の母が、私が彼女の許可なく重要な書類、本、および彼女が見つけられない同様のものを持ち出していると信じ始めたことだった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>nenio<rt class="S_S">何も~ない</rt></ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>a <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>simptom<rt class="XXL_L">[医]症状</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>persekut<rt class="L_L">(を)迫害する</rt></ruby>a <ruby>delir<rt class="S_S">錯乱する</rt></ruby>o.**<br>
+それは被害妄想の症状に他ならなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Kaj<rt class="L_L">And</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>a <ruby>gast<rt class="XXL_L">客</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>proksim<rt class="XXL_L">近い</rt></ruby>a <ruby>polic<rt class="XXL_L">警察</rt></ruby><ruby>bud<rt class="M_M">仮小屋</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>tie<rt class="XS_S">そこで</rt></ruby> <ruby>ripet<rt class="XS_S">(を)繰り返す</rt></ruby>e <ruby>plend<rt class="XS_S">不満を訴える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>deĵor<rt class="M_M">当直する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>polic<rt class="XXL_L">警察</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>kio<rt class="XXL_L">何</rt></ruby>n <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.**<br>
+そして彼女は近くの交番の常連になり、そこで勤務中の警察官に自分が信じていることを繰り返し訴えた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Foj<rt class="XXL_L">回</rt></ruby>e <ruby>polic<rt class="XXL_L">警察</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>telefon<rt class="XXL_L">電話</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>trans<rt class="XS_S">(~の)向こうに</rt></ruby><ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>ante <ruby>kio<rt class="XXL_L">何</rt></ruby>n <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>li<rt class="XS_S">彼</rt></ruby>.**<br>
+ある時警察官が私に電話をかけ、母が彼に話したことを伝えた。<br>
+<br>
+---<br>
+<br>
+**"*<ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>sufer<rt class="L_L">苦しむ</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>demenc<rt class="XXL_L">認知症</rt></ruby>o*", <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>respond<rt class="L_L">(を)答える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.**<br>
+「*私の母は認知症を患っています*」と私は答えた。<br>
+<br>
+---<br>
+<br>
+**<ruby>La<rt class="M_M">the</rt></ruby> <ruby>telefon<rt class="XXL_L">電話</rt></ruby>anta <ruby>polic<rt class="XXL_L">警察</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o, <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby>e <ruby>suspekt<rt class="L_L">(を)怪しむ</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>a <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>, <ruby>je<rt class="XS_S">(~)に</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>aj <ruby>vort<rt class="M_M">[文]語</rt></ruby>oj <ruby>respond<rt class="L_L">(を)答える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>: "*<ruby>Do<rt class="XS_S">そこで</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>prov<rt class="S_S">(を)試す</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>trankvil<rt class="XXL_L">平静な</rt></ruby><ruby>ig<rt class="XXS_S">させる</rt></ruby>i <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>en <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby> <ruby>trakt<rt class="XS_S">(を)取り扱う</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>kaz<rt class="M_M">件</rt></ruby>on*".**<br>
+電話をかけてきた警察官は、すでに半ばそれを疑っていたようで、私の言葉に答えた：「*では、お母さんを落ち着かせて、この件を処理せずに家に帰すようにします*」。<br>
+<br>
+---<br>
+<br>
+**<ruby>Kulp<rt class="S_S">罪のある</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby>oj <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>.**<br>
+しかし犯人は私だけではなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby><ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>at<rt class="XXS_S">受動<br>継続</rt></ruby>aj <ruby>hom<rt class="XXL_L">人</rt></ruby>oj <ruby>en<rt class="M_M">中で</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>on, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>ekster<rt class="L_L">(の)外で</rt></ruby>e <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>aĉet<rt class="S_S">(を)買う</rt></ruby>umado, <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby>o <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>kurac<rt class="XS_S">(を)治療する</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>ktp<rt class="S_S">など</rt></ruby>.**<br>
+私の母は、彼女が買い物や医者への訪問などで外出している間に、見知らぬ人々が自宅に入り込んでいると信じていた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>plur<rt class="M_M">複数の</rt></ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>ŝanĝ<rt class="S_S">(を)変える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ŝlos<rt class="XS_S">鍵をかける</rt></ruby><ruby>il<rt class="XXS_S">道<br>具</rt></ruby>ojn <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>pord<rt class="XXL_L">戸口</rt></ruby>o, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>plu<rt class="S_S">さらに</rt></ruby> <ruby>valid<rt class="S_S">[法]有効な</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.**<br>
+彼女は住居の玄関の鍵を何度も交換し、私が持っていた鍵はもう使えなくなった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>instal<rt class="XS_S">(を)据え付ける</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kontraŭ<rt class="M_M">(に)向かって</rt></ruby><ruby>krim<rt class="XXL_L">犯罪</rt></ruby>an <ruby>kamera<rt class="XXL_L">カメラ</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ŝanĝ<rt class="S_S">(を)変える</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>kelk<rt class="S_S">幾つかの</rt></ruby>ajn <ruby>foj<rt class="XXL_L">回</rt></ruby>ojn, <ruby>kred<rt class="XS_S">(を)信じる</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>funkci<rt class="XXL_L">機能</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>.**<br>
+彼女は防犯カメラを設置し、それが故障していると信じて何度も交換した。<br>
+<br>
+---<br>
+<br>
+**<ruby>Fakt<rt class="XL_L">事実</rt></ruby>e <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>a <ruby>cerb<rt class="XXL_L">頭脳</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>funkci<rt class="XXL_L">機能</rt></ruby>i.**<br>
+実際には故障し始めていたのは彼女の脳だった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ek<rt class="S_S">開始</rt></ruby><ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>maj<rt class="XL_L">５月</rt></ruby>o 2023 <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>monat<rt class="L_L">(暦の)月</rt></ruby>e <ruby>psikiatr<rt class="XXL_L">精神科医</rt></ruby>o <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>renkont<rt class="L_L">(に)出会う</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>preskrib<rt class="S_S">[医](を)処方する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>medikament<rt class="XXL_L">医薬</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>trakt<rt class="XS_S">(を)取り扱う</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>persekut<rt class="L_L">(を)迫害する</rt></ruby>an <ruby>delir<rt class="S_S">錯乱する</rt></ruby>on.**<br>
+2023年5月から、月に2回精神科医が彼女に会いに来て、被害妄想を治療するための薬を処方した。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>tamen<rt class="M_M">とはいえ;</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>impres<rt class="XXL_L">印象</rt></ruby>on, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>medikament<rt class="XXL_L">医薬</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>signif<rt class="XS_S">(を)意味する</rt></ruby>e <ruby>pli<rt class="S_S">より</rt></ruby><ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>mens<rt class="XXL_L">精神</rt></ruby>o<ruby>stat<rt class="XL_L">状態</rt></ruby>on.**<br>
+しかし私は、薬が彼女の精神状態を大幅に改善することに成功しなかったという印象を持っていた。<br>
+<br>
+---<br>
+<br>
+### **<ruby>Fin<rt class="XS_S">終える</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>a <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o**<br>
+### 自宅生活の終わり<br>
+<br>
+---<br>
+<br>
+**<ruby>Fin<rt class="XS_S">終える</rt></ruby>e <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>aŭgust<rt class="XXL_L">８月</rt></ruby>o 2024, <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>tag<rt class="XXL_L">日</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>kontakt<rt class="XXL_L">接触</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>a.**<br>
+2024年8月末、一日以上にわたって私の母と連絡が取れなくなった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tim<rt class="S_S">恐れる</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>kolaps<rt class="L_L">倒れる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>o, <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>fru<rt class="M_M">早い</rt></ruby><ruby>vesper<rt class="XXL_L">夕方</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ating<rt class="M_M">(に)着く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>an <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>on.**<br>
+彼女が自宅で倒れたのではないかと心配し、夜遅くに私は彼女の住居に着いた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>nov<rt class="S_S">新しい</rt></ruby>ajn <ruby>ŝlos<rt class="XS_S">鍵をかける</rt></ruby><ruby>il<rt class="XXS_S">道<br>具</rt></ruby>ojn, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby><ruby>it<rt class="XXXS_S">受動<br>完<br>了</rt></ruby>e.**<br>
+しかし私はすでに述べたように新しい鍵を持っていなかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>unu<rt class="XXL_L">一</rt></ruby>e <ruby>demand<rt class="M_M">(を)質問する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>polic<rt class="XXL_L">警察</rt></ruby>on <ruby>kio<rt class="XXL_L">何</rt></ruby>n <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby>i.**<br>
+私はまず警察にどうすればいいか尋ねた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Polic<rt class="XXL_L">警察</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>o <ruby>simpl<rt class="XL_L">簡単な</rt></ruby>e <ruby>konsil<rt class="S_S">(を)助言する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>kontakt<rt class="XXL_L">接触</rt></ruby>u <ruby>iu<rt class="XXS_S">ある;<br>だれか</rt></ruby>n <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>aj <ruby>serur<rt class="XXL_L">錠</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>aj <ruby>serv<rt class="M_M">仕える</rt></ruby>oj, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>reklam<rt class="S_S">(の)広告をする</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>n <ruby>inter<rt class="S_S">(の)間に</rt></ruby><ruby>ret<rt class="XXL_L">網</rt></ruby>e.**<br>
+警察官は単純に、ネットで宣伝している多くの鍵屋サービスのどれかに連絡するよう助言した。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sekv<rt class="XS_S">(に)付き従う</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>telefon<rt class="XXL_L">電話</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby> <ruby>serv<rt class="M_M">仕える</rt></ruby>o <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>serur<rt class="XXL_L">錠</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>li<rt class="S_S">彼</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>ferm<rt class="XS_S">(を)閉める</rt></ruby>u <ruby>la<rt class="M_M">the</rt></ruby> <ruby>pord<rt class="XXL_L">戸口</rt></ruby>on.**<br>
+そこで私はそのようなサービスに電話し、ドアを開けてもらうために鍵師を呼んだ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>kost<rt class="XS_S">(に)価する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>naŭ<rt class="L_L">九</rt></ruby><ruby>dek<rt class="L_L">十</rt></ruby> <ruby>mil<rt class="XXL_L">千</rt></ruby> <ruby>en<rt class="XXL_L">円</rt></ruby>ojn.**<br>
+それは約9万円かかった。<br>
+<br>
+---<br>
+<br>
+**<ruby>En<rt class="M_M">中で</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>int<rt class="XXS_S">能動;<br>完了</rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>dom<rt class="XXL_L">家</rt></ruby>on <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>trov<rt class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>an <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>on <ruby>kaŭr<rt class="XXS_S">うずくま<br>っている</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>akv<rt class="XXL_L">水</rt></ruby>a <ruby>ban<rt class="XS_S">水浴させる</rt></ruby><ruby>kuv<rt class="XL_L">大桶</rt></ruby>o <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby><ruby>konsci<rt class="S_S">(を)意識する</rt></ruby>e.**<br>
+家に入って、私は母が半ば意識のない状態で水の入っていない浴槽の中にうずくまっているのを見つけた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>gap<rt class="S_S">ぽかんと見る</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>a <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>mur<rt class="XXL_L">壁</rt></ruby>o <ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby>e <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby> <ruby>sufer<rt class="L_L">苦しむ</rt></ruby>o.**<br>
+彼女は苦しみもなく壁をぼんやり見つめていた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>supoz<rt class="S_S">(を)想定する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>intenc<rt class="S_S">(を)意図する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ban<rt class="XS_S">水浴させる</rt></ruby>i <ruby>si<rt class="XS_S">自分</rt></ruby>n, <ruby>en<rt class="M_M">中で</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ban<rt class="XS_S">水浴させる</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>plu<rt class="S_S">さらに</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mov<rt class="M_M">動かす</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby>i.**<br>
+私は、彼女が入浴しようとして浴室に入り、その後動けなくなったのだと思う。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ambulanc<rt class="XXL_L">救急車</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>hospital<rt class="XXL_L">病院</rt></ruby>o.**<br>
+私は救急車を呼び、母と一緒に病院に行った。<br>
+<br>
+---<br>
+<br>
+**<ruby>Tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>fin<rt class="XS_S">終える</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>a <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>ad<rt class="XXS_S">継続<br>行為</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o.**<br>
+こうして私の母の自宅での生活は終わった。<br>
+<br>
+---<br>
+<br>
+**<ruby>De<rt class="XS_S">から</rt></ruby> <ruby>pri<rt class="XS_S">ついて</rt></ruby><ruby>zorg<rt class="XS_S">世話をする</rt></ruby>a <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby><ruby>ord<rt class="L_L">順序</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>aŭd<rt class="S_S">(を)聞く</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>fru<rt class="M_M">早い</rt></ruby>e <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>vizit<rt class="XXS_S">(を)訪問<br>する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>on <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>foj<rt class="XXL_L">回</rt></ruby>on <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>lok<rt class="M_M">場所</rt></ruby>o <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>plaĉ<rt class="S_S">気に入る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>.**<br>
+ケアコーディネーターから、以前彼女は一度老人ホームを訪れたが、その場所はあまり気に入らなかったと聞いた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Supoz<rt class="S_S">(を)想定する</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>e <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>rezist<rt class="M_M">抵抗する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ide<rt class="L_L">観念</rt></ruby>o <ruby>for<rt class="XS_S">離れて</rt></ruby><ruby>las<rt class="XS_S">手放す</rt></ruby>i <ruby>si<rt class="XS_S">自分</rt></ruby>an <ruby>propr<rt class="XL_L">固有の</rt></ruby>an <ruby>hejm<rt class="XXL_L">家庭</rt></ruby>on, <ruby>kie<rt class="XS_S">どこで</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby><ruby>jar<rt class="XXL_L">年</rt></ruby><ruby>cent<rt class="XXL_L">百</rt></ruby>on.**<br>
+おそらく彼女は、半世紀住んでいた自分の家を離れるという考えに抵抗していた。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>rezist<rt class="M_M">抵抗する</rt></ruby>o <ruby>post<rt class="S_S">(~の)後で</rt></ruby>e <ruby>kost<rt class="XS_S">(に)価する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kapabl<rt class="XXL_L">有能な</rt></ruby>on <ruby>mem<rt class="XXL_L">自身</rt></ruby><ruby>star<rt class="XS_S">立っている</rt></ruby>e <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>i.**<br>
+しかしその抵抗は後に彼女に自立して生きる能力を失わせることになった。<br>
+<br>
+---<br>
+<br>
+**<ruby>Nun<rt class="XXL_L">今</rt></ruby><ruby>temp<rt class="XXL_L">時間</rt></ruby>e <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>patr<rt class="XXL_L">父</rt></ruby><ruby>in<rt class="XS_S">女性</rt></ruby>o <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tag<rt class="XXL_L">日</rt></ruby>ojn <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>kuŝ<rt class="XXS_S">横たわっ<br>ている</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>e <ruby>sur<rt class="XXS_S">(~の)<br>上に</rt></ruby> <ruby>lit<rt class="XXS_S">ベッ<br>ド</rt></ruby>o, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>bezon<rt class="XS_S">(を)必要とする</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>rul<rt class="XXS_S">転がす<br>;巻物</rt></ruby><ruby>seĝ<rt class="XL_L">いす</rt></ruby>on <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>akompan<rt class="L_L">(と)同行する</rt></ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>on <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>ekster<rt class="L_L">(の)外で</rt></ruby>en.**<br>
+現在、私の母はベッドに横たわるだけで日々を過ごし、外出するには車椅子と付き添いが必要だ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>bedaŭr<rt class="S_S">(を)残念に思う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>konvink<rt class="M_M">(を)説得する</rt></ruby>i <ruby>ŝi<rt class="XS_S">彼女</rt></ruby>n <ruby>ek<rt class="S_S">開始</rt></ruby><ruby>loĝ<rt class="XS_S">(に)住む</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>situaci<rt class="XXL_L">事態</rt></ruby>o <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>n <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby>.**<br>
+私は、状況がそれを強いる前に老人ホームに入居するよう彼女を説得できなかったことを大いに後悔している。<br>
+<br>
+---<br>
+<br>
+**<ruby>Fakt<rt class="XL_L">事実</rt></ruby>e <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ŝi<rt class="XS_S">彼女</rt></ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>sen<rt class="XS_S">(~)なしで</rt></ruby><ruby>spert<rt class="XS_S">経験を積んだ</rt></ruby>aj <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>tia<rt class="XS_S">そんな</rt></ruby>j <ruby>afer<rt class="XL_L">物事</rt></ruby>oj <ruby>i.a.<rt class="S_S">とりわけ</rt></ruby> <ruby>ĉar<rt class="S_S">~だから</rt></ruby> <ruby>neniu<rt class="XS_S">どの~も~ない</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>ni<rt class="XS_S">私達</rt></ruby>aj <ruby>proksim<rt class="XXL_L">近い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby>oj <ruby>spert<rt class="XS_S">経験を積んだ</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>jun<rt class="L_L">若い</rt></ruby><ruby>ul<rt class="XL_L">人</rt></ruby><ruby>ej<rt class="XS_S">場所</rt></ruby>o.**<br>
+実際、彼女も私もそのようなことについては経験がなかった。とりわけ私たちの身近な人の誰も老人ホームで暮らす経験をしたことがなかったからだ。<br>
+<br>
+---<br>
+<br>
+**<ruby>Sed<rt class="S_S">しかし</rt></ruby> <ruby>evident<rt class="XXL_L">明白な</rt></ruby>e <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>pas<rt class="XS_S">通過する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>epok<rt class="XXL_L">時代</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>dev<rt class="L_L">must</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>amar<rt class="L_L">苦い</rt></ruby>e <ruby>konstat<rt class="M_M">(を)確認する</rt></ruby>i.**<br>
+しかし明らかにその時代はすでに過ぎ去っていたことを、私は苦々しく認識しなければならなかった。<br>
+<br>
+---<br>
+<br>
+（完）<br>
+</p></body></html>
