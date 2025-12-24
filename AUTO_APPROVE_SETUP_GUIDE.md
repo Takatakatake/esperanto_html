@@ -1,6 +1,6 @@
 # Claude Code & Codex 自動承認設定ガイド
 
-**最終更新**: 2025年12月25日 06:50 JST
+**最終更新**: 2025年12月25日 07:00 JST
 **目的**: 全ての操作を確認なしで自動実行するための設定
 
 ---
@@ -13,8 +13,8 @@
 |:------:|---------|------|
 | 高 | `~/.claude/settings.local.json` | ローカル設定（優先適用） |
 | 中 | `~/.claude/settings.json` | 共有設定 |
-| - | `~/.claude-pro1/settings.json` | `claudea` コマンド用 |
-| - | `~/.claude-pro2/settings.json` | `claudem` コマンド用 |
+| - | `~/.claude-pro1/settings.json` | `claudea` コマンド用（Opus） |
+| - | `~/.claude-pro2/settings.json` | `claudem` コマンド用（Opus） |
 
 ### 1.2 現在の設定内容
 
@@ -36,8 +36,13 @@
       "Task",
       "TodoWrite",
       "NotebookEdit",
-      "LSP"
-    ]
+      "LSP",
+      "mcp__*",
+      "AskUserQuestion",
+      "EnterPlanMode",
+      "ExitPlanMode"
+    ],
+    "deny": []
   }
 }
 ```
@@ -49,12 +54,12 @@
   "permissions": {
     "defaultMode": "bypassPermissions",
     "allow": [
+      "Bash",
       "Read",
       "Write",
       "Edit",
       "Glob",
       "Grep",
-      "Bash",
       "WebFetch",
       "WebSearch",
       "TodoWrite",
@@ -79,16 +84,16 @@
   "permissions": {
     "defaultMode": "bypassPermissions",
     "allow": [
+      "Bash",
       "Read",
       "Edit",
       "Write",
-      "Bash",
+      "Glob",
+      "Grep",
       "WebFetch",
       "WebSearch",
       "Task",
       "TodoWrite",
-      "Glob",
-      "Grep",
       "NotebookEdit",
       "LSP",
       "mcp__*",
@@ -162,37 +167,29 @@
 ### 2.2 現在の設定内容
 
 ```toml
-model = "gpt-5.2"
+model = "gpt-5.2-codex"
 model_reasoning_effort = "xhigh"
 
-# Auto-approve settings - no confirmation prompts
+# Maximum freedom settings - no confirmation prompts
 approval_policy = "never"
 sandbox = "danger-full-access"
-
-# Sandbox permissions for full access
 sandbox_permissions = [
   "disk-full-read-access",
   "disk-full-write-access"
 ]
 
-[projects."/media/yamada/SSD-PG-C_N1/リンク集3"]
+[projects."/home/yt"]
 trust_level = "trusted"
 
-[projects."/home/yamada/Downloads"]
+[projects."/home/yt/ダウンロード"]
 trust_level = "trusted"
 
-[projects."/home/yamada/Insync_GoogleDrive/エスペラント関係202510"]
-trust_level = "trusted"
-
-[projects."/media/yamada/SSD-PUTA1"]
-trust_level = "trusted"
-
-[projects."/home/yamada/Videos/Screencasts"]
+[projects."/home/yt/ドキュメント"]
 trust_level = "trusted"
 
 [notice]
 hide_full_access_warning = true
-hide_gpt5_1_migration_prompt = true
+hide_rate_limit_model_nudge = true
 ```
 
 ### 2.3 主要設定項目
@@ -229,11 +226,11 @@ hide_gpt5_1_migration_prompt = true
 ### 3.1 ~/.bashrc の現在の設定
 
 ```bash
-# Claude Code プロファイル
+# Claude Code アカウント切り替え（Opusモデル用）
 alias claudea='CLAUDE_CONFIG_DIR=~/.claude-pro1 claude'
 alias claudem='CLAUDE_CONFIG_DIR=~/.claude-pro2 claude'
 
-# 完全自動化エイリアス
+# Claude Code & Codex - 完全自動モード
 alias claudeauto='claude --dangerously-skip-permissions'
 alias codexauto='codex --dangerously-bypass-approvals-and-sandbox'
 alias codexfull='codex --full-auto -s danger-full-access -a never'
@@ -482,6 +479,7 @@ echo "=== Claude ===" && grep '"defaultMode"' ~/.claude/settings*.json 2>/dev/nu
 
 | 日時 | 内容 |
 |------|------|
+| 2025-12-25 07:00 | 実際の設定に完全同期、claude-pro1/pro2作成 |
 | 2025-12-25 06:50 | `Bash(*)` を `Bash` に修正、エラー対処法追加 |
 | 2025-12-25 06:45 | 初版作成 |
 
