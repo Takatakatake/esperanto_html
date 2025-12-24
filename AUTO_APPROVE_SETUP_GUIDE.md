@@ -237,7 +237,11 @@ hide_gpt5_1_migration_prompt = true
 alias claudea='CLAUDE_CONFIG_DIR=~/.claude-pro1 claude'
 alias claudem='CLAUDE_CONFIG_DIR=~/.claude-pro2 claude'
 
-# Claude Code & Codex - 完全自動モード
+# Claude Code & Codex - 完全自動モード（デフォルト）
+alias claude='claude --dangerously-skip-permissions'
+alias codex='codex --dangerously-bypass-approvals-and-sandbox'
+
+# 追加の自動化エイリアス
 alias claudeauto='claude --dangerously-skip-permissions'
 alias codexauto='codex --dangerously-bypass-approvals-and-sandbox'
 alias codexfull='codex --full-auto -s danger-full-access -a never'
@@ -247,12 +251,12 @@ alias codexfull='codex --full-auto -s danger-full-access -a never'
 
 | エイリアス | 説明 |
 |-----------|------|
-| `claude` | 通常起動（settings.jsonで自動承認済み） |
+| `claude` | **常に全権限スキップで起動** |
+| `codex` | **常に全確認スキップ＋サンドボックス無効で起動** |
 | `claudea` | ~/.claude-pro1設定を使用（Opusモデル） |
 | `claudem` | ~/.claude-pro2設定を使用（Opusモデル） |
-| `claudeauto` | 全権限チェックを完全スキップ |
-| `codex` | 通常起動（config.tomlで自動承認済み） |
-| `codexauto` | 全確認スキップ＋サンドボックス無効 |
+| `claudeauto` | claude と同じ（互換性用） |
+| `codexauto` | codex と同じ（互換性用） |
 | `codexfull` | フルオートモード＋全権限アクセス |
 
 ---
@@ -486,6 +490,7 @@ echo "=== Claude ===" && grep '"defaultMode"' ~/.claude/settings*.json 2>/dev/nu
 
 | 日時 | 内容 |
 |------|------|
+| 2025-12-25 07:20 | claude/codexデフォルトエイリアス追加（常に最大自由度） |
 | 2025-12-25 07:10 | Codex model更新(gpt-5.2-codex)、実際の設定に完全同期 |
 | 2025-12-25 07:00 | 実際の設定に完全同期、claude-pro1/pro2作成 |
 | 2025-12-25 06:50 | `Bash(*)` を `Bash` に修正、エラー対処法追加 |
