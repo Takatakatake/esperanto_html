@@ -1,6 +1,6 @@
 # Claude Code & Codex 自動承認設定ガイド
 
-**最終更新**: 2025年12月25日 07:00 JST
+**最終更新**: 2025年12月25日 07:10 JST
 **目的**: 全ての操作を確認なしで自動実行するための設定
 
 ---
@@ -36,13 +36,8 @@
       "Task",
       "TodoWrite",
       "NotebookEdit",
-      "LSP",
-      "mcp__*",
-      "AskUserQuestion",
-      "EnterPlanMode",
-      "ExitPlanMode"
-    ],
-    "deny": []
+      "LSP"
+    ]
   }
 }
 ```
@@ -54,12 +49,12 @@
   "permissions": {
     "defaultMode": "bypassPermissions",
     "allow": [
-      "Bash",
       "Read",
       "Write",
       "Edit",
       "Glob",
       "Grep",
+      "Bash",
       "WebFetch",
       "WebSearch",
       "TodoWrite",
@@ -84,16 +79,16 @@
   "permissions": {
     "defaultMode": "bypassPermissions",
     "allow": [
-      "Bash",
       "Read",
       "Edit",
       "Write",
-      "Glob",
-      "Grep",
+      "Bash",
       "WebFetch",
       "WebSearch",
       "Task",
       "TodoWrite",
+      "Glob",
+      "Grep",
       "NotebookEdit",
       "LSP",
       "mcp__*",
@@ -170,32 +165,44 @@
 model = "gpt-5.2-codex"
 model_reasoning_effort = "xhigh"
 
-# Maximum freedom settings - no confirmation prompts
+# Auto-approve settings - no confirmation prompts
 approval_policy = "never"
 sandbox = "danger-full-access"
+
+# Sandbox permissions for full access
 sandbox_permissions = [
   "disk-full-read-access",
   "disk-full-write-access"
 ]
 
-[projects."/home/yt"]
+[projects."/media/yamada/SSD-PG-C_N1/リンク集3"]
 trust_level = "trusted"
 
-[projects."/home/yt/ダウンロード"]
+[projects."/home/yamada/Downloads"]
 trust_level = "trusted"
 
-[projects."/home/yt/ドキュメント"]
+[projects."/home/yamada/Insync_GoogleDrive/エスペラント関係202510"]
+trust_level = "trusted"
+
+[projects."/media/yamada/SSD-PUTA1"]
+trust_level = "trusted"
+
+[projects."/home/yamada/Videos/Screencasts"]
 trust_level = "trusted"
 
 [notice]
 hide_full_access_warning = true
-hide_rate_limit_model_nudge = true
+hide_gpt5_1_migration_prompt = true
+
+[notice.model_migrations]
+"gpt-5.2" = "gpt-5.2-codex"
 ```
 
 ### 2.3 主要設定項目
 
 | 項目 | 値 | 説明 |
 |------|-----|------|
+| `model` | `"gpt-5.2-codex"` | 使用モデル |
 | `approval_policy` | `"never"` | 承認を一切求めない |
 | `sandbox` | `"danger-full-access"` | サンドボックスなし |
 | `sandbox_permissions` | 全読み書き | ディスク全体へのアクセス |
@@ -479,6 +486,7 @@ echo "=== Claude ===" && grep '"defaultMode"' ~/.claude/settings*.json 2>/dev/nu
 
 | 日時 | 内容 |
 |------|------|
+| 2025-12-25 07:10 | Codex model更新(gpt-5.2-codex)、実際の設定に完全同期 |
 | 2025-12-25 07:00 | 実際の設定に完全同期、claude-pro1/pro2作成 |
 | 2025-12-25 06:50 | `Bash(*)` を `Bash` に修正、エラー対処法追加 |
 | 2025-12-25 06:45 | 初版作成 |
