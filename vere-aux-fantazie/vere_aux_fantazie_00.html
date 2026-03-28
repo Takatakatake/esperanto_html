@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>まえがき | ANTAŬPAROLO | Vere aŭ Fantazie</title>
+        <style>
+                html,
+                body {
+                        -webkit-text-size-adjust: 100%;
+                        -moz-text-size-adjust: 100%;
+                        -ms-text-size-adjust: 100%;
+                        text-size-adjust: 100%;
+                }
+
+
+                :root {
+                        --ruby-color: blue;
+                        --ruby-font-size: 0.5em;
+                }
+
+                html {
+                        font-size: 100%;
+                        /* 多くのブラウザは16px相当が標準 */
+                }
+
+                body {
+                        margin: 16px;
+                        font-family: Arial, sans-serif;
+                }
+
+                .page-nav {
+                        margin-bottom: 16px;
+                        line-height: 1.7;
+                }
+
+                .text-M_M {
+                        font-size: 1rem !important;
+                        font-family: Arial, sans-serif;
+                        line-height: 2.0 !important;
+                        /* text-M_Mのline-heightとrubyのline-heightは一致させる必要がある。 */
+                        display: block;
+                        /* ブロック要素として扱う */
+                        position: relative;
+                }
+
+                /* ▼ ルビ（フレックスでルビを上に表示） */
+                ruby {
+                        display: inline-flex;
+                        flex-direction: column;
+                        align-items: center;
+                        vertical-align: top !important;
+                        line-height: 2.0 !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        font-size: 1rem !important;
+                }
+
+                /* ▼ 追加マイナス余白（ルビサイズ別に上書き） */
+                rt {
+                        display: block !important;
+                        font-size: var(--ruby-font-size);
+                        color: var(--ruby-color);
+                        line-height: 1.05;
+                        /*ルビを改行するケースにおけるルビの行間*/
+                        text-align: center;
+                        /* margin-top: 0.2em !important;   
+        transform: translateY(0.4em) !important; */
+                }
+
+                rt.XXXS_S {
+                        --ruby-font-size: 0.3em;
+                        margin-top: -8.3em !important;
+                        /* ルビの高さ位置はここで調節する。 */
+                        transform: translateY(-0em) !important;
+                }
+
+                rt.XXS_S {
+                        --ruby-font-size: 0.3em;
+                        margin-top: -7.2em !important;
+                        /* ルビの高さ位置はここで調節する。 */
+                        transform: translateY(-0em) !important;
+                }
+
+                rt.XS_S {
+                        --ruby-font-size: 0.3em;
+                        margin-top: -6.1em !important;
+                        transform: translateY(-0em) !important;
+                }
+
+                rt.S_S {
+                        --ruby-font-size: 0.4em;
+                        margin-top: -4.85em !important;
+                        transform: translateY(-0em) !important;
+                }
+
+                rt.M_M {
+                        --ruby-font-size: 0.5em;
+                        margin-top: -4.00em !important;
+                        transform: translateY(-0.0em) !important;
+                }
+
+                rt.L_L {
+                        --ruby-font-size: 0.6em;
+                        margin-top: -3.55em !important;
+                        transform: translateY(-0.0em) !important;
+                }
+
+                rt.XL_L {
+                        --ruby-font-size: 0.7em;
+                        margin-top: -3.20em !important;
+                        transform: translateY(-0.0em) !important;
+                }
+
+                rt.XXL_L {
+                        --ruby-font-size: 0.8em;
+                        margin-top: -2.80em !important;
+                        transform: translateY(-0.0em) !important;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="page-nav">
+                <a href="../../index.html">Hejmo</a> /
+                <a href="../index.html">legajxoj</a> /
+                <a href="index.html">vere-aux-fantazie</a> /
+                <a href="vere_aux_fantazie.html">全文ルビ版</a> /
+                <a href="vere_aux_fantazie_du-lingva.html">全文対訳版</a>
+        </div>
+        <div class="page-nav">
+                前へ: なし /
+                <strong>ANTAŬPAROLO / まえがき</strong> /
+                <a href="vere_aux_fantazie_01.html">次へ: おいしいレストラン、でも高い</a>
+        </div>
+        <p class="text-M_M">
+                <ruby>Ver<rt class="S_S">本当の</rt></ruby>e <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>Fantazi<rt
+                                class="XXL_L">幻想
+                        </rt></ruby>e<br>
+                <ruby>Claude Piron<rt class="S_S">[人名]クロード・ピロン</rt></ruby><br>
+                底本: Claude Piron『Vere aŭ Fantazie』<br>
+                <br>
+                ========================================================================<br>
+                <ruby>ANTAŬ<rt class="XL_L">(~の)前に</rt></ruby><ruby>PAROL<rt class="L_L">話しをする</rt></ruby>O<br>
+                まえがき<br>
+                ========================================================================<br>
+                <br>
+                <ruby>Kar<rt class="S_S">親愛な</rt></ruby>a <ruby>leg<rt class="XS_S">(を)読む</rt></ruby><ruby>ant<rt
+                                class="XXS_S">
+                                能動;<br>継続</rt></ruby>o,<br>
+                親愛なる読者よ、<br>
+                <br>
+                <ruby>Vi<rt class="XXS_S">あなた<br>(達)</rt></ruby> <ruby>komenc<rt class="L_L">(を)始める</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>
+                <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i <ruby>esperant<rt class="M_M">エスペラント</rt>
+                </ruby>on.<br>
+                あなたはエスペラントを学び始めました。<br>
+                <br>
+                <ruby>Kaj<rt class="XL_L">And</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>vi<rt
+                                class="XXXS_S">
+                                あな<br>た(<br>達)</rt></ruby> <ruby>vol<rt class="XXS_S">意志が<br>ある</rt></ruby><ruby>as<rt
+                                class="XS_S">現在形
+                        </rt>
+                </ruby> <ruby>ir<rt class="XXS_S">行<br>く</rt></ruby>i <ruby>plu<rt class="S_S">さらに</rt></ruby>
+                <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby>en.<br>
+                そして今、あなたはさらに先へ進みたいと思っています。<br>
+                <br>
+                <ruby>Vi<rt class="XXS_S">あなた<br>(達)</rt></ruby> <ruby>dezir<rt class="M_M">(を)望む</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pli<rt
+                                class="S_S">より
+                        </rt></ruby><ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt>
+                </ruby>i
+                (<ruby>pli<rt class="S_S">より</rt></ruby>-<ruby>bon<rt class="XL_L">良い</rt></ruby><ruby>ig<rt
+                                class="XXS_S">
+                                させ<br>る</rt>
+                </ruby>i) <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>an <ruby>sci<rt class="XXS_S">知って<br>いる
+                        </rt>
+                </ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lingv
+                        <rt class="XXL_L">言語</rt>
+                </ruby>o.<br>
+                あなたはこの言語の知識をもっと深めたいと思っています。<br>
+                <br>
+                <ruby>Ĉi<rt class="S_S">近接</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>libr<rt class="XXL_L">本</rt></ruby>o
+                <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>por<rt
+                                class="S_S">
+                                ために</rt>
+                </ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>.<br>
+                この本はあなたのためのものです。<br>
+                <br>
+                <ruby>Por<rt class="S_S">ために</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby>i <ruby>uz<rt
+                                class="S_S">使う
+                        </rt>
+                </ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on <ruby>pli
+                        <rt class="S_S">より</rt>
+                </ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>e, <ruby>kaj<rt class="L_L">and</rt>
+                </ruby>
+                <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>pli<rt
+                                class="S_S">より
+                        </rt>
+                </ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>e <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i,
+                <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>bezon<rt class="XS_S">(を)必要とする</rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt>
+                </ruby>i <ruby>nov<rt class="S_S">新しい
+                        </rt></ruby>ajn <ruby>vort<rt class="M_M">[文]語</rt></ruby>ojn.<br>
+                その言語をよりよく使い、またそれをよりよく理解するためには、あなたは新しい語を学ぶ必要があります。<br>
+                <br>
+                <ruby>La<rt class="XL_L">the</rt></ruby> <ruby>libr<rt class="XXL_L">本</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>n
+                <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>ten
+                        <rt class="XS_S">
+                                支え持つ</rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>per<rt class="S_S">よって
+                        </rt></ruby>
+                <ruby>la<rt class="M_M">the</rt></ruby> <ruby>man<rt class="XXL_L">手</rt></ruby>o, <ruby>pov<rt
+                                class="S_S">できる
+                        </rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>serv<rt class="M_M">仕える</rt></ruby>i <ruby>al<rt
+                                class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>
+                <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby><ruby>cel<rt class="M_M">目的</rt></ruby>e: <ruby>ĝi<rt
+                                class="XS_S">
+                                それ</rt>
+                </ruby> <ruby>iom<rt class="XL_L">多少</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>iom
+                        <rt class="XL_L">多少</rt>
+                </ruby> <ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る
+                        </rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>n
+                <ruby>al
+                        <rt class="XXS_S">~の方<br>へ</rt>
+                </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>kompren<rt class="L_L">
+                                (を)理解する
+                        </rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+                <ruby>mil<rt class="XXL_L">千</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>oj <ruby>aŭ<rt
+                                class="XS_S">または
+                        </rt>
+                </ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>o-<ruby>part<rt class="XL_L">部分</rt></ruby>oj,
+                <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>plej<rt
+                                class="XL_L">最も</rt>
+                </ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>as<rt
+                                class="XS_S">
+                                現在形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>Esperant<rt class="M_M">
+                                エスペラント</rt>
+                </ruby>o,
+                <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>kiu<rt
+                                class="XXS_S">
+                                だれ;<br>どれ</rt></ruby>j <ruby>oni<rt class="L_L">人々</rt></ruby> <ruby>pov<rt class="S_S">
+                                できる</rt>
+                </ruby><ruby>as
+                        <rt class="XS_S">現在形</rt>
+                </ruby> <ruby>far<rt class="XXS_S">(を)す<br>る</rt></ruby>i <ruby>mult<rt class="M_M">多くの
+                        </rt></ruby>ajn <ruby>mil<rt class="XXL_L">千</rt></ruby>ojn <ruby>da<rt class="XXL_L">の</rt>
+                </ruby>
+                <ruby>ali<rt class="S_S">他の</rt></ruby>aj <ruby>vort<rt class="M_M">[文]語</rt></ruby>oj, <ruby>kiu<rt
+                                class="XXS_S">だれ;<br>どれ
+                        </rt></ruby>j, <ruby>fakt<rt class="XL_L">事実</rt></ruby>e, <ruby>ebl<rt class="L_L">可能</rt>
+                </ruby><ruby>ig
+                        <rt class="XXS_S">させ<br>る</rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>parol<rt class="S_S">
+                                話しをする</rt>
+                </ruby>i <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>skrib<rt class="M_M">(を)書く</rt></ruby>i
+                <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>ĉio<rt class="XS_S">すべて</rt></ruby>.<br>
+                あなたが今手に持っているこの本は、その目的のためにあなたの役に立つでしょう。すなわち、エスペラントで最も多く使われる千の語、または語の部分の理解へと、少しずつあなたを導いてくれるのです。そして、それらによって実際にはさらに何千もの別の語を作ることができ、それらの語によってあらゆることについて話し、書くことが可能になります。<br>
+                <br>
+                * * *<br>
+                <br>
+                <ruby>Dum<rt class="S_S">(~する)間</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>viv<rt
+                                class="XXS_S">
+                                生きて<br>いる</rt></ruby>o, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>hav<rt
+                                class="XXS_S">持って<br>いる
+                        </rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>grand
+                        <rt class="XL_L">大きい</rt>
+                </ruby>an <ruby>feliĉ<rt class="M_M">幸福な</rt></ruby>on <ruby>mult<rt class="M_M">
+                                多くの</rt>
+                </ruby>e <ruby>vojaĝ<rt class="M_M">旅行する</rt></ruby>i <ruby>tra<rt class="XS_S">通って</rt></ruby> <ruby>la
+                        <rt class="M_M">the</rt>
+                </ruby> <ruby>mond<rt class="XXL_L">世界</rt></ruby>o <ruby>kaj<rt class="L_L">and
+                        </rt></ruby>
+                <ruby>labor<rt class="XXL_L">働く</rt></ruby>i <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>land<rt
+                                class="XXL_L">
+                                国
+                        </rt></ruby>oj <ruby>plej<rt class="XL_L">最も</rt></ruby> <ruby>divers<rt class="XXL_L">様々な</rt>
+                </ruby>aj.<br>
+                私は人生のあいだに、世界中をたくさん旅し、実にさまざまな国々で働くという大きな幸運に恵まれました。<br>
+                <br>
+                <ruby>Ĉie<rt class="XXS_S">いたる<br>所で</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>parol<rt
+                                class="S_S">
+                                話しをする</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kun<rt
+                                class="XS_S">(~と)共に</rt>
+                </ruby>
+                <ruby>la<rt class="M_M">the</rt></ruby> <ruby>lok<rt class="M_M">場所</rt></ruby><ruby>an<rt class="M_M">
+                                成員</rt>
+                </ruby>oj <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>prov<rt class="S_S">(を)試す</rt></ruby><ruby>is
+                        <rt class="XXS_S">過去<br>形</rt>
+                </ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i
+                <ruby>ili<rt class="XXS_S">
+                                それ<br>ら</rt></ruby>ajn <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>ojn, <ruby>ili<rt
+                                class="XXS_S">
+                                それ<br>ら
+                        </rt></ruby>ajn <ruby>zorg<rt class="S_S">心配する</rt></ruby>ojn, <ruby>ili<rt class="XXS_S">
+                                それ<br>ら</rt>
+                </ruby>ajn
+                <ruby>feliĉ<rt class="M_M">幸福な</rt></ruby>ojn.<br>
+                どこでも私はその土地の人々と話し、彼らの生活、彼らの悩み、彼らの幸せを理解しようと努めました。<br>
+                <br>
+                <ruby>Kaj<rt class="XL_L">And</rt></ruby> <ruby>ĉie<rt class="XXS_S">いたる<br>所で</rt></ruby> <ruby>mi<rt
+                                class="XXL_L">私</rt></ruby> <ruby>aŭd<rt class="S_S">(を)聞く</rt></ruby><ruby>is<rt
+                                class="XXS_S">過去<br>形
+                        </rt>
+                </ruby> <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby>ojn; <ruby>ili<rt class="XXS_S">それ<br>ら</rt>
+                </ruby>
+                <ruby>raport<rt class="S_S">(を)報告する</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>kelk
+                        <rt class="S_S">幾つかの</rt>
+                </ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>pri<rt class="XS_S">ついて</rt>
+                </ruby>
+                <ruby>ver<rt class="S_S">本当の</rt></ruby>aj <ruby>okaz<rt class="L_L">起こる</rt></ruby><ruby>aĵ<rt
+                                class="XS_S">事物
+                        </rt>
+                </ruby>oj, <ruby>ali<rt class="S_S">他の</rt></ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>est<rt
+                                class="XXS_S">(~)で<br>ある</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>
+                <ruby>rakont<rt class="M_M">
+                                (を)物語る</rt></ruby>oj, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>hom<rt
+                                class="XXL_L">人
+                        </rt>
+                </ruby>oj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>pens<rt class="XXL_L">思う</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>*, <ruby>kaj<rt class="L_L">and</rt></ruby>,
+                <ruby>oft<rt class="XXS_S">
+                                たび<br>たび</rt></ruby>e, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>ge<rt
+                                class="M_M">男女
+                        </rt>
+                </ruby><ruby>patr<rt class="XXL_L">父</rt></ruby>oj <ruby>trans<rt class="XS_S">(~の)向こうに</rt>
+                </ruby><ruby>don<rt class="M_M">与える</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>al
+                        <rt class="XXS_S">~の方<br>へ
+                        </rt>
+                </ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>aj <ruby>ge<rt class="M_M">男女</rt></ruby><ruby>fil<rt
+                                class="XS_S">
+                                息子</rt></ruby>oj, <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>de<rt class="XS_S">の;から
+                        </rt></ruby>
+                <ruby>mult
+                        <rt class="M_M">多くの</rt>
+                </ruby>aj <ruby>jar<rt class="XXL_L">年</rt></ruby><ruby>cent<rt class="XXL_L">百</rt>
+                </ruby>oj.<br>
+                そしてどこでも私は物語を耳にしました。あるものは実際の出来事を語るものであり、またあるものは人々が自分で作り出した話*であり、さらに多くは、親がもう何世紀にもわたって子どもたちへ語り伝えてきた話でした。<br>
+                <br>
+                <ruby>Kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>hav<rt
+                                class="XXS_S">
+                                持って<br>いる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt
+                                class="M_M">the</rt>
+                </ruby>
+                <ruby>ide<rt class="L_L">観念</rt></ruby>on <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>ig<rt
+                                class="XXS_S">
+                                させ<br>る</rt></ruby>i <ruby>leg<rt class="XS_S">(を)読む</rt></ruby>o-<ruby>libr<rt
+                                class="XXL_L">本</rt>
+                </ruby>on
+                <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>person<rt class="XXL_L">人</rt></ruby>oj, <ruby>kiu
+                        <rt class="XXS_S">だれ;<br>どれ</rt>
+                </ruby>j <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>ne
+                        <rt class="M_M">ない
+                        </rt>
+                </ruby><ruby>long<rt class="XXL_L">長い</rt></ruby>e <ruby>komenc<rt class="L_L">(を)始める</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt>
+                </ruby>i
+                <ruby>la<rt class="M_M">
+                                the</rt></ruby> <ruby>lingv<rt class="XXL_L">言語</rt></ruby>on, <ruby>mi<rt
+                                class="XXL_L">私</rt></ruby>
+                <ruby>pens<rt class="XXL_L">思う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>: ”<ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>uz<rt
+                                class="S_S">使う</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>kelk<rt
+                                class="S_S">幾つかの</rt>
+                </ruby>ajn
+                <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j
+                <ruby>rakont
+                        <rt class="M_M">(を)物語る</rt>
+                </ruby>oj.”<br>
+                その言語を学び始めてまだ日の浅い人たちのために読本を用意しようと思い立ったとき、私はこう考えました。『それらの物語のいくつかを使おう。』<br>
+                <br>
+                <ruby>Tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>n <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>far<rt
+                                class="XXS_S">(を)す<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.<br>
+                私はそのとおりにしました。<br>
+                <br>
+                <ruby>Al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>al
+                        <rt class="XXS_S">~の方<br>へ</rt>
+                </ruby><ruby>don<rt class="M_M">与える</rt></ruby><ruby>is<rt class="XXS_S">
+                                過去<br>形</rt>
+                </ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>ajn, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn
+                <ruby>mi
+                        <rt class="XXL_L">私</rt>
+                </ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>pens<rt class="XXL_L">思う
+                        </rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>mem<rt class="XXL_L">自身</rt></ruby> <ruby>kaj
+                        <rt class="L_L">and</rt>
+                </ruby> <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>afer<rt class="XL_L">物事
+                        </rt>
+                </ruby>ojn, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j <ruby>okaz<rt class="L_L">起こる</rt>
+                </ruby><ruby>is
+                        <rt class="XXS_S">過去<br>形</rt>
+                </ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>, <ruby>aŭ<rt class="XS_S">
+                                または</rt></ruby> <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>kiu<rt class="XXS_S">
+                                だれ;<br>どれ</rt>
+                </ruby>j
+                <ruby>iu<rt class="XXS_S">ある<br>人</rt></ruby> <ruby>inform<rt class="S_S">(を)通報する</rt></ruby><ruby>is<rt
+                                class="XXS_S">過去<br>形</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>n.<br>
+                それらに私は、自分で作った別の話や、自分に起こったこと、あるいは誰かが私に知らせてくれた事柄も加えました。<br>
+                <br>
+                <ruby>Kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>rakont<rt
+                                class="M_M">
+                                (を)物語る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby>n <ruby>ver<rt
+                                class="S_S">本当の</rt>
+                </ruby>an,
+                <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>ebl<rt
+                                class="L_L">可能
+                        </rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby><ruby>met<rt class="S_S">(を)置く</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby>
+                <ruby>ŝanĝ<rt class="S_S">
+                                (を)変える</rt>
+                </ruby>ojn <ruby>neces<rt class="XXL_L">必要な</rt></ruby>ajn, <ruby>por<rt class="S_S">ために</rt></ruby>
+                <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>neniu<rt class="XS_S">どの~も~ない</rt></ruby> <ruby>re
+                        <rt class="S_S">再び
+                        </rt>
+                </ruby><ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby>u <ruby>la<rt class="M_M">the</rt>
+                </ruby>
+                <ruby>person
+                        <rt class="XXL_L">人</rt>
+                </ruby>ojn, <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>kiu<rt class="XXS_S">だれ;<br>どれ
+                        </rt></ruby>j <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt>
+                </ruby><ruby>as
+                        <rt class="XS_S">現在形</rt>
+                </ruby>.<br>
+                何か本当のことを語るときには、もちろん、私が話している人々を誰にも見分けられないように、必要な変更を加えました。<br>
+                <br>
+                <ruby>Tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>nask<rt class="M_M">(を)生む</rt></ruby><ruby>iĝ
+                        <rt class="XS_S">なる</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>ĉi<rt class="XS_S">近接</rt></ruby> <ruby>tiu<rt class="XXS_S">
+                                その;あ<br>のひと</rt></ruby> <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby><ruby>ar<rt
+                                class="S_S">集団</rt>
+                </ruby>o.<br>
+                こうしてこの物語集が生まれたのです。<br>
+                <br>
+                * * *<br>
+                <br>
+                <ruby>Mi<rt class="XXL_L">私</rt></ruby>a <ruby>grand<rt class="XL_L">大きい</rt></ruby>a <ruby>zorg<rt class="S_S">気を配る</rt></ruby>o <ruby>est
+                        <rt class="XXS_S">(~)で<br>ある</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>
+                <ruby>rakont<rt class="M_M">
+                                (を)物語る</rt></ruby>i <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>vort<rt class="M_M">
+                                [文]語</rt>
+                </ruby>oj,
+                <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>
+                <ruby>pov
+                        <rt class="S_S">できる</rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>plej<rt class="XL_L">最も</rt>
+                </ruby><ruby>part<rt class="XL_L">部分</rt></ruby>e <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i,
+                <ruby>kaj
+                        <rt class="L_L">and</rt>
+                </ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>cert<rt class="M_M">確かな
+                        </rt></ruby>e <ruby>pardon<rt class="L_L">(を)ゆるす</rt></ruby><ruby>os<rt class="XS_S">未来形</rt>
+                </ruby>
+                <ruby>mi<rt class="XXL_L">私</rt></ruby>n, <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>mi<rt
+                                class="XXL_L">私</rt>
+                </ruby> <ruby>nun<rt class="XXL_L">今</rt></ruby> <ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>os
+                        <rt class="XS_S">未来形</rt>
+                </ruby> <ruby>iom<rt class="XL_L">多少</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt>
+                </ruby>
+                <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>a <ruby>temp<rt class="XXL_L">時間</rt></ruby>o
+                <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>klar<rt class="S_S">明瞭な</rt></ruby><ruby>ig<rt
+                                class="XXS_S">させ<br>る
+                        </rt>
+                </ruby>i, <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby>
+                <ruby>far
+                        <rt class="XXS_S">(を)す<br>る</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.<br>
+                私がとくに気を配ったのは、あなたが大部分を理解できる語だけで語ることでした。ですから、いま少しだけ時間をいただいて、私がどのようにしたかを説明することを、どうかお許しください。<br>
+                <br>
+                <ruby>Ni<rt class="S_S">私達</rt></ruby> <ruby>rigard<rt class="L_L">(を)見る</rt></ruby>u, <ruby>ekzempl<rt class="XXL_L">例</rt></ruby>e,
+                <ruby>la<rt class="M_M">the</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby>on "<ruby>mal<rt
+                                class="S_S">正反対
+                        </rt>
+                </ruby><ruby>bon<rt class="XL_L">良い</rt></ruby>a".<br>
+                たとえば、「<ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>bon<rt class="XL_L">良い</rt>
+                </ruby>a」という語を見てみましょう。<br>
+                <br>
+                <ruby>Ĝi<rt class="S_S">それ</rt></ruby> <ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>tri<rt
+                                class="XL_L">三</rt></ruby> <ruby>part<rt class="XL_L">部分</rt></ruby>ojn: <ruby>mal<rt
+                                class="S_S">正反対
+                        </rt>
+                </ruby>, <ruby>bon<rt class="XL_L">良い</rt></ruby>, a.<br>
+                それには三つの部分があります。<ruby>mal<rt class="S_S">正反対</rt></ruby>、<ruby>bon<rt class="XL_L">良い</rt>
+                </ruby>、aです。<br>
+                <br>
+                <ruby>Sam<rt class="M_M">同一の</rt></ruby>e, "<ruby>ne<rt class="M_M">ない</rt></ruby><ruby>kompren<rt
+                                class="L_L">
+                                (を)理解する</rt></ruby><ruby>ebl<rt class="L_L">可能</rt></ruby>e" <ruby>hav<rt class="XXS_S">
+                                持って<br>いる</rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kvar<rt class="XXL_L">四</rt></ruby> <ruby>part<rt
+                                class="XL_L">部分</rt></ruby>ojn: <ruby>ne<rt class="M_M">ない</rt></ruby>, <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>,
+                <ruby>ebl<rt class="L_L">
+                                可能</rt></ruby>e, e.<br>
+                同様に、「<ruby>ne<rt class="M_M">ない</rt></ruby><ruby>kompren<rt class="L_L">(を)理解する</rt></ruby><ruby>ebl<rt
+                                class="L_L">
+                                可能</rt></ruby>e」には四つの部分があります。<ruby>ne<rt class="M_M">ない</rt></ruby>、<ruby>kompren<rt class="L_L">(を)理解する</rt>
+                </ruby>、<ruby>ebl<rt class="L_L">可能
+                        </rt></ruby>e、eです。<br>
+                <br>
+                <ruby>Ni<rt class="S_S">私達</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>nom<rt
+                                class="XXL_L">
+                                名前
+                        </rt></ruby>i <ruby>tia<rt class="XS_S">そんな</rt></ruby>jn <ruby>part<rt class="XL_L">部分</rt></ruby>ojn <ruby>sub<rt class="XS_S">
+                                (~の)下に</rt>
+                </ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>oj.<br>
+                このような部分を下位語要素と呼ぶことができます。<br>
+                <br>
+                <ruby>Vi<rt class="XXS_S">あなた<br>(達)</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby><ruby>ŝajn<rt class="XS_S">(~と)見える</rt></ruby>e <ruby>kon<rt
+                                class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>pli
+                        <rt class="S_S">より
+                        </rt>
+                </ruby> <ruby>mal<rt class="S_S">正反対</rt></ruby><ruby>pli<rt class="S_S">より</rt></ruby>, 400 <ruby>sub
+                        <rt class="XS_S">(~の)下に</rt>
+                </ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>ojn, <ruby>ĉar<rt class="XS_S">
+                                なぜなら
+                        </rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>n <ruby>instru<rt class="S_S">(を)教える
+                        </rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby>
+                <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt>
+                </ruby>o<ruby>libr<rt class="XXL_L">本</rt></ruby>o.<br>
+                あなたはおそらく、多かれ少なかれ四百の下位語要素を知っているでしょう。というのも、ほとんどすべての教科書がそれらを教えるからです。<br>
+                <br>
+                <ruby>Fakt<rt class="XXL_L">事実</rt></ruby>e, <ruby>person<rt class="XXL_L">人</rt></ruby>o, <ruby>kiu<rt
+                                class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>per<rt class="S_S">よって</rt></ruby>
+                <ruby>la<rt class="M_M">the
+                        </rt>
+                </ruby> <ruby>Zagreba Metodo<rt class="XXL_L">ザグレブ方式</rt></ruby>, <ruby>lern<rt class="XXS_S">
+                                (を)学習<br>する</rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> 620 <ruby>sub<rt class="XS_S">(~の)下に</rt>
+                </ruby><ruby>vort
+                        <rt class="M_M">[文]語</rt>
+                </ruby>ojn; <ruby>iu<rt class="XS_S">ある</rt></ruby>, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby> <ruby>uz<rt class="S_S">使う
+                        </rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+                </ruby> <ruby>libr
+                        <rt class="XXL_L">本</rt>
+                </ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>on <ruby>Gerda Malaperis!<rt class="XL_L">
+                                [書]Gerda Malaperis!</rt></ruby>, <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt>
+                </ruby><ruby>is<rt class="XXS_S">
+                                過去<br>形</rt></ruby> 744; <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>leg<rt
+                                class="XS_S">(を)読む</rt>
+                </ruby><ruby>ant<rt class="XXS_S">能動;<br>継続</rt></ruby>o, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt>
+                </ruby>
+                <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kompren<rt
+                                class="L_L">
+                                (を)理解する</rt></ruby>i <ruby>la<rt class="M_M">the</rt></ruby> <ruby>plej<rt class="XL_L">
+                                最も</rt></ruby>
+                <ruby>facil<rt class="M_M">容易な</rt></ruby>an <ruby>part<rt class="XL_L">部分</rt></ruby>on <ruby>de<rt
+                                class="XS_S">
+                                の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>revu<rt class="S_S">専門雑誌
+                        </rt></ruby>o
+                <ruby>Kontakto<rt class="M_M">[雑誌]Kontakto</rt></ruby>, <ruby>kon<rt class="XXS_S">知って<br>いる</rt>
+                </ruby><ruby>as
+                        <rt class="XS_S">現在形</rt>
+                </ruby> 520.<br>
+                実際、ザグレブ方式で学んだ人は六百二十の下位語要素を学んでおり、小冊子『<ruby>Gerda Malaperis!<rt class="XL_L">[書]Gerda Malaperis!</rt>
+                </ruby>』を使った人は七百四十四を学んでおり、雑誌『<ruby>Kontakto<rt class="M_M">[雑誌]Kontakto</rt>
+                </ruby>』の最もやさしい部分を理解できる読者は五百二十を知っています。<br>
+                <br>
+                <ruby>Nur<rt class="XS_S">ただ~だけ</rt></ruby> 405 <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby><ruby>vort
+                        <rt class="M_M">[文]語</rt>
+                </ruby>oj <ruby>aper<rt class="L_L">現れる</rt></ruby><ruby>as<rt class="XS_S">現在形
+                        </rt></ruby>
+                <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>j <ruby>tri<rt
+                                class="XL_L">
+                                三</rt></ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby><ruby>ar<rt class="S_S">集団</rt>
+                </ruby><ruby>et
+                        <rt class="XS_S">弱小</rt>
+                </ruby>oj, <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>est<rt class="XXS_S">
+                                (~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>: <ruby>en<rt class="M_M">
+                                中で</rt></ruby>
+                <ruby>la
+                        <rt class="M_M">the</rt>
+                </ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby><ruby>ar<rt class="S_S">集団</rt>
+                </ruby><ruby>et<rt class="XS_S">弱小</rt></ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>Kontakto
+                        <rt class="M_M">[雑誌]Kontakto</rt>
+                </ruby> <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>en<rt class="M_M">中で
+                        </rt>
+                </ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby> <ruby>ĉi<rt class="XS_S">近接</rt></ruby>-<ruby>supr<rt
+                                class="XXL_L">頂上</rt></ruby>e <ruby>nom<rt class="XXL_L">名前</rt></ruby><ruby>it<rt
+                                class="XXXS_S">
+                                受動<br>完<br>了
+                        </rt></ruby>aj <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>o<ruby>libr<rt class="XXL_L">本
+                        </rt>
+                </ruby>oj.<br>
+                わずか四百五の下位語要素だけが、その三つすべての小語彙集、すなわち『<ruby>Kontakto<rt class="M_M">[雑誌]Kontakto</rt>
+                </ruby>』の小語彙集と上に挙げた二つの教科書の中に現れます。<br>
+                <br>
+                <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>pren<rt class="XS_S">(を)手に取る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tiu
+                        <rt class="XXS_S">その;あ<br>のひと</rt>
+                </ruby>jn 405 <ruby>kiel<rt class="XXS_S">いかに;の<br>ように</rt>
+                </ruby>
+                <ruby>komenc<rt class="L_L">(を)始める</rt></ruby>an <ruby>vort<rt class="M_M">[文]語</rt></ruby>-<ruby>hav<rt
+                                class="XXS_S">持って<br>いる
+                        </rt></ruby><ruby>aĵ<rt class="XS_S">事物</rt></ruby>on.<br>
+                私はその四百五を出発点の語彙として採用しました。<br>
+                <br>
+                <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby><ruby>ir<rt class="XXS_S">行<br>く</rt></ruby><ruby>is<rt
+                                class="XXS_S">
+                                過去<br>形</rt></ruby> <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">
+                                the</rt></ruby>
+                <ruby>ide
+                        <rt class="L_L">観念</rt>
+                </ruby>o, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>tiu<rt class="XXS_S">
+                                その;あ<br>のひと</rt></ruby>jn <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>
+                <ruby>sufiĉ<rt class="L_L">十分な
+                        </rt></ruby>e <ruby>facil<rt class="M_M">容易な</rt></ruby>e <ruby>kompren<rt class="L_L">(を)理解する
+                        </rt>
+                </ruby><ruby>os
+                        <rt class="XS_S">未来形</rt>
+                </ruby>, <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと
+                        </rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>do<rt class="XXS_S">
+                                それ<br>ゆえ</rt>
+                </ruby>
+                <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>bezon<rt class="XS_S">(を)必要とする</rt></ruby><ruby>os<rt
+                                class="XS_S">
+                                未来形
+                        </rt></ruby> <ruby>serĉ<rt class="S_S">(を)捜す</rt></ruby>i <ruby>ili<rt class="XXS_S">それ<br>ら
+                        </rt></ruby>n
+                <ruby>en
+                        <rt class="M_M">中で</rt>
+                </ruby> <ruby>vort<rt class="M_M">[文]語</rt></ruby><ruby>ar<rt class="S_S">集団</rt>
+                </ruby>o.<br>
+                私は、それらならあなたがかなり容易に理解でき、したがって辞書で引く必要はないだろう、という考えから出発しました。<br>
+                <br>
+                <ruby>Ĉi<rt class="S_S">近接</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt>
+                </ruby><ruby>parol
+                        <rt class="S_S">話しをする</rt>
+                </ruby>o <ruby>uz<rt class="S_S">使う</rt></ruby><ruby>as<rt class="XS_S">現在形</rt>
+                </ruby>
+                <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby><ruby>vort
+                        <rt class="M_M">[文]語</rt>
+                </ruby>ojn, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j
+                <ruby>trov<rt class="XXS_S">
+                                (を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt class="XS_S">
+                                現在形</rt></ruby>
+                <ruby>inter<rt class="S_S">(の)間に</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j
+                405.<br>
+                この前書きは、その四百五の中にある下位語要素だけを使っています。<br>
+                <br>
+                <ruby>Ĉu<rt class="M_M">~か?</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n
+                <ruby>kompren
+                        <rt class="L_L">(を)理解する</rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>?<br>
+                あなたはこれを理解できますか。<br>
+                <br>
+                <ruby>Se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>jes<rt class="M_M">はい</rt></ruby>, <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>invit<rt
+                                class="XXS_S">
+                                (を)招待<br>する</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>vi<rt
+                                class="XXXS_S">
+                                あな<br>た(<br>達)</rt>
+                </ruby>n <ruby>daŭr<rt class="XXL_L">継続</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt></ruby>i
+                <ruby>la<rt class="M_M">the</rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt></ruby><ruby>ad<rt
+                                class="XXS_S">
+                                継続<br>行為</rt>
+                </ruby>on <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>tut<rt
+                                class="XS_S">全部の</rt></ruby>a <ruby>libr<rt class="XXL_L">本</rt></ruby>o.<br>
+                もしそうなら、私はあなたにこの本全体を読み進めるようお勧めします。<br>
+                <br>
+                <ruby>Fakt<rt class="XXL_L">事実</rt></ruby>e, <ruby>se<rt class="XXS_S">もし~<br>なら</rt></ruby> <ruby>vi<rt
+                                class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt>
+                </ruby><ruby>os<rt class="XS_S">
+                                未来形</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>n <ruby>rakont<rt
+                                class="M_M">(を)物語る
+                        </rt>
+                </ruby>on <ruby>unu<rt class="XXL_L">一</rt></ruby> <ruby>post<rt class="S_S">(~の)後で</rt></ruby> <ruby>la
+                        <rt class="M_M">the</rt>
+                </ruby> <ruby>ali<rt class="S_S">他の</rt></ruby>a, <ruby>vi<rt class="XXXS_S">
+                                あな<br>た(<br>達)
+                        </rt></ruby> <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby><ruby>os<rt class="XS_S">未来形
+                        </rt></ruby>
+                <ruby>ĉiu
+                        <rt class="XXS_S">各々の<br>;各~</rt>
+                </ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>du<rt class="XXL_L">二</rt>
+                </ruby><ruby>dek<rt class="XXL_L">十</rt></ruby><ruby>on<rt class="M_M">分数</rt></ruby> <ruby>aŭ<rt
+                                class="XS_S">
+                                または
+                        </rt></ruby> <ruby>du<rt class="XXL_L">二</rt></ruby><ruby>dek<rt class="XXL_L">十</rt>
+                </ruby><ruby>kvin<rt class="XXL_L">五</rt></ruby>on <ruby>da<rt class="XXL_L">の</rt></ruby>
+                <ruby>nov<rt class="S_S">新しい</rt>
+                </ruby>aj
+                <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>oj.<br>
+                実際、もしあなたがそれぞれの物語を一つずつ続けて読んでいけば、そのたびに二十ほど、あるいは二十五ほどの新しい下位語要素を学ぶことになります。<br>
+                <br>
+                <ruby>Ĉar<rt class="XS_S">なぜなら</rt></ruby> <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>trov<rt
+                                class="XXS_S">(を)見つ<br>ける</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt></ruby><ruby>as<rt
+                                class="XS_S">現在形
+                        </rt>
+                </ruby> <ruby>kun<rt class="XS_S">(~と)共に</rt></ruby> <ruby>mult<rt class="M_M">多くの</rt></ruby>aj,
+                <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>
+                <ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>vi<rt
+                                class="XXXS_S">
+                                あな<br>た(<br>達)</rt></ruby> <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>sci<rt
+                                class="XXS_S">知って<br>いる
+                        </rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>ĉio<rt class="XS_S">すべて</rt></ruby>n <ruby>neces
+                        <rt class="XXL_L">必要な</rt>
+                </ruby>an <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>pov<rt class="S_S">できる
+                        </rt>
+                </ruby>i <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i 97 <ruby>aŭ<rt class="XS_S">または</rt></ruby>
+                98
+                <ruby>el
+                        <rt class="XXS_S">中か<br>ら</rt>
+                </ruby><ruby>cent<rt class="XXL_L">百</rt></ruby>ojn <ruby>de<rt class="XS_S">の;から
+                        </rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>rakont<rt class="M_M">
+                                (を)物語る</rt>
+                </ruby>o.<br>
+                それらはあなたの知っている多くのものと一緒に出てくるので、あなたはすでに各物語の九七パーセントか九八パーセントを理解するのに必要なことをすべて知っていることになります。<br>
+                <br>
+                <ruby>Post<rt class="S_S">(~の)後で</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby>
+                <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby>o <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>skrib<rt
+                                class="M_M">(を)書く
+                        </rt>
+                </ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt>
+                </ruby>jn
+                <ruby>nov<rt class="S_S">新しい</rt></ruby>ajn <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby><ruby>vort<rt
+                                class="M_M">
+                                [文]語</rt></ruby>ojn, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>vi<rt
+                                class="XXXS_S">
+                                あな<br>た(<br>達)</rt></ruby> <ruby>bezon<rt class="XS_S">(を)必要とする</rt></ruby><ruby>os<rt
+                                class="XS_S">未来形
+                        </rt>
+                </ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i
+                <ruby>ĝi<rt class="XS_S">それ</rt></ruby>n <ruby>tut<rt class="XS_S">全部の</rt></ruby>e.<br>
+                各物語のあとに、あなたがそれを完全に理解するために必要となる新しい下位語要素を書いておきました。<br>
+                <br>
+                <ruby>Tiel<rt class="XXS_S">その;あ<br>の様に</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt>
+                </ruby>
+                <ruby>pov
+                        <rt class="S_S">できる</rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>serĉ<rt class="S_S">(を)捜す</rt>
+                </ruby>i <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>n <ruby>en<rt class="M_M">中で</rt></ruby>
+                <ruby>vort<rt class="M_M">[文]語</rt></ruby><ruby>ar<rt class="S_S">集団</rt></ruby>o <ruby>aŭ<rt
+                                class="XS_S">または</rt>
+                </ruby>
+                <ruby>demand<rt class="M_M">(を)質問する</rt></ruby>i <ruby>pri<rt class="XS_S">ついて</rt></ruby> <ruby>ili<rt
+                                class="XXS_S">それ<br>ら</rt></ruby> <ruby>amik<rt class="XXL_L">友達</rt></ruby>on <ruby>aŭ
+                        <rt class="XS_S">
+                                または</rt>
+                </ruby> <ruby>instru<rt class="S_S">(を)教える</rt></ruby><ruby>ist<rt class="XS_S">従事者</rt></ruby>on,
+                <ruby>ĉu<rt class="S_S">~か?</rt></ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby> <ruby>ol<rt
+                                class="XXS_S">
+                                ~より<br>も
+                        </rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt></ruby>i <ruby>la<rt class="M_M">the</rt>
+                </ruby>
+                <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby>on, <ruby>ĉu<rt class="S_S">~か?</rt></ruby> – <ruby>mi<rt
+                                class="XXL_L">私</rt>
+                </ruby>a<ruby>opini<rt class="XS_S">意見である</rt></ruby>e, <ruby>ĉi<rt class="XS_S">近接</rt></ruby> <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt>
+                </ruby>
+                <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>pli<rt
+                                class="S_S">
+                                より</rt></ruby> <ruby>bon<rt class="XL_L">良い</rt></ruby>a – <ruby>post<rt class="S_S">
+                                (~の)後で</rt></ruby>
+                <ruby>unu<rt class="XXL_L">一</rt></ruby>a <ruby>leg<rt class="XS_S">(を)読む</rt></ruby><ruby>ad<rt
+                                class="XXS_S">
+                                継続<br>行為</rt></ruby>o, <ruby>dum<rt class="S_S">(~する)間</rt></ruby> <ruby>kiu<rt
+                                class="XXS_S">だれ;<br>どれ
+                        </rt>
+                </ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>prov<rt class="S_S">(を)試す</rt>
+                </ruby><ruby>is
+                        <rt class="XXS_S">過去<br>形</rt>
+                </ruby> <ruby>kompren<rt class="L_L">(を)理解する</rt></ruby>i <ruby>sen<rt class="XS_S">
+                                (~)なしで</rt></ruby> <ruby>zorg<rt class="S_S">心配する</rt></ruby>i <ruby>pri<rt
+                                class="XS_S">ついて</rt></ruby>
+                <ruby>tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby> <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>ali<rt
+                                class="S_S">他の</rt></ruby>a <ruby>vort<rt class="M_M">[文]語</rt></ruby>o, <ruby>kiu<rt
+                                class="XXS_S">
+                                だれ;<br>どれ
+                        </rt></ruby>n <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>ankoraŭ<rt
+                                class="XXL_L">まだ</rt>
+                </ruby>
+                <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>kon<rt class="XXS_S">知って<br>いる</rt></ruby><ruby>as<rt
+                                class="XS_S">
+                                現在形
+                        </rt></ruby>.<br>
+                こうして、それらを辞書で調べたり、友人や先生に尋ねたりできます。それは物語を読む前でもよいし、あるいは――私としてはこちらのほうがよいと思いますが――まず一度読み、そのあいだはまだ知らない語にいちいちこだわらずに理解しようと努めたあとでもよいのです。<br>
+                <br>
+                <ruby>Tiu<rt class="XXS_S">その;あ<br>のひと</rt></ruby>j <ruby>nov<rt class="S_S">新しい</rt></ruby>aj <ruby>sub
+                        <rt class="XS_S">(~の)下に</rt>
+                </ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>oj <ruby>re<rt class="S_S">再び
+                        </rt>
+                </ruby><ruby>aper<rt class="L_L">現れる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>kaj<rt
+                                class="L_L">
+                                and</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby><ruby>aper<rt class="L_L">現れる</rt>
+                </ruby><ruby>ad
+                        <rt class="XXS_S">継続<br>行為</rt>
+                </ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mult<rt class="M_M">多くの
+                        </rt>
+                </ruby><ruby>foj<rt class="XXL_L">回</rt></ruby>e <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>la<rt
+                                class="M_M">
+                                the</rt></ruby> <ruby>libr<rt class="XXL_L">本</rt></ruby>o.<br>
+                それらの新しい下位語要素は、この本の中で何度も何度も再び現れます。<br>
+                <br>
+                <ruby>Ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>do<rt class="XXS_S">それ<br>ゆえ</rt></ruby> <ruby>en
+                        <rt class="M_M">中で</rt>
+                </ruby><ruby>skrib<rt class="M_M">(を)書く</rt></ruby><ruby>iĝ<rt class="XS_S">なる</rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>en<rt class="M_M">中で</rt></ruby> <ruby>vi<rt
+                                class="XXXS_S">
+                                あな<br>た(<br>達)</rt></ruby>a <ruby>memor<rt class="S_S">(を)覚えている</rt></ruby>o <ruby>sen
+                        <rt class="XS_S">
+                                (~)なしで
+                        </rt>
+                </ruby> <ruby>dev<rt class="L_L">義務</rt></ruby><ruby>ig<rt class="XXS_S">させ<br>る</rt>
+                </ruby>i <ruby>vi
+                        <rt class="XXXS_S">あな<br>た(<br>達)</rt>
+                </ruby>n <ruby>mult<rt class="M_M">多くの</rt></ruby>e <ruby>labor<rt class="XXL_L">働く</rt></ruby>i
+                <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ili<rt class="XXS_S">
+                                それ<br>ら</rt>
+                </ruby>n <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i.<br>
+                したがって、それらは、あなたにそれを学ぶための大きな労力を強いることなく、あなたの記憶に刻み込まれるでしょう。<br>
+                <br>
+                <ruby>La<rt class="XL_L">the</rt></ruby> <ruby>last<rt class="S_S">最後の</rt></ruby>aj <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby>oj
+                <ruby>preskaŭ<rt class="XXL_L">ほとんど</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>en<rt
+                                class="M_M">中で</rt>
+                </ruby><ruby>hav<rt class="XXS_S">持って<br>いる</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+                <ruby>nov<rt class="S_S">新しい</rt></ruby>ajn <ruby>vort<rt class="M_M">[文]語</rt></ruby>ojn; <ruby>ili<rt
+                                class="XXS_S">それ<br>ら
+                        </rt></ruby>a <ruby>cel<rt class="M_M">目的</rt></ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある
+                        </rt>
+                </ruby><ruby>as
+                        <rt class="XS_S">現在形</rt>
+                </ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>don<rt class="M_M">与える
+                        </rt></ruby>i <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">
+                                あな<br>た(<br>達)</rt>
+                </ruby>
+                <ruby>ebl<rt class="L_L">可能</rt></ruby><ruby>ec<rt class="S_S">性質</rt></ruby>on <ruby>re<rt class="S_S">
+                                再び</rt>
+                </ruby><ruby>vid<rt class="XXS_S">見る;<br>会う</rt></ruby>i <ruby>re<rt class="S_S">再び</rt></ruby>e
+                <ruby>kaj<rt class="L_L">and</rt></ruby> <ruby>re<rt class="S_S">再び</rt></ruby>e <ruby>vort<rt
+                                class="M_M">[文]語</rt>
+                </ruby>ojn, <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>jn <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)
+                        </rt>
+                </ruby> <ruby>antaŭ<rt class="M_M">(~の)前に</rt></ruby>e <ruby>ne<rt class="M_M">ない</rt></ruby>
+                <ruby>sufiĉ<rt class="L_L">十分な</rt></ruby>e <ruby>oft<rt class="XXS_S">たび<br>たび</rt></ruby>e
+                <ruby>renkont<rt class="L_L">
+                                (に)出会う</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby>.<br>
+                最後のほうの物語には、ほとんど新しい語は含まれていません。その目的はただ、以前にはまだ十分な回数出会っていなかった語を、あなたが何度も何度も見直す機会を与えることだけです。<br>
+                <br>
+                <ruby>Kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>
+                <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby><ruby>ven<rt class="XS_S">(に)来る</rt></ruby><ruby>os<rt
+                                class="XS_S">
+                                未来形</rt>
+                </ruby> <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>fin
+                        <rt class="XS_S">終える</rt>
+                </ruby>o <ruby>de<rt class="XS_S">の;から</rt></ruby> <ruby>la<rt class="M_M">the</rt>
+                </ruby>
+                <ruby>last<rt class="S_S">最後の</rt></ruby>a <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby>o, <ruby>vi<rt
+                                class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>tiel<rt class="XXS_S">その;あ<br>の様に</rt>
+                </ruby> <ruby>kon
+                        <rt class="XXS_S">知って<br>いる</rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby> <ruby>iom<rt class="XL_L">多少
+                        </rt>
+                </ruby> <ruby>pli<rt class="S_S">より</rt></ruby> <ruby>ol<rt class="XXS_S">~より<br>も</rt></ruby> <ruby>mil
+                        <rt class="XXL_L">千</rt>
+                </ruby> <ruby>sub<rt class="XS_S">(~の)下に</rt></ruby><ruby>vort<rt class="M_M">[文]語
+                        </rt>
+                </ruby>ojn, <ruby>per<rt class="S_S">よって</rt></ruby> <ruby>kiu<rt class="XXS_S">だれ;<br>どれ</rt></ruby>j
+                <ruby>vi
+                        <rt class="XXXS_S">あな<br>た(<br>達)</rt>
+                </ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>os<rt class="XS_S">未来形
+                        </rt></ruby> <ruby>parol<rt class="S_S">話しをする</rt></ruby>i <ruby>pri<rt class="XS_S">ついて</rt>
+                </ruby>
+                <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>afer<rt class="XL_L">物事</rt></ruby>o <ruby>de<rt
+                                class="XS_S">の;から
+                        </rt></ruby> <ruby>la<rt class="M_M">the</rt></ruby> <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt>
+                </ruby><ruby>tag<rt class="XXL_L">日</rt></ruby>a <ruby>viv<rt class="XXS_S">生きて<br>いる</rt></ruby>o.<br>
+                最後の物語の終わりにたどり着くころには、こうしてあなたは千を少し超える下位語要素を知ることになり、それらによって日常生活のあらゆる事柄について話せるようになるでしょう。<br>
+                <br>
+                * * *<br>
+                <br>
+                <ruby>Kelk<rt class="S_S">幾つかの</rt></ruby>aj <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>la<rt
+                                class="M_M">
+                                the</rt></ruby> <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby>oj, <ruby>kiu<rt
+                                class="XXS_S">だれ;<br>どれ
+                        </rt>
+                </ruby>jn <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby> <ruby>leg<rt class="XS_S">(を)読む</rt>
+                </ruby><ruby>os<rt class="XS_S">未来形</rt></ruby>, <ruby>jam<rt class="XL_L">既に</rt></ruby> <ruby>aper<rt
+                                class="L_L">
+                                現れる</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt class="M_M">中で
+                        </rt></ruby>
+                <ruby>Kontakto<rt class="M_M">[雑誌]Kontakto</rt></ruby> <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>en
+                        <rt class="M_M">中で</rt>
+                </ruby> <ruby>Franca Esperantisto<rt class="M_M">[雑誌]Franca Esperantisto
+                        </rt></ruby>,
+                <ruby>sed<rt class="S_S">しかし</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>far<rt
+                                class="XXS_S">
+                                (を)す<br>る</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>en<rt
+                                class="M_M">中で</rt>
+                </ruby>
+                <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby> <ruby>ŝanĝ<rt class="S_S">(を)変える</rt></ruby>ojn,
+                <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby> <ruby>vi<rt
+                                class="XXXS_S">
+                                あな<br>た(<br>達)</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby>u, <ruby>per<rt
+                                class="S_S">よって</rt>
+                </ruby>
+                <ruby>ĉiu<rt class="XXS_S">各々の<br>;各~</rt></ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby>
+                <ruby>ili<rt class="XXS_S">それ<br>ら</rt></ruby>, <ruby>lern<rt class="XXS_S">(を)学習<br>する</rt></ruby>i <ruby>io<rt class="XS_S">何か</rt></ruby>n
+                <ruby>nov<rt class="S_S">新しい</rt></ruby>an <ruby>lingv<rt class="XXL_L">言語</rt></ruby>e.<br>
+                あなたがこれから読む物語のいくつかは、すでに『<ruby>Kontakto<rt class="M_M">[雑誌]Kontakto</rt></ruby>』や『<ruby>Franca
+                        Esperantisto<rt class="M_M">[雑誌]Franca Esperantisto</rt>
+                </ruby>』に掲載されたものですが、私はそれらに変更を加えました。あなたがその一つ一つによって、言語の面で何か新しいことを学べるようにするためです。<br>
+                <br>
+                * * *<br>
+                <br>
+                <ruby>Mi<rt class="XXL_L">私</rt></ruby> <ruby>fin<rt class="XS_S">終える</rt></ruby>e <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>u
+                <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby>n <ruby>ali<rt class="S_S">他の</rt></ruby>an, <ruby>kio
+                        <rt class="XXL_L">何</rt>
+                </ruby> <ruby>por<rt class="S_S">ために</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>grav<rt
+                                class="M_M">
+                                重要な</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>: <ruby>mi<rt class="XXL_L">私
+                        </rt></ruby>
+                <ruby>prov<rt class="S_S">(を)試す</rt></ruby><ruby>is<rt class="XXS_S">過去<br>形</rt></ruby> <ruby>rakont<rt
+                                class="M_M">(を)物語る</rt></ruby>i <ruby>bel<rt class="S_S">美しい</rt></ruby>e, <ruby>iom<rt
+                                class="XL_L">多少
+                        </rt>
+                </ruby> <ruby>art<rt class="M_M">芸術</rt></ruby>e.<br>
+                最後に、私にとって大切な別のことも言わせてください。私は、美しく、いくらか芸術的に語ろうと努めました。<br>
+                <br>
+                <ruby>Tio<rt class="XXS_S">それ;<br>あれ</rt></ruby> <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>ĉiam<rt
+                                class="L_L">
+                                いつも</rt></ruby> <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>as<rt
+                                class="XS_S">現在形</rt>
+                </ruby>
+                <ruby>facil<rt class="M_M">容易な</rt></ruby>a, <ruby>kiam<rt class="M_M">いつ(時)</rt></ruby> <ruby>oni<rt
+                                class="L_L">人々
+                        </rt></ruby> <ruby>rajt<rt class="L_L">権利</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>
+                <ruby>uz<rt class="S_S">使う</rt></ruby>i <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>mal<rt
+                                class="S_S">
+                                正反対</rt>
+                </ruby><ruby>mult<rt class="M_M">多くの</rt></ruby>ajn <ruby>sub<rt class="XS_S">(~の)下に</rt>
+                </ruby><ruby>vort<rt class="M_M">[文]語</rt></ruby>ojn, <ruby>sed<rt class="S_S">しかし</rt></ruby>
+                <ruby>tamen<rt class="L_L">
+                                とはいえ</rt>
+                </ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>opini<rt class="XS_S">意見である</rt></ruby><ruby>is<rt
+                                class="XXS_S">過去<br>形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt></ruby>
+                <ruby>est<rt class="XXS_S">
+                                (~)で<br>ある</rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby> <ruby>mi<rt
+                                class="XXL_L">私</rt></ruby>a
+                <ruby>dev<rt class="L_L">義務</rt></ruby>o <ruby>tio<rt class="XXS_S">それ;<br>あれ</rt></ruby>n <ruby>prov<rt
+                                class="S_S">(を)試す</rt></ruby>i.<br>
+                使ってよい下位語要素が少ししかないとき、それはいつも簡単というわけではありませんが、それでも私は、それを試みるのが自分の務めだと考えました。<br>
+                <br>
+                <ruby>Ĉu<rt class="M_M">~か?</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>sukces<rt class="XL_L">成功する</rt></ruby><ruby>is<rt
+                                class="XXS_S">
+                                過去<br>形</rt></ruby>?<br>
+                私は成功したでしょうか。<br>
+                <br>
+                <ruby>Ne<rt class="M_M">ない</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>pov<rt class="S_S">できる</rt></ruby><ruby>us<rt
+                                class="XS_S">条件法
+                        </rt>
+                </ruby> <ruby>dir<rt class="XXS_S">(を)言<br>う</rt></ruby>i.<br>
+                それは私には言えません。<br>
+                <br>
+                <ruby>Sed<rt class="M_M">しかし</rt></ruby> <ruby>mi<rt class="XXL_L">私</rt></ruby> <ruby>esper<rt
+                                class="XS_S">
+                                (を)希望する
+                        </rt></ruby><ruby>as<rt class="XS_S">現在形</rt></ruby>, <ruby>ke<rt class="XXS_S">という<br>こと</rt>
+                </ruby>
+                <ruby>mi<rt class="XXL_L">私</rt></ruby>a <ruby>rakont<rt class="M_M">(を)物語る</rt></ruby><ruby>ar<rt
+                                class="S_S">
+                                集団</rt>
+                </ruby>o <ruby>est<rt class="XXS_S">(~)で<br>ある</rt></ruby><ruby>os<rt class="XS_S">未来形</rt></ruby>
+                <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>nur<rt class="XXS_S">ただ~<br>だけ</rt></ruby> <ruby>instru<rt
+                                class="S_S">
+                                (を)教える
+                        </rt></ruby>a <ruby>al<rt class="XXS_S">~の方<br>へ</rt></ruby> <ruby>vi<rt class="XXXS_S">あな<br>た(<br>達)</rt></ruby>, <ruby>sed<rt class="S_S">しかし
+                        </rt></ruby>
+                <ruby>ankaŭ<rt class="M_M">(~も)また</rt></ruby> <ruby>plaĉ<rt class="S_S">気に入る</rt></ruby>a.<br>
+                しかし、私の物語集があなたにとって、ためになるだけでなく、楽しいものでもあることを願っています。<br>
+                <br>
+                <ruby>Claude Piron<rt class="S_S">[人名]クロード・ピロン</rt></ruby><br>
+                クロード・ピロン<br>
+                <br>
+                *<ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>pens<rt class="XXL_L">思う</rt></ruby>i: <ruby>far<rt
+                                class="XXS_S">(を)す<br>る</rt></ruby>i, <ruby>ne<rt class="M_M">ない</rt></ruby> <ruby>el<rt
+                                class="XXS_S">
+                                中か<br>ら
+                        </rt></ruby> <ruby>io<rt class="XS_S">何か</rt></ruby> <ruby>ver<rt class="S_S">本当の</rt></ruby>a
+                <ruby>aŭ<rt class="XS_S">または</rt></ruby> <ruby>fakt<rt class="XL_L">事実</rt></ruby>a, <ruby>sed<rt
+                                class="S_S">しかし
+                        </rt>
+                </ruby> <ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby> <ruby>si<rt class="XS_S">自分</rt></ruby>aj
+                <ruby>pens<rt class="XXL_L">思う</rt></ruby>oj.<br>
+                *<ruby>el<rt class="XXS_S">中か<br>ら</rt></ruby><ruby>pens<rt class="XXL_L">思う</rt>
+                </ruby>i：何か真実のことや事実からではなく、自分の考えから作り出すこと。<br>
+                <br>
+        </p>
+</body>
+
+</html>
