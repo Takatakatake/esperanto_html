@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Claude Piron《Vere aŭ Fantazie》中文注音版独立索引。可从此页直接进入全文版与46个分章节页面。">
+  <title>Claude Piron《Vere aŭ Fantazie》中文注音版 | 独立索引</title>
+  <style>
+    :root {
+      --bg: #f4efe5;
+      --bg-deep: #e8efe6;
+      --paper: rgba(255, 252, 247, 0.92);
+      --paper-strong: #fffdf9;
+      --ink: #1f2724;
+      --muted: #5f6963;
+      --line: #d8d0c1;
+      --accent: #16594d;
+      --accent-strong: #0e433a;
+      --accent-soft: #dcece6;
+      --warm: #8e402d;
+      --shadow: 0 18px 42px rgba(41, 46, 43, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(142, 64, 45, 0.12), transparent 24rem),
+        radial-gradient(circle at left top, rgba(22, 89, 77, 0.16), transparent 28rem),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 45%, #f8f5ef 100%);
+      font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Yu Gothic", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .crumb {
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 8px 14px;
+      border: 1px solid rgba(22, 89, 77, 0.12);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(8px);
+    }
+
+    .anchor-nav {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .anchor-nav a {
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(22, 89, 77, 0.12);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .anchor-nav a:hover {
+      background: rgba(22, 89, 77, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 30px 28px;
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(255, 253, 249, 0.96), rgba(247, 242, 232, 0.92)),
+        var(--paper);
+      border: 1px solid rgba(22, 89, 77, 0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -72px -84px auto;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(22, 89, 77, 0.16), rgba(22, 89, 77, 0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Hiragino Mincho ProN", Georgia, serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--warm);
+      font-size: 1.02rem;
+      letter-spacing: 0.04em;
+    }
+
+    .lead {
+      max-width: 62rem;
+      margin: 18px 0 0;
+      font-size: 1.04rem;
+      color: #2c3531;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 11px 18px;
+      text-decoration: none;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 12px 24px rgba(22, 89, 77, 0.18);
+    }
+
+    .button-secondary {
+      color: var(--accent-strong);
+      background: rgba(22, 89, 77, 0.08);
+      border-color: rgba(22, 89, 77, 0.16);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 20px 0 0;
+    }
+
+    .stat {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(22, 89, 77, 0.1);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.55rem;
+      line-height: 1.1;
+      color: var(--accent-strong);
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--paper);
+      border: 1px solid rgba(22, 89, 77, 0.1);
+      box-shadow: 0 10px 28px rgba(41, 46, 43, 0.06);
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .section-intro {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .entry-card {
+      display: block;
+      padding: 18px;
+      text-decoration: none;
+      border-radius: 18px;
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .entry-card:hover,
+    .chapter-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(41, 46, 43, 0.08);
+      border-color: rgba(22, 89, 77, 0.3);
+    }
+
+    .entry-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .entry-title {
+      display: block;
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .entry-meta {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .entry-file {
+      display: block;
+      margin-top: 10px;
+      color: var(--warm);
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+      font-size: 0.86rem;
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+    }
+
+    .note h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .chapter-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+    }
+
+    .chapter-item {
+      margin: 0;
+    }
+
+    .chapter-link {
+      display: grid;
+      gap: 6px;
+      min-height: 100%;
+      padding: 16px 18px;
+      text-decoration: none;
+      border-radius: 18px;
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .chapter-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-width: 2.8em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(22, 89, 77, 0.1);
+      color: var(--accent-strong);
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    }
+
+    .chapter-cn {
+      font-size: 1.04rem;
+      font-weight: 800;
+    }
+
+    .chapter-eo {
+      color: var(--warm);
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+
+    .chapter-file,
+    code {
+      color: var(--muted);
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+      font-size: 0.84rem;
+      word-break: break-all;
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(22, 89, 77, 0.1);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 1180px);
+        padding-top: 20px;
+      }
+
+      .hero,
+      .section {
+        padding: 20px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <div class="crumb">独立文件夹入口 / Vere_aux_fantazie_中国語版</div>
+      <nav class="anchor-nav" aria-label="页内导航">
+        <a href="#read">阅读入口</a>
+        <a href="#chapters">章节目录</a>
+        <a href="#notes">使用说明</a>
+      </nav>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">Standalone Chinese Index</p>
+      <h1>Claude Piron《Vere aŭ Fantazie》中文注音版</h1>
+      <p class="subtitle">当前文件夹专用的独立索引页</p>
+      <p class="lead">
+        本页是这个复制文件夹的阅读入口。样式已经内嵌在页面里，主要链接也只指向当前目录内的 HTML 文件，
+        因此从这里可以直接进入全文版与分章节页面，不需要先回到上级目录。
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="vere_aux_fantazie_zh.html">打开中文注音全文版</a>
+        <a class="button button-secondary" href="vere_aux_fantazie_zh_00.html">从前言开始逐章阅读</a>
+        <a class="button button-secondary" href="#chapters">查看 46 个章节页面</a>
+      </div>
+
+      <div class="stats" aria-label="版本信息">
+        <div class="stat">
+          <strong>1</strong>
+          全文页面
+        </div>
+        <div class="stat">
+          <strong>46</strong>
+          分章节页面
+        </div>
+        <div class="stat">
+          <strong>00-45</strong>
+          章节编号范围
+        </div>
+        <div class="stat">
+          <strong>zh-Hans</strong>
+          页面语言标记
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="read">
+      <h2>阅读入口</h2>
+      <p class="section-intro">
+        如果你想连续读完整本书，直接进入全文页即可；如果你更希望像目录书一样按章阅读，就从前言页开始。
+      </p>
+
+      <div class="entry-grid">
+        <a class="entry-card" href="vere_aux_fantazie_zh.html">
+          <span class="entry-label">全文阅读</span>
+          <span class="entry-title">Claude Piron《Vere aŭ Fantazie》中文注音全文版</span>
+          <span class="entry-meta">适合连续滚动阅读整本作品。</span>
+          <span class="entry-file">vere_aux_fantazie_zh.html</span>
+        </a>
+
+        <a class="entry-card" href="vere_aux_fantazie_zh_00.html">
+          <span class="entry-label">分章起点</span>
+          <span class="entry-title">从前言开始进入分章节版本</span>
+          <span class="entry-meta">按 00 到 45 的顺序逐页阅读。</span>
+          <span class="entry-file">vere_aux_fantazie_zh_00.html</span>
+        </a>
+
+        <a class="entry-card" href="vere_aux_fantazie_zh_45.html">
+          <span class="entry-label">末尾页面</span>
+          <span class="entry-title">直接打开后记</span>
+          <span class="entry-meta">用于快速检查分章终点与收尾部分。</span>
+          <span class="entry-file">vere_aux_fantazie_zh_45.html</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <h2>使用说明</h2>
+      <p class="section-intro">
+        这里保留了复制后的中文版本页面，并为这个文件夹单独提供了一个清晰、可直接使用的本地目录页。
+      </p>
+
+      <div class="notes">
+        <div class="note">
+          <h3>文件组织</h3>
+          <p>当前目录内包含 <code>vere_aux_fantazie_zh.html</code> 以及 <code>vere_aux_fantazie_zh_00.html</code> 到 <code>vere_aux_fantazie_zh_45.html</code>。</p>
+        </div>
+        <div class="note">
+          <h3>命名方式</h3>
+          <p>全文页采用单一文件名，分章页采用两位编号，方便人工检查顺序，也便于后续批量处理。</p>
+        </div>
+        <div class="note">
+          <h3>独立性</h3>
+          <p>本索引页自身不依赖外部样式表，主要入口也全部使用当前目录相对链接，适合作为这个复制文件夹的起始页。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapters">
+      <h2>章节目录</h2>
+      <p class="section-intro">
+        下面按文件编号顺序列出全部分章节页面。每一项同时显示中文标题、世界语标题与实际文件名，便于阅读和核对。
+      </p>
+
+      <ol class="chapter-list">
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_00.html" class="chapter-link">
+            <span class="chapter-number">00</span>
+            <span class="chapter-cn">前言</span>
+            <span class="chapter-eo">ANTAŬPAROLO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_00.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_01.html" class="chapter-link">
+            <span class="chapter-number">01</span>
+            <span class="chapter-cn">好餐馆，但是很贵</span>
+            <span class="chapter-eo">1. BONA RESTORACIO, SED MULTEKOSTA</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_01.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_02.html" class="chapter-link">
+            <span class="chapter-number">02</span>
+            <span class="chapter-cn">令人惊异的盒子</span>
+            <span class="chapter-eo">2. LA MIRIGA SKATOLO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_02.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_03.html" class="chapter-link">
+            <span class="chapter-number">03</span>
+            <span class="chapter-cn">想要给予的富人</span>
+            <span class="chapter-eo">3. LA RIĈULO, KIU VOLIS DONI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_03.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_04.html" class="chapter-link">
+            <span class="chapter-number">04</span>
+            <span class="chapter-cn">寻找笔友</span>
+            <span class="chapter-eo">4. SERĈAS LETERAN AMIKON</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_04.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_05.html" class="chapter-link">
+            <span class="chapter-number">05</span>
+            <span class="chapter-cn">走向彼方世界</span>
+            <span class="chapter-eo">5. AL MONDO TRANSA</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_05.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_06.html" class="chapter-link">
+            <span class="chapter-number">06</span>
+            <span class="chapter-cn">通往自由之路</span>
+            <span class="chapter-eo">6. LA VOJO LIBERECEN</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_06.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_07.html" class="chapter-link">
+            <span class="chapter-number">07</span>
+            <span class="chapter-cn">愿大多数人幸福</span>
+            <span class="chapter-eo">7. PLEJ MULTAJ FELIĈU</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_07.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_08.html" class="chapter-link">
+            <span class="chapter-number">08</span>
+            <span class="chapter-cn">买下我的咖啡馆吧！</span>
+            <span class="chapter-eo">8. AĈETU MIAN KAFEJON!</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_08.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_09.html" class="chapter-link">
+            <span class="chapter-number">09</span>
+            <span class="chapter-cn">恐惧让人长出翅膀</span>
+            <span class="chapter-eo">9. TIMO HAVIGAS FLUGILOJN</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_09.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_10.html" class="chapter-link">
+            <span class="chapter-number">10</span>
+            <span class="chapter-cn">要说出真话吗？</span>
+            <span class="chapter-eo">10. ĈU DIRI LA VERON?</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_10.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_11.html" class="chapter-link">
+            <span class="chapter-number">11</span>
+            <span class="chapter-cn">关于阿凡提的第二个故事</span>
+            <span class="chapter-eo">11. DUA RAKONTO PRI AFANTI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_11.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_12.html" class="chapter-link">
+            <span class="chapter-number">12</span>
+            <span class="chapter-cn">适合她的男人</span>
+            <span class="chapter-eo">12. LA VIRO POR ŜI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_12.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_13.html" class="chapter-link">
+            <span class="chapter-number">13</span>
+            <span class="chapter-cn">治愈</span>
+            <span class="chapter-eo">13. LA RESANIGO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_13.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_14.html" class="chapter-link">
+            <span class="chapter-number">14</span>
+            <span class="chapter-cn">狮子的成功</span>
+            <span class="chapter-eo">14. LEONA SUKCESO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_14.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_15.html" class="chapter-link">
+            <span class="chapter-number">15</span>
+            <span class="chapter-cn">东郭先生遇狼</span>
+            <span class="chapter-eo">15. INSTRUISTO DUNGGŬO RENKONTAS LUPON</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_15.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_16.html" class="chapter-link">
+            <span class="chapter-number">16</span>
+            <span class="chapter-cn">关于阿凡提的第三个故事</span>
+            <span class="chapter-eo">16. TRIA RAKONTO PRI AFANTI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_16.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_17.html" class="chapter-link">
+            <span class="chapter-number">17</span>
+            <span class="chapter-cn">商业式的做法</span>
+            <span class="chapter-eo">17. KOMERCA ALIRO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_17.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_18.html" class="chapter-link">
+            <span class="chapter-number">18</span>
+            <span class="chapter-cn">请理解我，警察先生</span>
+            <span class="chapter-eo">18. KOMPRENU MIN, SINJORO POLICISTO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_18.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_19.html" class="chapter-link">
+            <span class="chapter-number">19</span>
+            <span class="chapter-cn">正义中的公正</span>
+            <span class="chapter-eo">19. ĜUSTECO EN JUSTECO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_19.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_20.html" class="chapter-link">
+            <span class="chapter-number">20</span>
+            <span class="chapter-cn">共同体精神</span>
+            <span class="chapter-eo">20. KOMUNECA SPIRITO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_20.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_21.html" class="chapter-link">
+            <span class="chapter-number">21</span>
+            <span class="chapter-cn">关于阿凡提的第四个故事</span>
+            <span class="chapter-eo">21. KVARA RAKONTO PRI AFANTI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_21.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_22.html" class="chapter-link">
+            <span class="chapter-number">22</span>
+            <span class="chapter-cn">神圣的鱼</span>
+            <span class="chapter-eo">22. LA SANKTA FIŜO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_22.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_23.html" class="chapter-link">
+            <span class="chapter-number">23</span>
+            <span class="chapter-cn">意外的重逢</span>
+            <span class="chapter-eo">23. NEATENDITA RENKONTIĜO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_23.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_24.html" class="chapter-link">
+            <span class="chapter-number">24</span>
+            <span class="chapter-cn">我请求说出真相！</span>
+            <span class="chapter-eo">24. LA VERON, MI PETAS!</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_24.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_25.html" class="chapter-link">
+            <span class="chapter-number">25</span>
+            <span class="chapter-cn">谁该怕谁？</span>
+            <span class="chapter-eo">25. KIU TIMU KIUN?</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_25.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_26.html" class="chapter-link">
+            <span class="chapter-number">26</span>
+            <span class="chapter-cn">当背部疼痛时</span>
+            <span class="chapter-eo">26. KIAM DORSO DOLORAS</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_26.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_27.html" class="chapter-link">
+            <span class="chapter-number">27</span>
+            <span class="chapter-cn">关于阿凡提的第五个故事</span>
+            <span class="chapter-eo">27. KVINA RAKONTO PRI AFANTI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_27.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_28.html" class="chapter-link">
+            <span class="chapter-number">28</span>
+            <span class="chapter-cn">我弄丢了几头母牛</span>
+            <span class="chapter-eo">28. MI PERDIS KELKAJN BOVINOJN</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_28.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_29.html" class="chapter-link">
+            <span class="chapter-number">29</span>
+            <span class="chapter-cn">惹人喜爱的名人</span>
+            <span class="chapter-eo">29. AMINDA FAMULO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_29.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_30.html" class="chapter-link">
+            <span class="chapter-number">30</span>
+            <span class="chapter-cn">失手</span>
+            <span class="chapter-eo">30. MISTRAFO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_30.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_31.html" class="chapter-link">
+            <span class="chapter-number">31</span>
+            <span class="chapter-cn">原则</span>
+            <span class="chapter-eo">31. PRINCIPOJ</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_31.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_32.html" class="chapter-link">
+            <span class="chapter-number">32</span>
+            <span class="chapter-cn">上了锁的衣柜</span>
+            <span class="chapter-eo">32. LA ŜLOSITA ŜRANKO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_32.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_33.html" class="chapter-link">
+            <span class="chapter-number">33</span>
+            <span class="chapter-cn">是借还是送？</span>
+            <span class="chapter-eo">33. ĈU PRUNTO AŬ DONACO?</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_33.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_34.html" class="chapter-link">
+            <span class="chapter-number">34</span>
+            <span class="chapter-cn">被诅咒的清单</span>
+            <span class="chapter-eo">34. MALBENITA LISTO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_34.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_35.html" class="chapter-link">
+            <span class="chapter-number">35</span>
+            <span class="chapter-cn">每个多少？</span>
+            <span class="chapter-eo">35. PO KIOM?</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_35.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_36.html" class="chapter-link">
+            <span class="chapter-number">36</span>
+            <span class="chapter-cn">完美的烘烤</span>
+            <span class="chapter-eo">36. PERFEKTA BAKADO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_36.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_37.html" class="chapter-link">
+            <span class="chapter-number">37</span>
+            <span class="chapter-cn">关于阿凡提的第六个故事</span>
+            <span class="chapter-eo">37. SESA RAKONTO PRI AFANTI</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_37.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_38.html" class="chapter-link">
+            <span class="chapter-number">38</span>
+            <span class="chapter-cn">不要站在那里！</span>
+            <span class="chapter-eo">38. NE STARU TIE!</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_38.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_39.html" class="chapter-link">
+            <span class="chapter-number">39</span>
+            <span class="chapter-cn">用线操纵木偶并不容易</span>
+            <span class="chapter-eo">39. NE FACILAS REGI PUPOJN FADENE</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_39.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_40.html" class="chapter-link">
+            <span class="chapter-number">40</span>
+            <span class="chapter-cn">亲爱的苏加！</span>
+            <span class="chapter-eo">40. KARA SUGA!</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_40.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_41.html" class="chapter-link">
+            <span class="chapter-number">41</span>
+            <span class="chapter-cn">我太害怕了</span>
+            <span class="chapter-eo">41. MI TRO TIMAS</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_41.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_42.html" class="chapter-link">
+            <span class="chapter-number">42</span>
+            <span class="chapter-cn">古杜拉小姐的账单</span>
+            <span class="chapter-eo">42. LA FAKTURO DE FRAŬLINO GUDULA</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_42.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_43.html" class="chapter-link">
+            <span class="chapter-number">43</span>
+            <span class="chapter-cn">我是母鸡吗，真的吗？</span>
+            <span class="chapter-eo">43. KOKINO, MI, ĈU VERE?</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_43.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_44.html" class="chapter-link">
+            <span class="chapter-number">44</span>
+            <span class="chapter-cn">最后一封信</span>
+            <span class="chapter-eo">44. FINA LETERO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_44.html</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a href="vere_aux_fantazie_zh_45.html" class="chapter-link">
+            <span class="chapter-number">45</span>
+            <span class="chapter-cn">后记</span>
+            <span class="chapter-eo">45. POSTPAROLO</span>
+            <span class="chapter-file">vere_aux_fantazie_zh_45.html</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <div class="footer">
+      <p>建议把这个 <code>index.html</code> 作为当前复制文件夹的起始页使用。若后续需要，我也可以继续把这个文件夹内 47 个页面顶部的导航一并改成完全本地化的独立链接结构。</p>
+    </div>
+  </main>
+</body>
+</html>
