@@ -1,0 +1,34 @@
+[
+ {
+  "word": "sporti",
+  "decomp": "sport/i",
+  "ruby": [
+   [
+    "sporti",
+    "<ruby>sport<rt class=\"M_M\">スポーツ</rt></ruby>i"
+   ],
+   [
+    "SPORTI",
+    "<ruby>SPORT<rt class=\"M_M\">スポーツ</rt></ruby>I"
+   ],
+   [
+    "Sporti",
+    "<ruby>Sport<rt class=\"M_M\">スポーツ</rt></ruby>i"
+   ]
+  ],
+  "kanji": [
+   [
+    "sporti",
+    "<ruby>体ˢ<rt class=\"M_M\">sport</rt></ruby>i"
+   ],
+   [
+    "SPORTI",
+    "<ruby>体ˢ<rt class=\"M_M\">SPORT</rt></ruby>I"
+   ],
+   [
+    "Sporti",
+    "<ruby>体ˢ<rt class=\"M_M\">Sport</rt></ruby>i"
+   ]
+  ]
+ }
+]
