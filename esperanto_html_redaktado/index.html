@@ -198,11 +198,10 @@
 
     <section class="panel">
       <h2>検証スクリプト</h2>
-      <p>方針書のゲート（§2.3 の CSS クラス算定、§11.2 G8 の対訳版式）を機械的に確認します。</p>
+      <p>方針書 §2.3 の CSS クラス算定（ピクセル幅比率基準）を機械的に確認します。方針書が挙げる他のゲート用スクリプトは本リポジトリの外にあります。</p>
       <ul class="link-list">
         <li><a href="ruby_css_verifier.py"><span class="item-title">ruby_css_verifier.py</span><span class="item-meta">ルビ CSS クラス一括検証・修正（ピクセル幅比率基準）</span></a></li>
         <li><a href="test_ruby_css_verifier.py"><span class="item-title">test_ruby_css_verifier.py</span><span class="item-meta">上記スクリプトのテスト</span></a></li>
-        <li><a href="translation_marking_checker.py"><span class="item-title">translation_marking_checker.py</span><span class="item-meta">対訳版式・訳文有無標示チェッカー</span></a></li>
       </ul>
       <span class="badge">python3 ruby_css_verifier.py *.html --fix --margin 0.05</span>
     </section>
