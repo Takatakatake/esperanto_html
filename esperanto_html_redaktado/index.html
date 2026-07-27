@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>esperanto_html_redaktado | 補助資料・編集用ファイル</title>
+  <style>
+    :root {
+      --bg: #f4efe5;
+      --bg-deep: #e8efe6;
+      --paper: rgba(255, 252, 247, 0.92);
+      --ink: #1f2724;
+      --muted: #5f6963;
+      --line: #d8d0c1;
+      --accent: #16594d;
+      --accent-soft: #dcece6;
+      --warm: #8e402d;
+      --shadow: 0 18px 42px rgba(41, 46, 43, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(142, 64, 45, 0.12), transparent 24rem),
+        radial-gradient(circle at left top, rgba(22, 89, 77, 0.16), transparent 28rem),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 45%, #f8f5ef 100%);
+      font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Yu Gothic", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1,
+    h2 {
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Hiragino Mincho ProN", Georgia, serif;
+      line-height: 1.25;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .crumb {
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border: 1px solid rgba(22, 89, 77, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero,
+    .panel {
+      padding: 26px 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      margin-top: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.3rem);
+    }
+
+    .lead {
+      max-width: 62rem;
+      margin: 18px 0 0;
+      font-size: 1.04rem;
+      color: #2c3531;
+    }
+
+    .panel h2 {
+      margin: 0 0 4px;
+      font-size: 1.25rem;
+    }
+
+    .panel h2+p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .link-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .link-list a {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+      align-items: baseline;
+      padding: 14px 18px;
+      border: 1px solid rgba(22, 89, 77, 0.14);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.72);
+      text-decoration: none;
+      transition: background .15s ease, border-color .15s ease;
+    }
+
+    .link-list a:hover,
+    .link-list a:focus-visible {
+      background: var(--accent-soft);
+      border-color: rgba(22, 89, 77, 0.4);
+    }
+
+    .item-title {
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(22, 89, 77, 0.1);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="crumb">esperanto_html_redaktado</nav>
+
+    <header class="hero">
+      <p class="eyebrow">Helpa Materialo</p>
+      <h1>補助資料・編集用ファイル</h1>
+      <p class="lead">旧 <code>Esperanto_HTML_文書/</code> に由来する補助資料と、ルビ注釈 HTML の編集・検証に使うファイルをまとめています。公開本文そのものではなく、方針書・検証スクリプト・参照データです。</p>
+    </header>
+
+    <section class="panel">
+      <h2>方針説明書</h2>
+      <p>ルビ注釈 HTML を修正する際の判断基準。語根分解・注釈訳語・CSS クラス・裸文字の許容範囲などを規定します。</p>
+      <ul class="link-list">
+        <li><a href="エスペラントルビHTML修正ガイド260328.txt"><span class="item-title">エスペラントルビHTML修正ガイド260328.txt</span><span class="item-meta">日本語版（原版）</span></a></li>
+        <li><a href="世界语HTML修正指南_中文注释版.txt"><span class="item-title">世界语HTML修正指南_中文注释版.txt</span><span class="item-meta">中文注釈版（中国語版作業用）</span></a></li>
+        <li><a href="編集プロンプト群.txt"><span class="item-title">編集プロンプト群.txt</span><span class="item-meta">作業用プロンプト</span></a></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>検証スクリプト</h2>
+      <p>方針書 §2.3 の CSS クラス算定（ピクセル幅比率基準）を機械的に確認します。方針書が挙げる他のゲート用スクリプトは本リポジトリの外にあります。</p>
+      <ul class="link-list">
+        <li><a href="ruby_css_verifier.py"><span class="item-title">ruby_css_verifier.py</span><span class="item-meta">ルビ CSS クラス一括検証・修正（ピクセル幅比率基準）</span></a></li>
+        <li><a href="test_ruby_css_verifier.py"><span class="item-title">test_ruby_css_verifier.py</span><span class="item-meta">上記スクリプトのテスト</span></a></li>
+      </ul>
+      <span class="badge">python3 ruby_css_verifier.py *.html --fix --margin 0.05</span>
+    </section>
+
+    <section class="panel">
+      <h2>参照データ・環境</h2>
+      <p>CSS クラス算定に必須の文字幅データと、その生成手順。</p>
+      <ul class="link-list">
+        <li><a href="Unicode_BMP全范围文字幅(宽)_Arial16.json"><span class="item-title">Unicode_BMP全范围文字幅(宽)_Arial16.json</span><span class="item-meta">Arial 16px 文字幅データ（BMP 63,488 文字）</span></a></li>
+        <li><a href="Unicode_BMP全范围文字幅(宽)检测处理_Arial16_JSON保存.ipynb"><span class="item-title">Unicode_BMP全范围文字幅(宽)检测处理_Arial16_JSON保存.ipynb</span><span class="item-meta">上記 JSON の計測ノートブック</span></a></li>
+        <li><a href="Windows新規環境セットアップ簡易指南_Esperanto_HTML.md"><span class="item-title">Windows新規環境セットアップ簡易指南_Esperanto_HTML.md</span><span class="item-meta">新規環境セットアップ手順</span></a></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>関連する本文フォルダ</h2>
+      <ul class="link-list">
+        <li><a href="../vere-aux-fantazie/index.html"><span class="item-title">vere-aux-fantazie/</span><span class="item-meta">Claude Piron『Vere aŭ Fantazie』日本語ルビ版</span></a></li>
+        <li><a href="../vere_aux_fantazie_kun_cxinaj_anotacioj/index.html"><span class="item-title">vere_aux_fantazie_kun_cxinaj_anotacioj/</span><span class="item-meta">同・中文注釈版</span></a></li>
+      </ul>
+    </section>
+
+    <p class="footer">このフォルダは公開本文よりも編集補助寄りの内容です。ページの体裁は外部スタイルシートに依存せず、この HTML 内に完結させています。</p>
+  </main>
+</body>
+
+</html>
